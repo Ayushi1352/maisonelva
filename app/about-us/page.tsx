@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { site } from "@/data";
-import PageBanner from "@/components/shared/PageBanner";
-import StorySection from "@/components/shared/StorySection";
-import TestimonialShowcase from "@/components/shared/TestimonialShowcase";
-import MissionVision from "./components/MissionVision";
+import PageBanner from "@/components/PageBanner";
+import StorySection from "@/components/StorySection";
+import TestimonialShowcase from "@/components/TestimonialShowcase";
+import MissionVision from "@/components/MissionVision";
 
 export const metadata: Metadata = site.missionVisionSection.seo;
 

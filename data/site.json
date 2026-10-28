@@ -23,7 +23,11 @@
         "cream": "#fbf6f0",
         "card": "#fcf8f4",
         "line": "#f0dfcb",
-        "footer": "#f6f4f0"
+        "footer": "#f6f4f0",
+        "backdrop": "#f5f3ef",
+        "navy": "#141c2b",
+        "amber": "#c2802f",
+        "slate": "#646a78"
       },
       "fonts": {
         "playfair": {
@@ -112,7 +116,7 @@
               },
               {
                 "key": "CollectionsPreview",
-                "component": "MaisonElvaCollectionsPreview1"
+                "component": "Mais  onElvaCollectionsPreview1"
               },
               {
                 "key": "ExploreBanner",
@@ -331,11 +335,11 @@
                 "href": "/"
               },
               {
-                "label": "About",
+                "label": "About Us",
                 "href": "/about-us"
               },
               {
-                "label": "Collection",
+                "label": "Collections",
                 "href": "/collections"
               },
               {
@@ -343,7 +347,7 @@
                 "href": "/gallery"
               },
               {
-                "label": "Blogs",
+                "label": "Blog",
                 "href": "/blog"
               },
               {
@@ -369,7 +373,7 @@
                 "href": "https://www.etsy.com/"
               }
             ],
-            "copyright": "© 2024 Maison Élva. All rights reserved.",
+            "copyright": "© {year} All Rights Reserved. Powered by Lestow.",
             "motto": [
               "Timeless",
               "Elegant",
@@ -383,7 +387,21 @@
           "MaisonElvaPageBanner1": {
             "homeLabel": "Home",
             "homeHref": "/",
-            "breadcrumbLabel": "Breadcrumb"
+            "breadcrumbLabel": "Breadcrumb",
+            "titles": {
+              "/blog": "Blogs",
+              "/blog/blog-details": "Blogs Details",
+              "/collections": "Our Collections",
+              "/collections/collection-details": "Our Collections",
+              "/contact-us": "Contact",
+              "/enquiry-now": "Enquire Now"
+            },
+            "pagination": {
+              "label": "Pagination",
+              "previous": "Previous page",
+              "next": "Next page",
+              "page": "Page {page}"
+            }
           }
         }
       },
@@ -423,7 +441,7 @@
             "titleAccent": "Timeless Beauty",
             "paragraphs": [
               "At Maison ÉLVA, we believe jewellery is more than an adornment — it’s a reflection of your story, your moments and your individuality.",
-              "Our collections are thoughtfully crafted with exquisite detail, blending modern elegance with timeless artistry to create pieces that stay with you forever."
+              "Our collections are thoughtfully crafted with exquisite detail, blending modern elegance with timeless artistry to\u00a0create pieces that stay with you forever."
             ],
             "button": {
               "label": "Read More",
@@ -545,9 +563,9 @@
               "title": "Collections",
               "description": "Discover handcrafted bracelets, necklaces, earrings and rings — each piece designed to celebrate your most cherished moments."
             },
-            "label": "Our Collections",
-            "title": "Collections",
-            "intro": "Discover handcrafted bracelets, necklaces, earrings and rings — each piece designed to celebrate your most cherished moments.",
+            "label": "Our",
+            "title": "Collection",
+            "intro": "A curated range of timeless jewellery and fashion pieces, designed to complement every moment of your story.",
             "categories": [
               {
                 "id": "earrings",
@@ -570,11 +588,57 @@
                 "singular": "Necklace"
               }
             ],
-            "allLabel": "All",
-            "categoriesLabel": "Collection categories",
+            "cards": [
+              {
+                "label": "Rings",
+                "image": "/images/gallery/solitaire-ring.webp",
+                "imageAlt": "Gold solitaire engagement ring stacked with a diamond band"
+              },
+              {
+                "label": "Necklaces",
+                "image": "/images/gallery/halo-pendant.webp",
+                "imageAlt": "Diamond halo pendant on a fine gold chain"
+              },
+              {
+                "label": "Earrings",
+                "image": "/images/gallery/drop-earrings.webp",
+                "imageAlt": "Pear-cut diamond drop earrings resting on stone"
+              },
+              {
+                "label": "Bracelets",
+                "image": "/images/gallery/tennis-bracelet.webp",
+                "imageAlt": "Gold bezel-set diamond tennis bracelet"
+              },
+              {
+                "label": "Sets",
+                "image": "/images/gallery/diamond-necklace.webp",
+                "imageAlt": "Diamond V-necklace worn as part of a bridal set"
+              },
+              {
+                "label": "Fashion Jewellery",
+                "image": "/images/home/explore-banner.webp",
+                "imageAlt": "Gold leaf earrings and bangle set with marquise stones"
+              },
+              {
+                "label": "Bracelets",
+                "image": "/images/gallery/tennis-bracelet.webp",
+                "imageAlt": "Gold bezel-set diamond tennis bracelet"
+              },
+              {
+                "label": "Sets",
+                "image": "/images/gallery/diamond-necklace.webp",
+                "imageAlt": "Diamond V-necklace worn as part of a bridal set"
+              },
+              {
+                "label": "Fashion Jewellery",
+                "image": "/images/home/explore-banner.webp",
+                "imageAlt": "Gold leaf earrings and bangle set with marquise stones"
+              }
+            ],
+            "cardHref": "/collections/collection-details",
+            "perPage": 12,
             "items": [
               {
-                "slug": "radiant-halo-diamond-pendant-necklace",
                 "name": "Radiant Halo Diamond Pendant Necklace",
                 "category": "necklaces",
                 "nameAccent": "Radiant Halo",
@@ -683,7 +747,6 @@
                 ]
               },
               {
-                "slug": "aurora-golden-bracelet",
                 "name": "Aurora Golden Bracelet",
                 "category": "bracelets",
                 "nameAccent": "Aurora Golden",
@@ -786,7 +849,6 @@
                 ]
               },
               {
-                "slug": "bloom-golden-bracelet",
                 "name": "Bloom Golden Bracelet",
                 "category": "bracelets",
                 "nameAccent": "Bloom Golden",
@@ -889,7 +951,6 @@
                 ]
               },
               {
-                "slug": "velvet-golden-bracelet",
                 "name": "Velvet Golden Bracelet",
                 "category": "bracelets",
                 "nameAccent": "Velvet Golden",
@@ -992,7 +1053,6 @@
                 ]
               },
               {
-                "slug": "pear-drop-diamond-earrings",
                 "name": "Pear Drop Diamond Earrings",
                 "category": "earrings",
                 "nameAccent": "Pear Drop",
@@ -1095,7 +1155,6 @@
                 ]
               },
               {
-                "slug": "starburst-diamond-studs",
                 "name": "Starburst Diamond Studs",
                 "category": "earrings",
                 "nameAccent": "Starburst",
@@ -1198,7 +1257,6 @@
                 ]
               },
               {
-                "slug": "eternity-hoop-earrings",
                 "name": "Eternity Hoop Earrings",
                 "category": "earrings",
                 "nameAccent": "Eternity",
@@ -1301,7 +1359,6 @@
                 ]
               },
               {
-                "slug": "solitaire-diamond-ring",
                 "name": "Solitaire Diamond Ring",
                 "category": "rings",
                 "nameAccent": "Solitaire",
@@ -1406,7 +1463,6 @@
                 ]
               },
               {
-                "slug": "emerald-cut-diamond-ring",
                 "name": "Emerald Cut Diamond Ring",
                 "category": "rings",
                 "nameAccent": "Emerald Cut",
@@ -1509,7 +1565,6 @@
                 ]
               },
               {
-                "slug": "pear-halo-diamond-ring",
                 "name": "Pear Halo Diamond Ring",
                 "category": "rings",
                 "nameAccent": "Pear Halo",
@@ -1612,7 +1667,6 @@
                 ]
               },
               {
-                "slug": "diamond-cascade-necklace",
                 "name": "Diamond Cascade Necklace",
                 "category": "necklaces",
                 "nameAccent": "Diamond",
@@ -1715,7 +1769,6 @@
                 ]
               },
               {
-                "slug": "pear-drop-pendant",
                 "name": "Pear Drop Pendant",
                 "category": "necklaces",
                 "nameAccent": "Pear Drop",
@@ -1847,6 +1900,7 @@
             "titleTop": "Moments of",
             "titleAccent": "Timeless Beauty",
             "description": "A glimpse into our world of exquisite craftsmanship, refined designs and timeless jewellery pieces.",
+            "perPage": 12,
             "images": [
               {
                 "src": "/images/gallery/solitaire-ring.webp",
@@ -1927,6 +1981,7 @@
             "titleTop": "What Our",
             "titleAccent": "Customers Say",
             "description": "Real stories from our valued customers who trust our jewellery for life’s most cherished moments.",
+            "perPage": 6,
             "items": [
               {
                 "quote": "The quality and finish of the jewellery is simply outstanding. I purchased a diamond ring for my anniversary and it exceeded all my expectations. Truly a timeless piece!",
@@ -1980,9 +2035,9 @@
             "titleTop": "Latest",
             "titleAccent": "Stories",
             "readMore": "Read More",
+            "perPage": 6,
             "items": [
               {
-                "slug": "simple-tips-to-keep-your-diamond-jewellery-shining",
                 "title": "Simple Tips to Keep Your Diamond Jewellery Shining",
                 "titleAccent": "Diamond Jewellery",
                 "category": "Jewellery Guide",
@@ -2022,7 +2077,6 @@
                 }
               },
               {
-                "slug": "top-jewellery-trends-youll-love-this-season",
                 "title": "Top Jewellery Trends You’ll Love This Season",
                 "titleAccent": "You’ll Love",
                 "category": "Jewellery Trends",
@@ -2062,7 +2116,6 @@
                 }
               },
               {
-                "slug": "how-to-choose-the-perfect-jewellery-for-every-occasion",
                 "title": "How to Choose the Perfect Jewellery for Every Occasion",
                 "titleAccent": "Perfect Jewellery",
                 "category": "Jewellery Guide",
@@ -2102,7 +2155,6 @@
                 }
               },
               {
-                "slug": "the-seasons-jewellery-edit",
                 "title": "The Season’s Jewellery Edit",
                 "titleAccent": "Jewellery",
                 "category": "Jewellery Trends",
@@ -2142,7 +2194,6 @@
                 }
               },
               {
-                "slug": "choosing-jewellery-for-special-moments",
                 "title": "Choosing Jewellery for Special Moments",
                 "titleAccent": "Special",
                 "category": "Jewellery Guide",
@@ -2182,7 +2233,6 @@
                 }
               },
               {
-                "slug": "from-modern-minimalism-to-timeless-classics",
                 "title": "From Modern Minimalism to Timeless Classics",
                 "titleAccent": "to Timeless",
                 "category": "Jewellery Trends",

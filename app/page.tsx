@@ -1,9 +1,9 @@
-import HeroSection from "@/components/home/HeroSection";
-import CollectionsSection from "@/components/home/CollectionsSection";
-import ExploreBanner from "@/components/home/ExploreBanner";
-import BlogSection from "@/components/home/BlogSection";
-import StorySection from "@/components/shared/StorySection";
-import TestimonialShowcase from "@/components/shared/TestimonialShowcase";
+import HeroSection from "@/components/HeroSection";
+import CollectionsSection from "@/components/CollectionsSection";
+import ExploreBanner from "@/components/ExploreBanner";
+import BlogSection from "@/components/BlogSection";
+import StorySection from "@/components/StorySection";
+import TestimonialShowcase from "@/components/TestimonialShowcase";
 import { site } from "@/data";
 
 export default function HomePage() {
