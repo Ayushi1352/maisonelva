@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Brand colours — defaults; site.json (theme.colors) overrides them in app/layout.tsx. Taken from the Maison Élva logo (maroon, charcoal, gold) */
+  --color-maroon: #4f151d; /* logo wordmark "MAISON" (sampled) */
+  --color-maroon-dark: #3a0f15;
+  --color-maroon-light: #6e3a41; /* tint of logo maroon — thin rules/dividers */
+  --color-maroon-soft: #8a5f64;
+  /* Accent reds used only where the page designs show red instead of logo maroon */
+  --color-ruby: #86061a; /* testimonials, gallery, enquiry, contact, blog details */
+  --color-ruby-dark: #6a0414; /* hover state */
+  --color-ruby-deep: #5e0411; /* product details + about "Mission" */
+  --color-ink: #222021; /* logo wordmark "ÉLVA" (sampled) */
+  --color-ink-soft: #333333;
+  --color-body: #4a4a4a;
+  --color-muted: #5c5c5c;
+  --color-subtle: #8a8a8a;
+  --color-gold: #b08858; /* logo star + swash (sampled) */
+  --color-gold-deep: #9a7346;
+  --color-gold-light: #d2b68f;
+
+  /* Warm neutrals (gold-tinted) */
+  --color-page: #fefdfb;
+  --color-sand: #f6efe7;
+  --color-blush: #f9f5f4;
+  --color-cream: #fbf6f0;
+  --color-card: #fcf8f4;
+  --color-line: #f0dfcb;
+  --color-footer: #f6f4f0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Fonts from site.json (theme.fonts) via app/fonts.generated.ts; the second part is the fallback. */
+  --font-playfair: var(--font-playfair-face, Georgia, serif);
+  --font-caslon: var(--font-caslon-face, Georgia, serif);
+  --font-cormorant: var(--font-cormorant-face, Georgia, serif);
+  --font-newsreader: var(--font-newsreader-face, Georgia, serif);
+  --font-marcellus: var(--font-marcellus-face, Georgia, serif);
+  --font-poppins: var(--font-poppins-face, Arial, sans-serif);
+  --font-gsans: var(--font-gsans-face, Arial, sans-serif);
+  --font-sans: var(--font-poppins-face, Arial, sans-serif);
 }
 
-@media (prefers-color-scheme: dark) {
+/*
+ * The design is drawn on a 1920px canvas. From 1280px upwards the root
+ * font-size follows the viewport (16px at 1920px), so every `xl:` value written
+ * in rem (design px / 16) keeps the exact proportions of the design.
+ * Below 1280px the root stays at 16px and the tablet / mobile layouts apply.
+ */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (min-width: 80rem) {
+  html {
+    font-size: min(0.8333vw, 20px);
+  }
+}
+
+/*
+ * One vertical gap between every page section (and before the footer).
+ * <main> stacks the sections with this gap, so sections themselves carry no
+ * outer top/bottom spacing. 64px mobile → 80px tablet → 96px at 1024px →
+ * 9rem from 1280px (96px at 1280, scales with the design up to 144px at 1920).
+ */
+:root {
+  --section-gap: 4rem;
+}
+
+@media (min-width: 48rem) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --section-gap: 5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --section-gap: 6rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  :root {
+    --section-gap: 9rem;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-poppins-face), system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+img {
+  user-select: none;
+}
+
+/* Gradient heading text (Collections heading) — logo charcoal into logo maroon */
+.text-gradient-brand {
+  background-image: linear-gradient(90deg, var(--color-ink) 0%, var(--color-maroon) 60%, var(--color-maroon) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Soft form fields used on the contact + enquiry pages */
+.field {
+  width: 100%;
+  border: 2px solid #f0ddc8;
+  background: #fdfaf6;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.field:focus {
+  border-color: var(--color-gold);
+}
+
+.field::placeholder {
+  color: var(--color-subtle);
+  opacity: 1;
+}
+
+select.field {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.45s ease both;
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+/* duration matches the fadeFor default in lib/useDummySubmit.ts */
+.animate-fade-out {
+  animation: fade-out 0.4s ease forwards;
+}
+
+@keyframes countdown {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.animate-countdown {
+  animation: countdown linear forwards;
 }
