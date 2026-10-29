@@ -368,9 +368,9 @@
                 "href": "https://www.facebook.com/"
               },
               {
-                "platform": "etsy",
-                "label": "Etsy",
-                "href": "https://www.etsy.com/"
+                "platform": "linkedin",
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/"
               }
             ],
             "copyright": "© {year} All Rights Reserved. Powered by Lestow.",

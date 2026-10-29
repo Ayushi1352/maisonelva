@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { site, type MaisonElvaFooterData, type SectionProps } from "@/data";
-import { Facebook, Instagram, Sparkle } from "@/components/Icons";
+import { Facebook, Instagram, Linkedin, Sparkle } from "@/components/Icons";
 
 // The footer shows the same logo as the header
 const { brand } = site.navbar;
@@ -15,7 +15,7 @@ async function currentYear() {
 function SocialIcon({ platform }: { platform: string }) {
   if (platform === "instagram") return <Instagram className="size-[1.65rem] xl:size-[1.9rem]" />;
   if (platform === "facebook") return <Facebook className="size-[1.65rem] xl:size-[1.95rem]" />;
-  return <span className="font-caslon text-[1.6rem] leading-none xl:text-[2.1rem]">E</span>;
+  return <Linkedin className="size-[1.6rem] xl:size-[1.9rem]" />;
 }
 
 export default async function Footer({ data: footer = site.footer }: SectionProps<MaisonElvaFooterData>) {
