@@ -21,14 +21,14 @@ function Statement({ label, title, text, titleClass }: { label: string; title: s
 
 export default function MissionVision({ data: about = site.missionVisionSection }: SectionProps<MaisonElvaMissionVisionData>) {
   return (
-    <section className="bg-[linear-gradient(180deg,#fcfaf6_0%,#fbf8f4_100%)] px-5 py-14 sm:px-8 md:px-10 xl:relative xl:h-[48.05rem] xl:p-0">
+    <section className="bg-[linear-gradient(180deg,#fcfaf6_0%,#fbf8f4_100%)] px-5 sm:px-8 md:px-10 xl:relative xl:h-[44.25rem] xl:p-0">
       <div className="grid items-center gap-12 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] md:gap-8 xl:block">
-        <div className="xl:absolute xl:left-[10.1rem] xl:top-[10.05rem]">
+        <div className="xl:absolute xl:left-[10.1rem] xl:top-[8.6rem]">
           <Statement label={about.mission.label} title={about.mission.title} text={about.mission.text} titleClass="text-ruby-deep" />
         </div>
 
         {/* Arched image with gold outline and star accents */}
-        <div className="relative mx-auto w-[15rem] py-16 md:w-[13rem] lg:w-[16rem] xl:absolute xl:left-[49rem] xl:top-[8.4rem] xl:w-[23.06rem] xl:p-0">
+        <div className="relative mx-auto w-[15rem] py-16 md:w-[13rem] lg:w-[16rem] xl:absolute xl:left-[49rem] xl:top-[6.95rem] xl:w-[23.06rem] xl:p-0">
           <span className="absolute left-1/2 top-0 flex h-[3.6rem] -translate-x-[60%] flex-col items-center xl:-top-[6.95rem] xl:h-[6.7rem]" aria-hidden="true">
             <span className="w-px flex-1 bg-gold" />
             <Sparkle className="-my-1 size-6 text-gold xl:size-[2.1rem]" />
@@ -50,7 +50,7 @@ export default function MissionVision({ data: about = site.missionVisionSection 
           </span>
         </div>
 
-        <div className="xl:absolute xl:left-[81.9rem] xl:top-[10.05rem]">
+        <div className="xl:absolute xl:left-[81.9rem] xl:top-[8.6rem]">
           <Statement label={about.vision.label} title={about.vision.title} text={about.vision.text} titleClass="text-ink" />
         </div>
       </div>

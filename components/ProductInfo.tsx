@@ -7,6 +7,9 @@ type ProductInfoProps = SectionProps<MaisonElvaCollectionDetailData> & { product
 export default function ProductInfo({ data = site.collectionDetailPage, product }: ProductInfoProps) {
   const category = site.collectionsPage.categories.find((item) => item.id === product.category);
   const title = splitAccent(product.name, product.nameAccent);
+  // first word after the accent stays on the accent's line: "Radiant Halo Diamond" / "Pendant Necklace"
+  const [leadWord = "", ...restWords] = title.after.split(" ");
+  const rest = restWords.join(" ");
 
   return (
     <div className="xl:pt-[0.25rem] xl:min-w-0">
@@ -16,7 +19,10 @@ export default function ProductInfo({ data = site.collectionDetailPage, product 
       </p>
       <h1 className="mt-3 font-caslon text-[2.1rem] font-bold leading-[1.15] tracking-[-0.02em] md:text-[2.7rem] xl:mt-[1.5rem] xl:text-[3.6rem] xl:leading-[4.6rem]">
         {title.before && <span className="text-navy">{title.before} </span>}
-        <span className="text-ruby">{title.accent}</span> <span className="text-navy">{title.after}</span>
+        <span className="md:whitespace-nowrap">
+          <span className="text-ruby">{title.accent}</span> <span className="text-navy">{leadWord}</span>
+        </span>
+        {rest && <span className="text-navy md:block">{` ${rest}`}</span>}
       </h1>
       <p className="mt-4 font-caslon text-[2rem] font-bold text-ruby xl:mt-[0.75rem] xl:text-[3.5rem]">{product.price}</p>
       <p className="mt-3 max-w-[42rem] font-caslon text-[1rem] leading-[1.6] text-body xl:mt-[0.13rem] xl:w-[42.7rem] xl:max-w-none xl:text-[1.38rem] xl:leading-[2.3rem]">

@@ -19,28 +19,33 @@ function labelFromSegment(segment: string) {
     .join(" ");
 }
 
-/** Builds Home / Section / Item straight from the URL, so the banner always matches the route */
-function crumbsFromPath(pathname: string, home: Crumb): Crumb[] {
+/**
+ * Builds Home / Section / Item straight from the URL, one crumb per segment, so the breadcrumb always matches
+ * the route. A path listed in site.json (pageBanner.titles) uses that label; a detail page whose listed title
+ * repeats its parent's ("Our Collections" under /collections) falls back to the segment name.
+ */
+function crumbsFromPath(pathname: string, home: Crumb, titles: Record<string, string>): Crumb[] {
   const segments = pathname.split("/").filter(Boolean);
-  return [
-    home,
-    ...segments.map((segment, index) => ({
-      label: labelFromSegment(segment),
-      href: `/${segments.slice(0, index + 1).join("/")}`,
-    })),
-  ];
+  const crumbs = [home];
+  segments.forEach((segment, index) => {
+    const href = `/${segments.slice(0, index + 1).join("/")}`;
+    const listed = titles[href];
+    const label = listed && listed !== crumbs[crumbs.length - 1].label ? listed : labelFromSegment(segment);
+    crumbs.push({ label, href });
+  });
+  return crumbs;
 }
 
 /**
- * Page title + breadcrumb, both taken from the current route. A route listed in site.json
- * (pageBanner.titles) shows that title instead, as a plain Home / Title breadcrumb.
+ * Page title + breadcrumb, both taken from the current route. The title is the route's entry in site.json
+ * (pageBanner.titles) when there is one, otherwise the last crumb.
  */
 export default function PageBanner({ data = site.pageBanner }: SectionProps<MaisonElvaPageBannerData>) {
   const pathname = usePathname();
   const home = { label: data.homeLabel, href: data.homeHref };
-  const fixedTitle = (data.titles as Record<string, string>)[pathname];
-  const crumbs = fixedTitle ? [home, { label: fixedTitle, href: pathname }] : crumbsFromPath(pathname, home);
-  const title = crumbs[crumbs.length - 1].label;
+  const titles = data.titles as Record<string, string>;
+  const crumbs = crumbsFromPath(pathname, home, titles);
+  const title = titles[pathname] ?? crumbs[crumbs.length - 1].label;
 
   return (
     <section className="bg-page px-4 pt-12 text-center md:pt-16 xl:pt-[8.6rem]">

@@ -6,7 +6,7 @@ export default function TestimonialCard({ testimonial, ratingLabel }: { testimon
   return (
     <article className="relative flex flex-col rounded-[0.4rem] border-2 border-line bg-[linear-gradient(180deg,#fcfaf7_0%,#fbf6f1_100%)] px-6 pb-9 pt-9 shadow-[0_0.6rem_1.6rem_rgba(190,150,110,0.12)] md:px-10 xl:px-[5.3rem] xl:pb-[4rem] xl:pt-[3.15rem]">
       <QuoteMark className="w-14 text-amber xl:w-[5.35rem]" />
-      <p className="mt-4 max-w-[41.5rem] flex-1 font-newsreader text-[1.2rem] font-[350] leading-[1.5] text-ink-soft md:text-[1.35rem] xl:mt-[1.72rem] xl:text-[2.61rem] xl:leading-[3.3rem]">
+      <p className="mt-4 max-w-[41.5rem] flex-1 font-newsreader text-[1.2rem] font-[350] leading-[1.5] text-ink-soft md:text-[1.45rem] xl:mt-[1.72rem] xl:text-[2.6rem] xl:leading-[3.375rem]">
         {testimonial.quote}
       </p>
       <div className="mt-5 flex gap-2 text-amber xl:mt-[1.6rem] xl:gap-[0.9rem]" aria-label={fill(ratingLabel, { rating: testimonial.rating })}>

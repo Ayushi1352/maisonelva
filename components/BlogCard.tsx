@@ -8,7 +8,9 @@ export default function BlogCard({ post, readMore }: { post: BlogPost; readMore:
   const href = "/blog/blog-details";
 
   return (
-    <article className="group">
+    // From tablet up the card's 5 parts sit on the row grid's shared tracks, so category, title, excerpt and
+    // Read More line up across the two cards even when one title wraps to more lines.
+    <article className="group md:row-span-5 md:grid md:grid-rows-subgrid md:gap-y-0">
       <Link href={href} className="relative block aspect-[642/383] overflow-hidden" aria-label={post.title}>
         <Image
           src={post.image}
@@ -37,7 +39,7 @@ export default function BlogCard({ post, readMore }: { post: BlogPost; readMore:
       </p>
       <Link
         href={href}
-        className="group/more mt-6 inline-flex items-center gap-5 border-b-2 border-gold-light pb-2.5 font-poppins text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-ink transition-colors hover:border-ruby hover:text-ruby xl:ml-[0.25rem] xl:mt-[1.75rem] xl:gap-[1.2rem] xl:pb-[0.95rem] xl:text-[0.94rem]"
+        className="group/more mt-6 inline-flex md:self-start md:justify-self-start items-center gap-5 border-b-2 border-gold-light pb-2.5 font-poppins text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-ink transition-colors hover:border-ruby hover:text-ruby xl:ml-[0.25rem] xl:mt-[1.75rem] xl:gap-[1.2rem] xl:pb-[0.95rem] xl:text-[0.94rem]"
       >
         {readMore}
         <ArrowRight className="w-7 transition-transform group-hover/more:translate-x-1 xl:w-[1.6rem]" />

@@ -5,7 +5,7 @@ import CollectionBrowser from "@/components/CollectionBrowser";
 /** Collections page: star divider, small "OUR" label, small-caps "COLLECTION" heading, gold rule, intro and the category cards */
 export default function CollectionListing({ data: collections = site.collectionsPage }: SectionProps<MaisonElvaCollectionListingData>) {
   return (
-    <section className="bg-page px-5 sm:px-8 md:px-10 xl:px-0 xl:pb-[5rem] xl:pt-[11rem]">
+    <section className="bg-page px-5 sm:px-8 md:px-10 xl:px-0">
       <div className="text-center">
         <StarDivider />
         <p className="mt-3 font-caslon text-[0.8rem] uppercase leading-none tracking-[0.3em] text-ink xl:mt-[0.9rem] xl:text-[1.15rem]">

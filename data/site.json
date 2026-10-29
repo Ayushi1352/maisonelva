@@ -116,7 +116,7 @@
               },
               {
                 "key": "CollectionsPreview",
-                "component": "Mais  onElvaCollectionsPreview1"
+                "component": "MaisonElvaCollectionsPreview1"
               },
               {
                 "key": "ExploreBanner",
@@ -633,18 +633,21 @@
                 "label": "Fashion Jewellery",
                 "image": "/images/home/explore-banner.webp",
                 "imageAlt": "Gold leaf earrings and bangle set with marquise stones"
+              },
+              {
+                "label": "Pendants",
+                "image": "/images/gallery/pear-pendant.webp",
+                "imageAlt": "Pear-shaped diamond halo pendant on a fine chain"
               }
             ],
             "cardHref": "/collections/collection-details",
-            "perPage": 12,
+            "perPage": 9,
             "items": [
               {
                 "name": "Radiant Halo Diamond Pendant Necklace",
                 "category": "necklaces",
                 "nameAccent": "Radiant Halo",
                 "finish": "Rose Gold",
-                "rating": 4.8,
-                "reviews": 36,
                 "price": "₹72,500",
                 "summary": "A stunning halo pendant crafted with natural diamonds, designed to add a touch of timeless elegance to your everyday look or\u00a0special moments.",
                 "cardImage": "/images/gallery/halo-pendant.webp",
@@ -685,8 +688,8 @@
                 "descriptionTitleAccent": "Timeless Beauty",
                 "descriptionTitleRest": "in Every Detail",
                 "description": [
-                  "The Radiant Halo Diamond Pendant Necklace beautifully blends modern design with timeless elegance. Featuring a brilliant centre diamond surrounded by a halo of smaller diamonds, this piece is perfect for adding a delicate yet luxurious touch to your everyday style or special occasions.",
-                  "Crafted in premium 18K rose gold, this necklace symbolises grace, sophistication and everlasting beauty, making it an ideal gift for loved ones or a treasured addition to your own collection."
+                  "The Radiant Halo Diamond Pendant Necklace beautifully blends\nmodern design with timeless elegance. Featuring a brilliant centre\ndiamond surrounded by a halo of smaller diamonds, this piece is\nperfect for adding a delicate yet luxurious touch to your everyday\nstyle or special occasions.",
+                  "Crafted in premium 18K rose gold, this necklace symbolises grace,\nsophistication and everlasting beauty, making it an ideal gift\nfor loved ones or a treasured addition to your own collection."
                 ],
                 "modelImage": "/images/collections/radiant-halo-model.webp",
                 "features": [
@@ -751,8 +754,6 @@
                 "category": "bracelets",
                 "nameAccent": "Aurora Golden",
                 "finish": "Golden",
-                "rating": 4.9,
-                "reviews": 42,
                 "price": "₹58,900",
                 "summary": "An open cuff bracelet in polished gold, finished with a pear-cut diamond and a delicate pavé trail that catches the light with every movement.",
                 "cardImage": "/images/collections/aurora-golden-bracelet.webp",
@@ -853,8 +854,6 @@
                 "category": "bracelets",
                 "nameAccent": "Bloom Golden",
                 "finish": "Golden",
-                "rating": 4.8,
-                "reviews": 31,
                 "price": "₹46,500",
                 "summary": "A delicate chain bracelet with clover motifs in mother-of-pearl and pavé diamonds — a playful, feminine piece for every day.",
                 "cardImage": "/images/collections/bloom-golden-bracelet.webp",
@@ -955,8 +954,6 @@
                 "category": "bracelets",
                 "nameAccent": "Velvet Golden",
                 "finish": "Golden",
-                "rating": 4.9,
-                "reviews": 28,
                 "price": "₹64,800",
                 "summary": "A sculptural triple-band cuff set with marquise rubies and a whisper of diamonds — bold, romantic and unmistakably modern.",
                 "cardImage": "/images/collections/velvet-golden-bracelet.webp",
@@ -1057,8 +1054,6 @@
                 "category": "earrings",
                 "nameAccent": "Pear Drop",
                 "finish": "Rose Gold",
-                "rating": 4.9,
-                "reviews": 51,
                 "price": "₹68,200",
                 "summary": "Graceful drop earrings with pear-cut diamonds framed in a halo of brilliants, designed to move beautifully with you.",
                 "cardImage": "/images/gallery/drop-earrings.webp",
@@ -1159,8 +1154,6 @@
                 "category": "earrings",
                 "nameAccent": "Starburst",
                 "finish": "Golden",
-                "rating": 4.7,
-                "reviews": 24,
                 "price": "₹39,900",
                 "summary": "Radiant starburst studs with marquise and round diamonds — everyday sparkle with a celestial twist.",
                 "cardImage": "/images/gallery/starburst-studs.webp",
@@ -1261,8 +1254,6 @@
                 "category": "earrings",
                 "nameAccent": "Eternity",
                 "finish": "Golden",
-                "rating": 4.8,
-                "reviews": 33,
                 "price": "₹52,400",
                 "summary": "Classic huggie hoops lined with brilliant-cut diamonds for a polished, everyday glow.",
                 "cardImage": "/images/gallery/hoop-earrings.webp",
@@ -1363,8 +1354,6 @@
                 "category": "rings",
                 "nameAccent": "Solitaire",
                 "finish": "Golden",
-                "rating": 4.9,
-                "reviews": 64,
                 "price": "₹1,24,000",
                 "summary": "A brilliant round solitaire on a pavé band, paired with a matching wedding ring for a perfect bridal set.",
                 "cardImage": "/images/gallery/solitaire-ring.webp",
@@ -1467,8 +1456,6 @@
                 "category": "rings",
                 "nameAccent": "Emerald Cut",
                 "finish": "Golden",
-                "rating": 4.8,
-                "reviews": 29,
                 "price": "₹1,48,500",
                 "summary": "An architectural emerald-cut diamond on a slender pavé band — understated, modern and endlessly elegant.",
                 "cardImage": "/images/gallery/emerald-cut-ring.webp",
@@ -1569,8 +1556,6 @@
                 "category": "rings",
                 "nameAccent": "Pear Halo",
                 "finish": "Rose Gold",
-                "rating": 4.9,
-                "reviews": 38,
                 "price": "₹96,700",
                 "summary": "A pear-cut diamond embraced by a halo of brilliants on a split pavé shank — romantic and radiant.",
                 "cardImage": "/images/gallery/pear-halo-ring.webp",
@@ -1671,8 +1656,6 @@
                 "category": "necklaces",
                 "nameAccent": "Diamond",
                 "finish": "Golden",
-                "rating": 4.8,
-                "reviews": 22,
                 "price": "₹1,12,000",
                 "summary": "A fine chain necklace that blooms into a cascade of diamond clusters at the collarbone.",
                 "cardImage": "/images/gallery/diamond-necklace.webp",
@@ -1773,8 +1756,6 @@
                 "category": "necklaces",
                 "nameAccent": "Pear Drop",
                 "finish": "Golden",
-                "rating": 4.7,
-                "reviews": 19,
                 "price": "₹61,300",
                 "summary": "A pear-shaped diamond halo pendant on a classic cable chain — elegant simplicity for every day.",
                 "cardImage": "/images/gallery/pear-pendant.webp",
@@ -1880,8 +1861,6 @@
             "descriptionLabel": "Product Description",
             "featuresLabel": "Key Features",
             "specificationsLabel": "Product Specifications",
-            "reviewsSuffix": "Reviews",
-            "ratingLabel": "Rated {value} out of 5",
             "modelImageAlt": "{name} styled on a model",
             "thumbnailLabel": "Show image {index} of {name}",
             "zoomLabel": "View larger image",
@@ -1900,7 +1879,7 @@
             "titleTop": "Moments of",
             "titleAccent": "Timeless Beauty",
             "description": "A glimpse into our world of exquisite craftsmanship, refined designs and timeless jewellery pieces.",
-            "perPage": 12,
+            "perPage": 9,
             "images": [
               {
                 "src": "/images/gallery/solitaire-ring.webp",
@@ -1961,6 +1940,11 @@
                 "src": "/images/gallery/station-necklace.webp",
                 "alt": "Diamond station necklace with a solitaire drop",
                 "ratio": "599/586"
+              },
+              {
+                "src": "/images/contact/ring.webp",
+                "alt": "Diamond ring displayed on a soft stone surface",
+                "ratio": "601/549"
               }
             ],
             "viewLabel": "View {alt}",
@@ -2017,6 +2001,12 @@
                 "quote": "Exceptional collection and outstanding service. The jewellery is elegant, modern and perfect for every occasion. I highly recommend them to anyone who truly values quality.",
                 "name": "Ananya Desai",
                 "city": "Pune",
+                "rating": 5
+              },
+              {
+                "quote": "The bracelet I bought for my anniversary is simply stunning. The craftsmanship is flawless and the team helped me choose the perfect piece with so much patience.",
+                "name": "Kavya Iyer",
+                "city": "Chennai",
                 "rating": 5
               }
             ],
@@ -2267,6 +2257,45 @@
                       "title": "Care for",
                       "titleAccent": "Longevity",
                       "text": "Clean and store your pieces properly so they stay brilliant for generations."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Caring for Your Gold Jewellery at Home",
+                "titleAccent": "Gold Jewellery",
+                "category": "Jewellery Care",
+                "excerpt": "A few simple habits keep your gold pieces bright and beautiful — here is how to care for them at home.",
+                "day": "28",
+                "month": "Oct",
+                "date": "28 Oct 2026",
+                "image": "/images/blog/diamond-care.webp",
+                "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                "detail": {
+                  "intro": "Gold is timeless, but a little care keeps it looking its best. Here is how to look after your pieces at home.",
+                  "image": "/images/gallery/eternity-bands.webp",
+                  "imageAlt": "Stacked gold eternity bands with diamonds",
+                  "quote": "Treat your jewellery gently every day, and it will stay beautiful for a lifetime.",
+                  "sections": [
+                    {
+                      "title": "Clean",
+                      "titleAccent": "Gently",
+                      "text": "Soak your pieces in warm water with a drop of mild soap, then brush softly and pat dry."
+                    },
+                    {
+                      "title": "Store",
+                      "titleAccent": "Separately",
+                      "text": "Keep each piece in its own soft pouch or lined compartment to avoid scratches and tangles."
+                    },
+                    {
+                      "title": "Avoid",
+                      "titleAccent": "Chemicals",
+                      "text": "Remove jewellery before swimming, cleaning or applying perfume and lotions."
+                    },
+                    {
+                      "title": "Visit an",
+                      "titleAccent": "Expert",
+                      "text": "Bring your pieces in once a year for a professional clean and a check of clasps and settings."
                     }
                   ]
                 }

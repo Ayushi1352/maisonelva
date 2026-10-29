@@ -18,8 +18,16 @@ export default function ProductDescription({ data = site.collectionDetailPage, p
           <span className="block text-navy">{product.descriptionTitleRest}</span>
         </h2>
         <div className="mt-5 max-w-[50rem] space-y-4 font-caslon text-[1rem] leading-[1.7] text-body md:text-[1.05rem] xl:mt-[1.5rem] xl:max-w-[49.6rem] xl:space-y-[1.1rem] xl:text-[1.36rem] xl:leading-[2.125rem]">
+          {/* "\n" in a paragraph fixes where lines break on desktop; smaller screens wrap freely */}
           {product.description.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+            <p key={paragraph}>
+              {paragraph.split("\n").map((line, index) => (
+                <span key={index} className="xl:block">
+                  {index > 0 && " "}
+                  {line}
+                </span>
+              ))}
+            </p>
           ))}
         </div>
         <span

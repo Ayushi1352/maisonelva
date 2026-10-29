@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { site, type MaisonElvaCollectionsPreviewData, type SectionProps } from "@/data";
 import ProductCard from "@/components/ProductCard";
-import { gradientText } from "@/components/styles";
 
 // Categories and products come from the collections page, so both pages always show the same items
 const { categories, items } = site.collectionsPage;
@@ -23,7 +22,8 @@ export default function CollectionsSection({ data: section = site.collectionsPre
         <div className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 md:grid-cols-3 xl:mt-[2.6rem] xl:grid-cols-[23.75rem_30.3rem_29.7rem_1fr] xl:gap-x-0">
           {/* Heading + category tabs */}
           <div className="relative col-span-full xl:col-span-1">
-            <h2 className={`${gradientText} mt-3 inline-block max-w-full break-words pb-2 xl:max-w-none font-cormorant text-[2.9rem] sm:text-[3.4rem] xl:whitespace-nowrap font-semibold leading-none tracking-[-0.02em] md:text-[4.4rem] xl:absolute xl:-top-[1.6rem] xl:left-0 xl:mt-0 xl:text-[7.1rem]`}>
+            {/* gradient heading: logo charcoal into logo maroon */}
+            <h2 className="mt-3 inline-block max-w-full break-words bg-[linear-gradient(90deg,var(--color-ink)_0%,var(--color-maroon)_60%,var(--color-maroon)_100%)] bg-clip-text pb-2 font-cormorant text-[2.9rem] font-semibold leading-none tracking-[-0.02em] text-transparent sm:text-[3.4rem] md:text-[4.4rem] xl:absolute xl:-top-[1.6rem] xl:left-0 xl:mt-0 xl:max-w-none xl:whitespace-nowrap xl:text-[7.1rem]">
               {section.title}
             </h2>
             <ul
