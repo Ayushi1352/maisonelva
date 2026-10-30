@@ -24,8 +24,7 @@ export default function ProductInfo({ data = site.collectionDetailPage, product 
         </span>
         {rest && <span className="text-navy md:block">{` ${rest}`}</span>}
       </h1>
-      <p className="mt-4 font-caslon text-[2rem] font-bold text-ruby xl:mt-[0.75rem] xl:text-[3.5rem]">{product.price}</p>
-      <p className="mt-3 max-w-[42rem] font-caslon text-[1rem] leading-[1.6] text-body xl:mt-[0.13rem] xl:w-[42.7rem] xl:max-w-none xl:text-[1.38rem] xl:leading-[2.3rem]">
+      <p className="mt-4 max-w-[42rem] font-caslon text-[1rem] leading-[1.6] text-body xl:mt-[0.75rem] xl:w-[42.7rem] xl:max-w-none xl:text-[1.38rem] xl:leading-[2.3rem]">
         {product.summary}
       </p>
       <div className="mt-7 flex items-center gap-4 xl:mt-[2.05rem] xl:gap-[2rem]" aria-hidden="true">

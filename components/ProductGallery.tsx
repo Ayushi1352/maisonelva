@@ -36,7 +36,7 @@ export default function ProductGallery({ data = site.collectionDetailPage, name,
                 onClick={() => setActive(index)}
                 aria-label={fill(data.thumbnailLabel, { index: index + 1, name })}
                 aria-pressed={active === index}
-                className={`relative block aspect-[177/193] w-full overflow-hidden border-2 transition-colors ${
+                className={`relative block aspect-[177/193] w-full overflow-hidden border-2 transition-colors xl:aspect-[1106/1041] ${
                   active === index ? "border-gold" : "border-transparent hover:border-[#e6cfb3]"
                 }`}
               >
@@ -46,7 +46,7 @@ export default function ProductGallery({ data = site.collectionDetailPage, name,
           ))}
         </ul>
       )}
-      <div className="relative aspect-[809/899] w-full overflow-hidden xl:w-[50.56rem] xl:shrink-0">
+      <div className="relative aspect-[809/899] w-full overflow-hidden xl:aspect-auto xl:h-[47rem] xl:w-[50.56rem] xl:shrink-0">
         <Image
           key={images[active]}
           src={images[active] ?? images[0]}

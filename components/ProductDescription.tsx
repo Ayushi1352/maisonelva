@@ -7,7 +7,7 @@ type ProductDescriptionProps = SectionProps<MaisonElvaCollectionDetailData> & { 
 
 export default function ProductDescription({ data = site.collectionDetailPage, product }: ProductDescriptionProps) {
   return (
-    <section className="grid bg-[#f8f3ee] xl:grid-cols-[1fr_54rem]">
+    <section className="grid bg-[#f8f3ee] xl:mt-[3.5rem] xl:grid-cols-[1fr_54rem]">
       <div className="relative px-5 py-12 sm:px-8 md:px-10 xl:px-0 xl:pb-[2.6rem] xl:pl-[7.9rem] xl:pt-[2.6rem]">
         <p className="flex items-center font-caslon text-[0.85rem] uppercase tracking-[0.3em] text-amber xl:text-[1.3rem] xl:tracking-[0.26em]">
           <span className="mr-4 h-[2px] w-12 bg-gold xl:mr-[2.1rem] xl:w-[4rem]" aria-hidden="true" />

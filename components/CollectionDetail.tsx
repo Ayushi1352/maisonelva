@@ -7,7 +7,7 @@ import ProductHighlights from "@/components/ProductHighlights";
 type CollectionDetailProps = SectionProps<MaisonElvaCollectionDetailData> & { product: Product };
 
 export default function CollectionDetail({ data = site.collectionDetailPage, product }: CollectionDetailProps) {
-  // The three blocks sit close together in the design, so they share one wrapper instead of the page-wide section gap
+  // The blocks sit closer together than the page-wide section gap, so they share one wrapper; ProductDescription sets its own desktop top margin
   return (
     <div className="flex flex-col gap-10 xl:gap-0">
       <section className="bg-[#faf8f5] px-4 sm:px-6 md:px-10 xl:pb-[2.4rem] xl:pl-[5.8rem] xl:pr-[5.1rem] xl:pt-[2.6rem]">
