@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { MaisonElvaBlogPost as BlogPost } from "@/data";
+import { site, type MaisonElvaBlogPost as BlogPost } from "@/data";
 import { ArrowRight } from "@/components/Icons";
 
 export default function BlogCard({ post, readMore }: { post: BlogPost; readMore: string }) {
   // Every post opens the one common blog detail page.
-  const href = "/blog/blog-details";
+  const href = site.blogPage.postHref;
 
   return (
     // From tablet up the card's 5 parts sit on the row grid's shared tracks, so category, title, excerpt and

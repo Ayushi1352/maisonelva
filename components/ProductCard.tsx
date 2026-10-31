@@ -10,7 +10,7 @@ export default function ProductCard({ product, className = "" }: { product: Prod
   const title = splitAccent(product.name, product.nameAccent);
 
   return (
-    <Link href="/collections/collection-details" className={`group block ${fadeIn} ${className}`}>
+    <Link href={site.collectionsPage.productHref} className={`group block ${fadeIn} ${className}`}>
       <div className="relative mx-auto aspect-[380/270] w-full max-w-[23.75rem] overflow-hidden">
         <Image
           src={product.cardImage}

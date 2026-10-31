@@ -6,7 +6,7 @@ import { site, type MaisonElvaCollectionListingData, type SectionProps } from "@
 import Pagination, { usePagination } from "@/components/Pagination";
 import { fadeIn } from "@/components/styles";
 
-/** Category cards (image + name with a short gold rule), three per row, paged by perPage in templates.json */
+/** Category cards (image + name with a short gold rule), three per row, paged by perPage in site.json */
 export default function CollectionBrowser({ data = site.collectionsPage }: SectionProps<MaisonElvaCollectionListingData>) {
   const { cards, cardHref, perPage } = data;
   const { page, setPage, totalPages, start, pageItems } = usePagination(cards, perPage);

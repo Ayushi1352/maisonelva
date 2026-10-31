@@ -26,7 +26,7 @@ export default function Navbar({ data = site.navbar }: SectionProps<MaisonElvaHe
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-bg-main)]">
       <div className="flex h-20 items-center justify-between px-4 sm:px-6 md:h-24 md:px-10 lg:h-[9.375rem] lg:pl-[3.75rem] lg:pr-[2.3rem]">
-        <Link href="/" aria-label={brand.name} className="block shrink-0">
+        <Link href={brand.href} aria-label={brand.name} className="block shrink-0">
           <Image
             src={brand.logo.src}
             alt={brand.logo.alt}

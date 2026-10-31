@@ -6,8 +6,6 @@ import { flushSync } from "react-dom";
 import { site, type MaisonElvaTestimonialsData, type SectionProps } from "@/data";
 import { ArrowLeft, ArrowRight } from "@/components/Icons";
 
-const AUTOPLAY_MS = 6000;
-
 /** "Trusted by our clients" slider — used on the home page and the about page */
 export default function TestimonialShowcase({ data: content = site.testimonialsSection, className = "" }: SectionProps<MaisonElvaTestimonialsData>) {
   const [index, setIndex] = useState(0);
@@ -50,9 +48,9 @@ export default function TestimonialShowcase({ data: content = site.testimonialsS
   // Moves on by itself every few seconds; waits while the visitor hovers or uses the arrows. Restarts after every change.
   useEffect(() => {
     if (paused || total < 2) return;
-    const timer = window.setTimeout(() => go(1), AUTOPLAY_MS);
+    const timer = window.setTimeout(() => go(1), content.autoplayMs);
     return () => window.clearTimeout(timer);
-  }, [index, paused, total, go]);
+  }, [index, paused, total, go, content.autoplayMs]);
 
   return (
     <section

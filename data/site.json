@@ -1,0 +1,2407 @@
+{
+  "MaisonElva": {
+    "theme": {
+      "fonts": {
+        "playfair": {
+          "family": "Playfair Display",
+          "fallback": "Georgia, serif",
+          "weights": [
+            400,
+            500,
+            600,
+            700
+          ],
+          "italic": false
+        },
+        "caslon": {
+          "family": "Libre Caslon Text",
+          "fallback": "Georgia, serif",
+          "weights": [
+            400,
+            700
+          ],
+          "italic": false
+        },
+        "cormorant": {
+          "family": "Cormorant Garamond",
+          "fallback": "Georgia, serif",
+          "weights": [
+            400,
+            500,
+            600,
+            700
+          ],
+          "italic": true
+        },
+        "newsreader": {
+          "family": "Newsreader",
+          "fallback": "Georgia, serif",
+          "weights": "variable",
+          "italic": false
+        },
+        "marcellus": {
+          "family": "Marcellus",
+          "fallback": "Georgia, serif",
+          "weights": [
+            400
+          ],
+          "italic": false
+        },
+        "poppins": {
+          "family": "Poppins",
+          "fallback": "Arial, sans-serif",
+          "weights": [
+            300,
+            400,
+            500,
+            600
+          ],
+          "italic": false
+        },
+        "gsans": {
+          "family": "Google Sans",
+          "fallback": "Arial, sans-serif",
+          "weights": [
+            400,
+            500
+          ],
+          "italic": false
+        }
+      },
+      "fontRoles": {
+        "primary": "poppins",
+        "heading": "playfair",
+        "navigation": "playfair",
+        "secondary": "caslon",
+        "display": "cormorant",
+        "editorial": "newsreader",
+        "decorative": "marcellus",
+        "ui": "gsans"
+      }
+    },
+    "sections": {
+      "Header": {
+        "variants": {
+          "MaisonElvaHeader1": {
+            "brand": {
+              "name": "Maison Élva",
+              "href": "/",
+              "logo": {
+                "src": "/images/logo.webp",
+                "alt": "Maison Élva — Jewellery | Fashion Apparel",
+                "width": 1958,
+                "height": 436
+              }
+            },
+            "seo": {
+              "title": "Maison Élva | Jewellery & Fashion Apparel",
+              "description": "Maison Élva crafts timeless jewellery and fashion apparel that celebrate your unique story — fine diamonds, gold and pieces made to stay with you forever.",
+              "lang": "en",
+              "icon": "/favicon.ico"
+            },
+            "navigation": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Collections",
+                "href": "/collections"
+              },
+              {
+                "label": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Testimonials",
+                "href": "/testimonials"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact-us"
+              }
+            ],
+            "cta": {
+              "label": "Enquiry Now",
+              "href": "/enquiry-now"
+            },
+            "labels": {
+              "mainNav": "Main navigation",
+              "mobileNav": "Mobile navigation",
+              "openMenu": "Open menu",
+              "closeMenu": "Close menu"
+            }
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "MaisonElvaFooter1": {
+            "tagline": [
+              "Timeless jewellery and fashion",
+              "for a more confident you."
+            ],
+            "quickLinksTitle": "Quick Links",
+            "quickLinks": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About Us",
+                "href": "/about-us"
+              },
+              {
+                "label": "Collections",
+                "href": "/collections"
+              },
+              {
+                "label": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Contact Us",
+                "href": "/contact-us"
+              }
+            ],
+            "followTitle": "Follow Us",
+            "socials": [
+              {
+                "platform": "instagram",
+                "label": "Instagram",
+                "href": "https://www.instagram.com/"
+              },
+              {
+                "platform": "facebook",
+                "label": "Facebook",
+                "href": "https://www.facebook.com/"
+              },
+              {
+                "platform": "linkedin",
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/"
+              }
+            ],
+            "copyright": "© {year} All Rights Reserved. Powered by Lestow.",
+            "motto": [
+              "Timeless",
+              "Elegant",
+              "You"
+            ]
+          }
+        }
+      },
+      "PageBanner": {
+        "variants": {
+          "MaisonElvaPageBanner1": {
+            "homeLabel": "Home",
+            "homeHref": "/",
+            "breadcrumbLabel": "Breadcrumb",
+            "separator": "/",
+            "pages": {
+              "/about-us": {
+                "title": "About Us",
+                "paths": [
+                  {
+                    "label": "About Us"
+                  }
+                ]
+              },
+              "/collections": {
+                "title": "Our Collections",
+                "paths": [
+                  {
+                    "label": "Our Collections"
+                  }
+                ]
+              },
+              "/collections/collection-details": {
+                "title": "Our Collections",
+                "paths": [
+                  {
+                    "label": "Our Collections",
+                    "href": "/collections"
+                  },
+                  {
+                    "label": "Collection Details"
+                  }
+                ]
+              },
+              "/gallery": {
+                "title": "Gallery",
+                "paths": [
+                  {
+                    "label": "Gallery"
+                  }
+                ]
+              },
+              "/testimonials": {
+                "title": "Testimonials",
+                "paths": [
+                  {
+                    "label": "Testimonials"
+                  }
+                ]
+              },
+              "/blog": {
+                "title": "Blogs",
+                "paths": [
+                  {
+                    "label": "Blogs"
+                  }
+                ]
+              },
+              "/blog/blog-details": {
+                "title": "Blogs Details",
+                "paths": [
+                  {
+                    "label": "Blogs",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Blogs Details"
+                  }
+                ]
+              },
+              "/contact-us": {
+                "title": "Contact",
+                "paths": [
+                  {
+                    "label": "Contact"
+                  }
+                ]
+              },
+              "/enquiry-now": {
+                "title": "Enquire Now",
+                "paths": [
+                  {
+                    "label": "Enquire Now"
+                  }
+                ]
+              }
+            },
+            "pagination": {
+              "label": "Pagination",
+              "previous": "Previous page",
+              "next": "Next page",
+              "page": "Page {page}"
+            }
+          }
+        }
+      },
+      "Hero": {
+        "variants": {
+          "MaisonElvaHero1": {
+            "label": "Timeless Elegance",
+            "titleLines": [
+              {
+                "text": "Fine",
+                "accent": false
+              },
+              {
+                "text": "Jewellery",
+                "accent": true
+              },
+              {
+                "text": "Collection",
+                "accent": false
+              }
+            ],
+            "description": "Crafted to celebrate your unique story, our jewellery blends modern sophistication with timeless artistry.",
+            "button": {
+              "label": "Explore Collection",
+              "href": "/collections"
+            },
+            "image": "/images/home/hero-model.webp",
+            "imageAlt": "Model wearing a ruby and diamond necklace with matching drop earrings"
+          }
+        }
+      },
+      "AboutStory": {
+        "variants": {
+          "MaisonElvaAboutStory1": {
+            "label": "About Maison Élva",
+            "titleTop": "A Story of",
+            "titleAccent": "Timeless Beauty",
+            "paragraphs": [
+              "At Maison ÉLVA, we believe jewellery is more than an adornment — it’s a reflection of your story, your moments and your individuality.",
+              "Our collections are thoughtfully crafted with exquisite detail, blending modern elegance with timeless artistry to\u00a0create pieces that stay with you forever."
+            ],
+            "button": {
+              "label": "Read More",
+              "href": "/about-us"
+            },
+            "primaryImage": "/images/home/story-necklace.webp",
+            "primaryImageAlt": "Ruby pear pendant necklace resting on champagne satin",
+            "secondaryImage": "/images/home/story-model.webp",
+            "secondaryImageAlt": "Model in burgundy silk wearing ruby earrings and a diamond bracelet"
+          }
+        }
+      },
+      "CollectionsPreview": {
+        "variants": {
+          "MaisonElvaCollectionsPreview1": {
+            "label": "Our Collections",
+            "title": "Collections",
+            "defaultCategory": "bracelets",
+            "itemsPerCategory": 3,
+            "categoriesLabel": "Collection categories"
+          }
+        }
+      },
+      "ExploreBanner": {
+        "variants": {
+          "MaisonElvaExploreBanner1": {
+            "label": "Discover Timeless Beauty",
+            "titleTop": "Explore Our",
+            "titleAccent": "Collections",
+            "description": "From everyday elegance to extraordinary pieces, find jewellery that celebrates your unique story.",
+            "button": {
+              "label": "View Collections",
+              "href": "/collections"
+            },
+            "image": "/images/home/explore-banner.webp",
+            "imageAlt": "Gold leaf bangle and matching earrings displayed on travertine with satin"
+          }
+        }
+      },
+      "Testimonials": {
+        "variants": {
+          "MaisonElvaTestimonials1": {
+            "label": "Testimonials",
+            "titleLines": [
+              {
+                "text": "Trusted",
+                "accent": false
+              },
+              {
+                "text": "By Our",
+                "accent": false
+              },
+              {
+                "text": "Clients",
+                "accent": true
+              }
+            ],
+            "description": "Real stories from our valued clients who cherish our jewellery and the moments it represents.",
+            "image": "/images/home/testimonial-model.webp",
+            "imageAlt": "Smiling model wearing ruby drop earrings, a ruby ring and a diamond bracelet",
+            "items": [
+              {
+                "quote": "The craftsmanship and attention to detail are truly exceptional. Each piece from Maison Élva feels special and timeless. I always receive compliments whenever I wear their jewellery.",
+                "name": "Priya Sharma",
+                "role": "Happy Customer"
+              },
+              {
+                "quote": "From the first sketch to the final polish, the team made my custom ring feel like a true heirloom. The finish is flawless and the stones simply glow in every light.",
+                "name": "Aaradhya Mehta",
+                "role": "Happy Customer"
+              },
+              {
+                "quote": "Elegant packaging, quick delivery and earrings that look even more beautiful in person. Maison Élva has become my first choice for every special occasion.",
+                "name": "Kavya Nair",
+                "role": "Happy Customer"
+              }
+            ],
+            "previousLabel": "Previous testimonial",
+            "nextLabel": "Next testimonial",
+            "autoplayMs": 6000
+          }
+        }
+      },
+      "BlogPreview": {
+        "variants": {
+          "MaisonElvaBlogPreview1": {
+            "label": "Our Blog",
+            "titleTop": "Latest",
+            "titleAccent": "Stories",
+            "count": 2
+          }
+        }
+      },
+      "MissionVision": {
+        "variants": {
+          "MaisonElvaMissionVision1": {
+            "seo": {
+              "title": "About Us",
+              "description": "At Maison ÉLVA, we believe jewellery is more than an adornment — it’s a reflection of your story, your moments and your individuality."
+            },
+            "mission": {
+              "label": "Our",
+              "title": "Mission",
+              "text": "To create timeless jewellery and fashion pieces that celebrate individuality, craftsmanship and elegance, while building lasting relationships with our customers."
+            },
+            "vision": {
+              "label": "Our",
+              "title": "Vision",
+              "text": "To be a trusted and inspiring brand known for refined design, exceptional quality and a modern approach to jewellery and fashion, making every moment more meaningful."
+            },
+            "image": "/images/about/mission-rings.webp",
+            "imageAlt": "Two stacked gold rings, one set with diamonds, on a marble plinth"
+          }
+        }
+      },
+      "CollectionListing": {
+        "variants": {
+          "MaisonElvaCollectionListing1": {
+            "seo": {
+              "title": "Collections",
+              "description": "Discover handcrafted bracelets, necklaces, earrings and rings — each piece designed to celebrate your most cherished moments."
+            },
+            "label": "Our",
+            "title": "Collection",
+            "intro": "A curated range of timeless jewellery and fashion pieces, designed to complement every moment of your story.",
+            "categories": [
+              {
+                "id": "earrings",
+                "label": "Earrings",
+                "singular": "Earring"
+              },
+              {
+                "id": "bracelets",
+                "label": "Bracelets",
+                "singular": "Bracelet"
+              },
+              {
+                "id": "rings",
+                "label": "Rings",
+                "singular": "Ring"
+              },
+              {
+                "id": "necklaces",
+                "label": "Necklaces",
+                "singular": "Necklace"
+              }
+            ],
+            "cards": [
+              {
+                "label": "Rings",
+                "image": "/images/gallery/solitaire-ring.webp",
+                "imageAlt": "Gold solitaire engagement ring stacked with a diamond band"
+              },
+              {
+                "label": "Necklaces",
+                "image": "/images/gallery/halo-pendant.webp",
+                "imageAlt": "Diamond halo pendant on a fine gold chain"
+              },
+              {
+                "label": "Earrings",
+                "image": "/images/gallery/drop-earrings.webp",
+                "imageAlt": "Pear-cut diamond drop earrings resting on stone"
+              },
+              {
+                "label": "Bracelets",
+                "image": "/images/gallery/tennis-bracelet.webp",
+                "imageAlt": "Gold bezel-set diamond tennis bracelet"
+              },
+              {
+                "label": "Sets",
+                "image": "/images/gallery/diamond-necklace.webp",
+                "imageAlt": "Diamond V-necklace worn as part of a bridal set"
+              },
+              {
+                "label": "Fashion Jewellery",
+                "image": "/images/home/explore-banner.webp",
+                "imageAlt": "Gold leaf earrings and bangle set with marquise stones"
+              },
+              {
+                "label": "Bracelets",
+                "image": "/images/gallery/tennis-bracelet.webp",
+                "imageAlt": "Gold bezel-set diamond tennis bracelet"
+              },
+              {
+                "label": "Sets",
+                "image": "/images/gallery/diamond-necklace.webp",
+                "imageAlt": "Diamond V-necklace worn as part of a bridal set"
+              },
+              {
+                "label": "Fashion Jewellery",
+                "image": "/images/home/explore-banner.webp",
+                "imageAlt": "Gold leaf earrings and bangle set with marquise stones"
+              },
+              {
+                "label": "Pendants",
+                "image": "/images/gallery/pear-pendant.webp",
+                "imageAlt": "Pear-shaped diamond halo pendant on a fine chain"
+              }
+            ],
+            "cardHref": "/collections/collection-details",
+            "productHref": "/collections/collection-details",
+            "perPage": 9,
+            "items": [
+              {
+                "name": "Radiant Halo Diamond Pendant Necklace",
+                "category": "necklaces",
+                "nameAccent": "Radiant Halo",
+                "finish": "Rose Gold",
+                "summary": "A stunning halo pendant crafted with natural diamonds, designed to add a touch of timeless elegance to your everyday look or\u00a0special moments.",
+                "cardImage": "/images/gallery/halo-pendant.webp",
+                "images": [
+                  "/images/collections/radiant-halo-main.webp",
+                  "/images/gallery/halo-pendant.webp",
+                  "/images/collections/radiant-halo-model.webp",
+                  "/images/gallery/station-necklace.webp"
+                ],
+                "thumbnails": [
+                  "/images/collections/radiant-halo-thumb-1.webp",
+                  "/images/collections/radiant-halo-thumb-2.webp",
+                  "/images/collections/radiant-halo-thumb-3.webp",
+                  "/images/collections/radiant-halo-thumb-4.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Rose Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Pendant Size",
+                    "value": "12 mm (Approx.)"
+                  },
+                  {
+                    "label": "Chain Type",
+                    "value": "Adjustable (16–18 Inches)"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Radiant Halo Diamond Pendant Necklace beautifully blends\nmodern design with timeless elegance. Featuring a brilliant centre\ndiamond surrounded by a halo of smaller diamonds, this piece is\nperfect for adding a delicate yet luxurious touch to your everyday\nstyle or special occasions.",
+                  "Crafted in premium 18K rose gold, this necklace symbolises grace,\nsophistication and everlasting beauty, making it an ideal gift\nfor loved ones or a treasured addition to your own collection."
+                ],
+                "modelImage": "/images/collections/radiant-halo-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "0.50 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Pendant Size",
+                    "value": "12 mm (Approx.)"
+                  },
+                  {
+                    "label": "Chain Length",
+                    "value": "16–18 Inches (Adjustable)"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Rose Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS1"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "F (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Aurora Golden Bracelet",
+                "category": "bracelets",
+                "nameAccent": "Aurora Golden",
+                "finish": "Golden",
+                "summary": "An open cuff bracelet in polished gold, finished with a pear-cut diamond and a delicate pavé trail that catches the light with every movement.",
+                "cardImage": "/images/collections/aurora-golden-bracelet.webp",
+                "images": [
+                  "/images/collections/aurora-golden-bracelet.webp"
+                ],
+                "thumbnails": [
+                  "/images/collections/aurora-golden-bracelet.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Style",
+                    "value": "Open Cuff"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "Adjustable (6–7 Inches)"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Aurora Golden Bracelet pairs a sculpted open-cuff silhouette with a brilliant pear-cut centre stone. A fine line of pavé diamonds sweeps along the band, creating a graceful glow that feels effortless from morning to evening.",
+                  "Crafted in premium 18K yellow gold, it is light enough for everyday wear yet refined enough to mark your most special moments — a piece designed to be treasured for years."
+                ],
+                "modelImage": "/images/home/story-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "0.65 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Bracelet Style",
+                    "value": "Open Cuff"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "6–7 Inches (Adjustable)"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS1"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "F (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Bloom Golden Bracelet",
+                "category": "bracelets",
+                "nameAccent": "Bloom Golden",
+                "finish": "Golden",
+                "summary": "A delicate chain bracelet with clover motifs in mother-of-pearl and pavé diamonds — a playful, feminine piece for every day.",
+                "cardImage": "/images/collections/bloom-golden-bracelet.webp",
+                "images": [
+                  "/images/collections/bloom-golden-bracelet.webp"
+                ],
+                "thumbnails": [
+                  "/images/collections/bloom-golden-bracelet.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Stones",
+                    "value": "Mother-of-Pearl & Diamond"
+                  },
+                  {
+                    "label": "Style",
+                    "value": "Station Chain"
+                  },
+                  {
+                    "label": "Length",
+                    "value": "Adjustable (6.5–7.5 Inches)"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Bloom Golden Bracelet celebrates nature with four-petal clover motifs set along a fine gold chain. Lustrous mother-of-pearl petals sit beside a sparkling pavé clover for a balanced, joyful design.",
+                  "Finished in 18K yellow gold with an adjustable clasp, it layers beautifully with watches and bangles or shines on its own as a meaningful gift."
+                ],
+                "modelImage": "/images/home/story-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Stone Type",
+                    "value": "Mother-of-Pearl & Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "0.20 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Motif Size",
+                    "value": "10 mm (Approx.)"
+                  },
+                  {
+                    "label": "Chain Length",
+                    "value": "6.5–7.5 Inches (Adjustable)"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS2"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "G (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Velvet Golden Bracelet",
+                "category": "bracelets",
+                "nameAccent": "Velvet Golden",
+                "finish": "Golden",
+                "summary": "A sculptural triple-band cuff set with marquise rubies and a whisper of diamonds — bold, romantic and unmistakably modern.",
+                "cardImage": "/images/collections/velvet-golden-bracelet.webp",
+                "images": [
+                  "/images/collections/velvet-golden-bracelet.webp"
+                ],
+                "thumbnails": [
+                  "/images/collections/velvet-golden-bracelet.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Gemstone",
+                    "value": "Natural Ruby"
+                  },
+                  {
+                    "label": "Style",
+                    "value": "Triple-Band Cuff"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "Adjustable (6–7 Inches)"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Velvet Golden Bracelet weaves three fluid gold bands into an elegant open cuff. Two marquise rubies rest at its heart, framed by a subtle line of pavé diamonds that adds depth and light.",
+                  "Crafted in 18K yellow gold, it brings rich colour to evening looks while remaining comfortable enough to wear all day."
+                ],
+                "modelImage": "/images/home/testimonial-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Gemstones",
+                    "text": "Rubies chosen for deep, vivid colour."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Gemstone Type",
+                    "value": "Natural Ruby"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "1.10 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Bracelet Style",
+                    "value": "Triple-Band Cuff"
+                  },
+                  {
+                    "label": "Size",
+                    "value": "6–7 Inches (Adjustable)"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "Eye Clean"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "Pigeon Blood Red"
+                  }
+                ]
+              },
+              {
+                "name": "Pear Drop Diamond Earrings",
+                "category": "earrings",
+                "nameAccent": "Pear Drop",
+                "finish": "Rose Gold",
+                "summary": "Graceful drop earrings with pear-cut diamonds framed in a halo of brilliants, designed to move beautifully with you.",
+                "cardImage": "/images/gallery/drop-earrings.webp",
+                "images": [
+                  "/images/gallery/drop-earrings.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/drop-earrings.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Rose Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Drop Length",
+                    "value": "32 mm (Approx.)"
+                  },
+                  {
+                    "label": "Closure",
+                    "value": "Push Back"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Pear Drop Diamond Earrings feature a cascade of round brilliants leading to a pear-cut centre stone wrapped in a delicate halo — a silhouette that flatters every face.",
+                  "Crafted in 18K rose gold, they bring quiet sparkle to bridal looks, celebrations and evenings you’ll want to remember."
+                ],
+                "modelImage": "/images/blog/jewellery-guide.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "1.20 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Drop Length",
+                    "value": "32 mm (Approx.)"
+                  },
+                  {
+                    "label": "Closure",
+                    "value": "Push Back"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Rose Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS1"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "F (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Starburst Diamond Studs",
+                "category": "earrings",
+                "nameAccent": "Starburst",
+                "finish": "Golden",
+                "summary": "Radiant starburst studs with marquise and round diamonds — everyday sparkle with a celestial twist.",
+                "cardImage": "/images/gallery/starburst-studs.webp",
+                "images": [
+                  "/images/gallery/starburst-studs.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/starburst-studs.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Stud Size",
+                    "value": "11 mm (Approx.)"
+                  },
+                  {
+                    "label": "Closure",
+                    "value": "Screw Back"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Starburst Diamond Studs arrange marquise diamonds around a brilliant centre stone, creating a radiant star that glows from every angle.",
+                  "Set in 18K yellow gold with secure screw backs, they are made to be worn every day and loved for a lifetime."
+                ],
+                "modelImage": "/images/blog/jewellery-guide.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "0.80 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Stud Size",
+                    "value": "11 mm (Approx.)"
+                  },
+                  {
+                    "label": "Closure",
+                    "value": "Screw Back"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS2"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "G (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Eternity Hoop Earrings",
+                "category": "earrings",
+                "nameAccent": "Eternity",
+                "finish": "Golden",
+                "summary": "Classic huggie hoops lined with brilliant-cut diamonds for a polished, everyday glow.",
+                "cardImage": "/images/gallery/hoop-earrings.webp",
+                "images": [
+                  "/images/gallery/hoop-earrings.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/hoop-earrings.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Hoop Size",
+                    "value": "18 mm (Approx.)"
+                  },
+                  {
+                    "label": "Closure",
+                    "value": "Hinged Snap"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Eternity Hoop Earrings are set all the way around with brilliant diamonds, giving a continuous ribbon of light that frames the face.",
+                  "Their hinged snap closure and comfortable profile make them the perfect everyday luxury."
+                ],
+                "modelImage": "/images/blog/jewellery-guide.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "1.00 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Hoop Size",
+                    "value": "18 mm (Approx.)"
+                  },
+                  {
+                    "label": "Closure",
+                    "value": "Hinged Snap"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS1"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "F (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Solitaire Diamond Ring",
+                "category": "rings",
+                "nameAccent": "Solitaire",
+                "finish": "Golden",
+                "summary": "A brilliant round solitaire on a pavé band, paired with a matching wedding ring for a perfect bridal set.",
+                "cardImage": "/images/gallery/solitaire-ring.webp",
+                "images": [
+                  "/images/gallery/solitaire-ring.webp",
+                  "/images/gallery/eternity-bands.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/solitaire-ring.webp",
+                  "/images/gallery/eternity-bands.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Centre Stone",
+                    "value": "1.00 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Setting",
+                    "value": "Six-Prong"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Solitaire Diamond Ring lifts a brilliant round diamond in a classic six-prong setting above a band of sparkling pavé — a timeless symbol of commitment.",
+                  "Crafted in 18K yellow gold and paired with a matching band, it is designed to be worn and cherished for a lifetime."
+                ],
+                "modelImage": "/images/home/story-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "1.35 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Centre Stone",
+                    "value": "1.00 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Setting",
+                    "value": "Six-Prong"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS1"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "E (Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Emerald Cut Diamond Ring",
+                "category": "rings",
+                "nameAccent": "Emerald Cut",
+                "finish": "Golden",
+                "summary": "An architectural emerald-cut diamond on a slender pavé band — understated, modern and endlessly elegant.",
+                "cardImage": "/images/gallery/emerald-cut-ring.webp",
+                "images": [
+                  "/images/gallery/emerald-cut-ring.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/emerald-cut-ring.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Centre Stone",
+                    "value": "1.20 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Setting",
+                    "value": "Four-Prong"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Emerald Cut Diamond Ring showcases the long, mirror-like facets of an emerald-cut diamond, held in four slim prongs above a delicate pavé band.",
+                  "Crafted in 18K yellow gold, it is a refined statement for engagements, anniversaries and milestones."
+                ],
+                "modelImage": "/images/home/story-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "1.45 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Centre Stone",
+                    "value": "1.20 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Setting",
+                    "value": "Four-Prong"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VVS2"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "E (Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Pear Halo Diamond Ring",
+                "category": "rings",
+                "nameAccent": "Pear Halo",
+                "finish": "Rose Gold",
+                "summary": "A pear-cut diamond embraced by a halo of brilliants on a split pavé shank — romantic and radiant.",
+                "cardImage": "/images/gallery/pear-halo-ring.webp",
+                "images": [
+                  "/images/gallery/pear-halo-ring.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/pear-halo-ring.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Rose Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Centre Stone",
+                    "value": "0.75 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Setting",
+                    "value": "Halo"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Pear Halo Diamond Ring surrounds a pear-cut centre stone with a sparkling halo, set on a pavé band that adds brilliance from every angle.",
+                  "Crafted in 18K rose gold, its warm tone and graceful shape make it a beloved choice for proposals and celebrations."
+                ],
+                "modelImage": "/images/home/story-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "1.05 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Centre Stone",
+                    "value": "0.75 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Setting",
+                    "value": "Halo"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Rose Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS1"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "F (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Diamond Cascade Necklace",
+                "category": "necklaces",
+                "nameAccent": "Diamond",
+                "finish": "Golden",
+                "summary": "A fine chain necklace that blooms into a cascade of diamond clusters at the collarbone.",
+                "cardImage": "/images/gallery/diamond-necklace.webp",
+                "images": [
+                  "/images/gallery/diamond-necklace.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/diamond-necklace.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Drop Length",
+                    "value": "45 mm (Approx.)"
+                  },
+                  {
+                    "label": "Chain Type",
+                    "value": "Adjustable (16–18 Inches)"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Diamond Cascade Necklace gathers clusters of brilliant diamonds into a graceful V that rests perfectly at the neckline.",
+                  "Crafted in 18K yellow gold, it brings effortless glamour to both evening wear and bridal looks."
+                ],
+                "modelImage": "/images/gallery/diamond-necklace.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "1.80 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Drop Length",
+                    "value": "45 mm (Approx.)"
+                  },
+                  {
+                    "label": "Chain Length",
+                    "value": "16–18 Inches (Adjustable)"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS2"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "G (Near Colorless)"
+                  }
+                ]
+              },
+              {
+                "name": "Pear Drop Pendant",
+                "category": "necklaces",
+                "nameAccent": "Pear Drop",
+                "finish": "Golden",
+                "summary": "A pear-shaped diamond halo pendant on a classic cable chain — elegant simplicity for every day.",
+                "cardImage": "/images/gallery/pear-pendant.webp",
+                "images": [
+                  "/images/gallery/pear-pendant.webp"
+                ],
+                "thumbnails": [
+                  "/images/gallery/pear-pendant.webp"
+                ],
+                "quickSpecs": [
+                  {
+                    "label": "Material",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Diamond",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Pendant Size",
+                    "value": "14 mm (Approx.)"
+                  },
+                  {
+                    "label": "Chain Type",
+                    "value": "Adjustable (16–18 Inches)"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  }
+                ],
+                "descriptionTitleAccent": "Timeless Beauty",
+                "descriptionTitleRest": "in Every Detail",
+                "description": [
+                  "The Pear Drop Pendant frames a pear-cut diamond with a halo of brilliants, suspended from a refined cable chain.",
+                  "Crafted in 18K yellow gold, it is a graceful everyday piece and a thoughtful gift."
+                ],
+                "modelImage": "/images/collections/radiant-halo-model.webp",
+                "features": [
+                  {
+                    "icon": "diamond",
+                    "title": "Natural Diamonds",
+                    "text": "Carefully selected for exceptional brilliance."
+                  },
+                  {
+                    "icon": "gift",
+                    "title": "Perfect for Gifting",
+                    "text": "An ideal choice for special occasions."
+                  },
+                  {
+                    "icon": "shield",
+                    "title": "Premium 18K Gold",
+                    "text": "Crafted for lasting beauty and durability."
+                  },
+                  {
+                    "icon": "infinity",
+                    "title": "Timeless & Versatile",
+                    "text": "Designed to complement every style."
+                  }
+                ],
+                "specifications": [
+                  {
+                    "label": "Diamond Type",
+                    "value": "Natural Diamond"
+                  },
+                  {
+                    "label": "Total Carat Weight",
+                    "value": "0.60 Carat (Approx.)"
+                  },
+                  {
+                    "label": "Pendant Size",
+                    "value": "14 mm (Approx.)"
+                  },
+                  {
+                    "label": "Chain Length",
+                    "value": "16–18 Inches (Adjustable)"
+                  },
+                  {
+                    "label": "Metal Type",
+                    "value": "18K Yellow Gold"
+                  },
+                  {
+                    "label": "Finish",
+                    "value": "High Polish"
+                  },
+                  {
+                    "label": "Clarity",
+                    "value": "VS1"
+                  },
+                  {
+                    "label": "Color",
+                    "value": "F (Near Colorless)"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "CollectionDetail": {
+        "variants": {
+          "MaisonElvaCollectionDetail1": {
+            "descriptionLabel": "Product Description",
+            "featuresLabel": "Key Features",
+            "specificationsLabel": "Product Specifications",
+            "modelImageAlt": "{name} styled on a model",
+            "thumbnailLabel": "Show image {index} of {name}",
+            "zoomLabel": "View larger image",
+            "closeLabel": "Close"
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "MaisonElvaGallery1": {
+            "seo": {
+              "title": "Gallery",
+              "description": "A glimpse into our world of exquisite craftsmanship, refined designs and timeless jewellery pieces."
+            },
+            "label": "Gallery",
+            "titleTop": "Moments of",
+            "titleAccent": "Timeless Beauty",
+            "description": "A glimpse into our world of exquisite craftsmanship, refined designs and timeless jewellery pieces.",
+            "perPage": 9,
+            "images": [
+              {
+                "src": "/images/gallery/solitaire-ring.webp",
+                "alt": "Solitaire diamond ring with matching pavé band",
+                "ratio": "601/549"
+              },
+              {
+                "src": "/images/gallery/halo-pendant.webp",
+                "alt": "Round halo diamond pendant on a gold chain",
+                "ratio": "581/549"
+              },
+              {
+                "src": "/images/gallery/drop-earrings.webp",
+                "alt": "Pear diamond drop earrings on a stone plinth",
+                "ratio": "599/549"
+              },
+              {
+                "src": "/images/gallery/diamond-necklace.webp",
+                "alt": "Diamond cluster necklace worn at the collarbone",
+                "ratio": "601/567"
+              },
+              {
+                "src": "/images/gallery/eternity-bands.webp",
+                "alt": "Stacked gold eternity bands with diamonds",
+                "ratio": "581/567"
+              },
+              {
+                "src": "/images/gallery/emerald-cut-ring.webp",
+                "alt": "Emerald-cut diamond ring on a pavé band",
+                "ratio": "599/567"
+              },
+              {
+                "src": "/images/gallery/starburst-studs.webp",
+                "alt": "Starburst diamond stud earrings",
+                "ratio": "601/532"
+              },
+              {
+                "src": "/images/gallery/pear-pendant.webp",
+                "alt": "Pear-shaped diamond halo pendant",
+                "ratio": "581/532"
+              },
+              {
+                "src": "/images/gallery/tennis-bracelet.webp",
+                "alt": "Gold and diamond tennis bracelet",
+                "ratio": "599/532"
+              },
+              {
+                "src": "/images/gallery/pear-halo-ring.webp",
+                "alt": "Pear halo diamond ring in rose gold",
+                "ratio": "601/586"
+              },
+              {
+                "src": "/images/gallery/hoop-earrings.webp",
+                "alt": "Diamond eternity hoop earrings",
+                "ratio": "581/586"
+              },
+              {
+                "src": "/images/gallery/station-necklace.webp",
+                "alt": "Diamond station necklace with a solitaire drop",
+                "ratio": "599/586"
+              },
+              {
+                "src": "/images/contact/ring.webp",
+                "alt": "Diamond ring displayed on a soft stone surface",
+                "ratio": "601/549"
+              }
+            ],
+            "viewLabel": "View {alt}",
+            "closeLabel": "Close",
+            "previousLabel": "Previous image",
+            "nextLabel": "Next image"
+          }
+        }
+      },
+      "TestimonialListing": {
+        "variants": {
+          "MaisonElvaTestimonialListing1": {
+            "seo": {
+              "title": "Testimonials",
+              "description": "Real stories from our valued customers who trust our jewellery for life’s most cherished moments."
+            },
+            "label": "Testimonials",
+            "titleTop": "What Our",
+            "titleAccent": "Customers Say",
+            "description": "Real stories from our valued customers who trust our jewellery for life’s most cherished moments.",
+            "perPage": 6,
+            "items": [
+              {
+                "quote": "The quality and finish of the jewellery is simply outstanding. I bought a diamond ring for our anniversary and it exceeded all my expectations. Truly a timeless piece!",
+                "name": "Aaradhya Mehta",
+                "city": "Mumbai",
+                "rating": 5
+              },
+              {
+                "quote": "Beautiful collection with elegant designs. The team guided me to the perfect necklace for my special occasion, and the entire experience was smooth and delightful.",
+                "name": "Priya Sharma",
+                "city": "Delhi",
+                "rating": 5
+              },
+              {
+                "quote": "I bought a pair of diamond earrings and I’m in love with them. The craftsmanship is exceptional and the detailing is just perfect. Definitely my go-to jewellery store!",
+                "name": "Sneha Kapoor",
+                "city": "Bengaluru",
+                "rating": 5
+              },
+              {
+                "quote": "From design to delivery, everything was flawless. The jewellery looks even more beautiful in person, with premium quality, elegant packaging and excellent service.",
+                "name": "Kavya Nair",
+                "city": "Chennai",
+                "rating": 5
+              },
+              {
+                "quote": "I ordered a pendant for my mother’s birthday and she absolutely loved it. The design is classic and the quality is unmatched. Thank you for making it such a special gift.",
+                "name": "Rhea Malhotra",
+                "city": "Kolkata",
+                "rating": 5
+              },
+              {
+                "quote": "Exceptional collection and outstanding service. The jewellery is elegant, modern and perfect for every occasion. I highly recommend them to anyone who truly values quality.",
+                "name": "Ananya Desai",
+                "city": "Pune",
+                "rating": 5
+              },
+              {
+                "quote": "The bracelet I bought for my anniversary is simply stunning. The craftsmanship is flawless and the team helped me choose the perfect piece with so much patience.",
+                "name": "Kavya Iyer",
+                "city": "Chennai",
+                "rating": 5
+              }
+            ],
+            "ratingLabel": "{rating} out of 5 stars"
+          }
+        }
+      },
+      "BlogListing": {
+        "variants": {
+          "MaisonElvaBlogListing1": {
+            "seo": {
+              "title": "Blog",
+              "description": "Jewellery guides, care tips and the latest trends from Maison Élva."
+            },
+            "label": "Our Blog",
+            "titleTop": "Latest",
+            "titleAccent": "Stories",
+            "readMore": "Read More",
+            "postHref": "/blog/blog-details",
+            "perPage": 6,
+            "items": [
+              {
+                "title": "Simple Tips to Keep Your Diamond Jewellery Shining",
+                "titleAccent": "Diamond Jewellery",
+                "category": "Jewellery Guide",
+                "excerpt": "Easy, everyday care habits that keep your diamond jewellery as brilliant as the day you bought it.",
+                "day": "12",
+                "month": "Oct",
+                "date": "12 Oct 2026",
+                "image": "/images/blog/jewellery-guide.webp",
+                "imageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                "detail": {
+                  "intro": "Diamond jewellery is more than just an accessory, it’s a symbol of love, elegance and cherished memories. With the right care and mindful habits, you can keep your favourite pieces looking as brilliant as the day you bought them.",
+                  "image": "/images/blog/diamond-care.webp",
+                  "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "quote": "A little care goes a long way in preserving the beauty and brilliance of your diamond jewellery. Follow these simple tips to keep your cherished pieces looking radiant for years to come.",
+                  "sections": [
+                    {
+                      "title": "Keep Your Jewellery",
+                      "titleAccent": "Clean",
+                      "text": "Regular cleaning helps maintain the natural shine of your diamond jewellery. Use a soft, lint-free cloth to gently wipe your pieces after wearing them. For a deeper clean, use a mild jewellery cleaner or lukewarm water with a few drops of gentle soap. Avoid harsh chemicals that can damage delicate stones and metals."
+                    },
+                    {
+                      "title": "Store Them",
+                      "titleAccent": "Properly",
+                      "text": "Always store your jewellery in a soft-lined jewellery box or individual pouches to prevent scratches and tangling. Keep different pieces separate, especially those with diamonds or delicate designs. Proper storage not only keeps them safe but also helps maintain their brilliance for longer."
+                    },
+                    {
+                      "title": "Avoid Exposure to",
+                      "titleAccent": "Harsh Elements",
+                      "text": "Remove your jewellery before swimming, exercising or using household cleaning products. Exposure to chlorine, sweat, perfumes and harsh chemicals can dull the shine and damage the metal or gemstones. Putting them on after your skincare and makeup routine is a good habit."
+                    },
+                    {
+                      "title": "Get Professional",
+                      "titleAccent": "Check-ups",
+                      "text": "For valuable or frequently worn pieces, it’s a good idea to get them checked by a professional jeweller once in a while. They can inspect the settings, clean them thoroughly and ensure that your jewellery remains in perfect condition."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Top Jewellery Trends You’ll Love This Season",
+                "titleAccent": "You’ll Love",
+                "category": "Jewellery Trends",
+                "excerpt": "From stacked bands to sculptural gold, explore the trends our clients are falling in love with this season.",
+                "day": "25",
+                "month": "Oct",
+                "date": "25 Oct 2026",
+                "image": "/images/blog/jewellery-trends.webp",
+                "imageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                "detail": {
+                  "intro": "This season is all about pieces that feel personal, versatile and quietly luxurious. From stacked bands to sculptural gold, here are the trends our clients are falling in love with.",
+                  "image": "/images/gallery/eternity-bands.webp",
+                  "imageAlt": "Stacked gold eternity bands with diamonds",
+                  "quote": "The best trends are the ones that feel like you. Choose pieces that layer easily, flatter your everyday style and still feel special years from now.",
+                  "sections": [
+                    {
+                      "title": "Stacked",
+                      "titleAccent": "Eternity Bands",
+                      "text": "Slim diamond bands worn together create a personalised look that grows with you. Mix yellow and rose gold, or combine plain and pavé bands for depth and texture."
+                    },
+                    {
+                      "title": "Sculptural",
+                      "titleAccent": "Gold Cuffs",
+                      "text": "Fluid, open cuffs with a single statement stone are replacing busy stacks. They feel modern on their own and add instant polish to both day and evening outfits."
+                    },
+                    {
+                      "title": "Colour With",
+                      "titleAccent": "Rubies",
+                      "text": "Deep red rubies paired with diamonds bring warmth and romance to classic designs. Look for marquise and pear shapes for a contemporary feel."
+                    },
+                    {
+                      "title": "Everyday",
+                      "titleAccent": "Diamond Pendants",
+                      "text": "Delicate halo pendants on fine chains remain a favourite. They are easy to wear daily and make thoughtful gifts for birthdays and anniversaries."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "How to Choose the Perfect Jewellery for Every Occasion",
+                "titleAccent": "Perfect Jewellery",
+                "category": "Jewellery Guide",
+                "excerpt": "Discover expert tips to select jewellery that matches your style, outfit and the moment beautifully.",
+                "day": "12",
+                "month": "Oct",
+                "date": "12 Oct 2026",
+                "image": "/images/blog/jewellery-guide.webp",
+                "imageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                "detail": {
+                  "intro": "The right piece can complete an outfit and make a moment unforgettable. Here is how to choose jewellery that feels perfectly suited to every occasion.",
+                  "image": "/images/blog/diamond-care.webp",
+                  "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "quote": "Let the occasion guide the sparkle, and let your personal style guide the design.",
+                  "sections": [
+                    {
+                      "title": "Everyday",
+                      "titleAccent": "Elegance",
+                      "text": "For daily wear, choose lightweight studs, slim bands and delicate pendants that are comfortable and easy to pair with any outfit."
+                    },
+                    {
+                      "title": "Work &",
+                      "titleAccent": "Meetings",
+                      "text": "Opt for refined, understated pieces — a classic pendant or small hoops add polish without distraction."
+                    },
+                    {
+                      "title": "Evenings &",
+                      "titleAccent": "Celebrations",
+                      "text": "Drop earrings, statement necklaces and cocktail rings bring drama and light to evening looks. Balance one statement piece with simpler accents."
+                    },
+                    {
+                      "title": "Weddings &",
+                      "titleAccent": "Milestones",
+                      "text": "Diamonds and fine gold are timeless choices for life’s biggest moments. Coordinate metals with your outfit and choose pieces you will treasure for years."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "The Season’s Jewellery Edit",
+                "titleAccent": "Jewellery",
+                "category": "Jewellery Trends",
+                "excerpt": "A curated look at the shapes, metals and stones defining jewellery this season — and how to wear them your way.",
+                "day": "25",
+                "month": "Oct",
+                "date": "25 Oct 2026",
+                "image": "/images/blog/jewellery-trends.webp",
+                "imageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                "detail": {
+                  "intro": "A curated look at the shapes, metals and stones defining jewellery this season — and how to wear them your way.",
+                  "image": "/images/home/explore-banner.webp",
+                  "imageAlt": "Gold leaf bangle and matching earrings displayed on travertine with satin",
+                  "quote": "Invest in pieces that move effortlessly between occasions — that is the true modern luxury.",
+                  "sections": [
+                    {
+                      "title": "Nature-Inspired",
+                      "titleAccent": "Motifs",
+                      "text": "Leaves, petals and clovers in gold and diamonds bring softness and movement to bracelets and earrings."
+                    },
+                    {
+                      "title": "Warm",
+                      "titleAccent": "Rose Gold",
+                      "text": "Rose gold continues to shine for its flattering, romantic glow on every skin tone."
+                    },
+                    {
+                      "title": "Mixed",
+                      "titleAccent": "Shapes",
+                      "text": "Pear, marquise and emerald cuts add a contemporary edge to classic designs."
+                    },
+                    {
+                      "title": "Meaningful",
+                      "titleAccent": "Gifts",
+                      "text": "Personal, wearable pieces — pendants, studs and slim bands — remain the most cherished gifts."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Choosing Jewellery for Special Moments",
+                "titleAccent": "Special",
+                "category": "Jewellery Guide",
+                "excerpt": "Celebrations deserve pieces as meaningful as the moment itself. Here is how to choose them with confidence.",
+                "day": "12",
+                "month": "Oct",
+                "date": "12 Oct 2026",
+                "image": "/images/blog/jewellery-guide.webp",
+                "imageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                "detail": {
+                  "intro": "Celebrations deserve pieces that feel as meaningful as the moment itself. Here is how to choose them with confidence.",
+                  "image": "/images/blog/diamond-care.webp",
+                  "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "quote": "The most beautiful jewellery tells a story — make sure it is yours.",
+                  "sections": [
+                    {
+                      "title": "Start With",
+                      "titleAccent": "Your Style",
+                      "text": "Classic, modern or romantic — knowing your style narrows the choices and ensures the piece feels like you."
+                    },
+                    {
+                      "title": "Consider the",
+                      "titleAccent": "Neckline",
+                      "text": "Pendants suit V-necks, collars suit strapless styles and drop earrings flatter high necklines."
+                    },
+                    {
+                      "title": "Choose the Right",
+                      "titleAccent": "Metal",
+                      "text": "Yellow gold feels warm and classic, rose gold romantic, and white gold crisp and modern."
+                    },
+                    {
+                      "title": "Ask an",
+                      "titleAccent": "Expert",
+                      "text": "Our team is always happy to guide you to pieces that match your occasion, style and budget."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "From Modern Minimalism to Timeless Classics",
+                "titleAccent": "to Timeless",
+                "category": "Jewellery Trends",
+                "excerpt": "Minimal lines meet heirloom classics — discover how to balance both in your jewellery collection.",
+                "day": "25",
+                "month": "Oct",
+                "date": "25 Oct 2026",
+                "image": "/images/blog/jewellery-trends.webp",
+                "imageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                "detail": {
+                  "intro": "Minimal lines and heirloom classics are meeting in beautiful new ways. Discover how to balance both in your collection.",
+                  "image": "/images/gallery/tennis-bracelet.webp",
+                  "imageAlt": "Gold and diamond tennis bracelet",
+                  "quote": "Build your collection around a few timeless foundations, then layer in modern pieces that reflect who you are today.",
+                  "sections": [
+                    {
+                      "title": "Minimal",
+                      "titleAccent": "Foundations",
+                      "text": "Fine chains, slim bands and small studs create an effortless base for everyday wear."
+                    },
+                    {
+                      "title": "Timeless",
+                      "titleAccent": "Classics",
+                      "text": "Tennis bracelets, solitaire rings and halo pendants never go out of style."
+                    },
+                    {
+                      "title": "Layer With",
+                      "titleAccent": "Intention",
+                      "text": "Combine textures and lengths thoughtfully so every piece has room to shine."
+                    },
+                    {
+                      "title": "Care for",
+                      "titleAccent": "Longevity",
+                      "text": "Clean and store your pieces properly so they stay brilliant for generations."
+                    }
+                  ]
+                }
+              },
+              {
+                "title": "Caring for Your Gold Jewellery at Home",
+                "titleAccent": "Gold Jewellery",
+                "category": "Jewellery Care",
+                "excerpt": "A few simple habits keep your gold pieces bright and beautiful — here is how to care for them at home.",
+                "day": "28",
+                "month": "Oct",
+                "date": "28 Oct 2026",
+                "image": "/images/blog/diamond-care.webp",
+                "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                "detail": {
+                  "intro": "Gold is timeless, but a little care keeps it looking its best. Here is how to look after your pieces at home.",
+                  "image": "/images/gallery/eternity-bands.webp",
+                  "imageAlt": "Stacked gold eternity bands with diamonds",
+                  "quote": "Treat your jewellery gently every day, and it will stay beautiful for a lifetime.",
+                  "sections": [
+                    {
+                      "title": "Clean",
+                      "titleAccent": "Gently",
+                      "text": "Soak your pieces in warm water with a drop of mild soap, then brush softly and pat dry."
+                    },
+                    {
+                      "title": "Store",
+                      "titleAccent": "Separately",
+                      "text": "Keep each piece in its own soft pouch or lined compartment to avoid scratches and tangles."
+                    },
+                    {
+                      "title": "Avoid",
+                      "titleAccent": "Chemicals",
+                      "text": "Remove jewellery before swimming, cleaning or applying perfume and lotions."
+                    },
+                    {
+                      "title": "Visit an",
+                      "titleAccent": "Expert",
+                      "text": "Bring your pieces in once a year for a professional clean and a check of clasps and settings."
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      "BlogDetail": {
+        "variants": {
+          "MaisonElvaBlogDetail1": {
+            "dateLabel": "Published on"
+          }
+        }
+      },
+      "ContactDetails": {
+        "variants": {
+          "MaisonElvaContactDetails1": {
+            "seo": {
+              "title": "Contact Us",
+              "description": "Have a question, need assistance, or looking for the perfect piece? Our team is here to help you with personalized guidance and exceptional service."
+            },
+            "label": "Contact Us",
+            "titleTop": "We’d Love to",
+            "titleAccent": "Hear From You",
+            "description": "Have a question, need assistance, or looking for the perfect piece? Our team is here to help you with personalized guidance and exceptional service.",
+            "hoursTitle": "Working Hours",
+            "hours": [
+              "Monday to Friday - 10:00 AM to 7:00 PM",
+              "Saturday - 10:00 AM to 5:00 PM",
+              "Sunday - Holiday"
+            ],
+            "images": [
+              {
+                "src": "/images/contact/ring.webp",
+                "alt": "Halo diamond ring on cream fabric"
+              },
+              {
+                "src": "/images/contact/earrings.webp",
+                "alt": "Pear diamond drop earrings on cream fabric"
+              },
+              {
+                "src": "/images/contact/pendant.webp",
+                "alt": "Halo diamond pendant on cream fabric"
+              }
+            ],
+            "touch": {
+              "label": "Get In Touch",
+              "titleTop": "Branching Out",
+              "titleAccent": "For You",
+              "description": "Visit our store, connect with us or explore our online platforms. We’re always here to make your jewellery journey seamless and\u00a0delightful."
+            },
+            "info": [
+              {
+                "icon": "location",
+                "title": "Our Location",
+                "lines": [
+                  "123 Main Street,",
+                  "New York, NY 10001,",
+                  "USA"
+                ]
+              },
+              {
+                "icon": "phone",
+                "title": "Instant Connect",
+                "lines": [
+                  "+1 0000000000"
+                ],
+                "hrefs": [
+                  "tel:+10000000000"
+                ]
+              },
+              {
+                "icon": "globe",
+                "title": "Our Websites",
+                "lines": [
+                  "www.example.com",
+                  "www.examplejewels.com"
+                ],
+                "hrefs": [
+                  "https://www.example.com",
+                  "https://www.examplejewels.com"
+                ]
+              },
+              {
+                "icon": "mail",
+                "title": "Mail Us",
+                "lines": [
+                  "info@xyz.com",
+                  "support@xyz.com"
+                ],
+                "hrefs": [
+                  "mailto:info@xyz.com",
+                  "mailto:support@xyz.com"
+                ]
+              }
+            ],
+            "map": {
+              "title": "Map showing the Maison Élva store location",
+              "openLabel": "Open in Google Maps",
+              "embedUrl": "https://maps.google.com/maps?q={query}&z=15&output=embed",
+              "openUrl": "https://www.google.com/maps/search/?api=1&query={query}"
+            }
+          }
+        }
+      },
+      "ContactForm": {
+        "variants": {
+          "MaisonElvaContactForm1": {
+            "title": "Send Us a Message",
+            "fields": {
+              "name": "Name*",
+              "phone": "Phone Number*",
+              "email": "Email Address*",
+              "subject": "Subject*",
+              "message": "Message*"
+            },
+            "button": "Send Message",
+            "sending": "Sending…",
+            "successTitle": "Thank you, {name}!",
+            "success": "Your message has been sent. Our team will get back to you within 24 hours.",
+            "closeLabel": "Close message"
+          }
+        }
+      },
+      "Enquiry": {
+        "variants": {
+          "MaisonElvaEnquiry1": {
+            "seo": {
+              "title": "Enquiry Now",
+              "description": "Have a question, need expert advice, or looking for a custom design? Share your details with us and our team will get back to you with personalized guidance and the best options for your needs."
+            },
+            "label": "Enquiry Now",
+            "titleTop": "Let’s Make Your",
+            "titleAccent": "Perfect Piece",
+            "description": "Have a question, need expert advice, or looking for a custom design? Share your details with us and our team will get back to you with personalized guidance and the best options for your needs.",
+            "features": [
+              {
+                "icon": "diamond",
+                "title": "Expert Guidance",
+                "text": [
+                  "Get professional advice tailored",
+                  "to your style and budget."
+                ]
+              },
+              {
+                "icon": "headset",
+                "title": "Quick Response",
+                "text": [
+                  "Our team will get back to you",
+                  "as soon as possible."
+                ]
+              },
+              {
+                "icon": "shield",
+                "title": "Personalized Recommendations",
+                "text": [
+                  "Find the perfect jewellery options",
+                  "for your special moments."
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "NotFound": {
+        "variants": {
+          "MaisonElvaNotFound1": {
+            "seo": {
+              "title": "Page Not Found",
+              "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+            },
+            "code": "404",
+            "title": "Oops! Page Not Found",
+            "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+            "button": {
+              "label": "Back to Home",
+              "href": "/"
+            }
+          }
+        }
+      },
+      "EnquiryForm": {
+        "variants": {
+          "MaisonElvaEnquiryForm1": {
+            "label": "Send Us An",
+            "titleTop": "Enquiry",
+            "titleAccent": "Now",
+            "fields": {
+              "name": "Your Name*",
+              "phone": "Phone Number*",
+              "email": "Email Address*",
+              "enquiryFor": "Enquiry For*",
+              "budget": "Preferred Budget (Optional)",
+              "message": "Your Message*"
+            },
+            "enquiryOptions": [
+              "Rings",
+              "Necklaces",
+              "Earrings",
+              "Bracelets",
+              "Custom Design",
+              "Bridal Jewellery",
+              "Other"
+            ],
+            "budgetOptions": [
+              "Under ₹50,000",
+              "₹50,000 – ₹1,00,000",
+              "₹1,00,000 – ₹2,50,000",
+              "Above ₹2,50,000"
+            ],
+            "button": "Send Enquiry",
+            "sending": "Sending…",
+            "successTitle": "Thank you, {name}!",
+            "success": "We have received your enquiry. Our jewellery expert will call you shortly with the best options for you.",
+            "closeLabel": "Close message"
+          }
+        }
+      }
+    }
+  }
+}

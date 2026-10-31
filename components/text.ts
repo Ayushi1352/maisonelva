@@ -1,10 +1,10 @@
-/** Fills "{key}" placeholders from templates.json labels, e.g. fill("Rated {value} out of 5", { value: 4.5 }) */
+/** Fills "{key}" placeholders from site.json labels, e.g. fill("Rated {value} out of 5", { value: 4.5 }) */
 export function fill(template: string, values: Record<string, string | number>) {
   return template.replace(/\{(\w+)\}/g, (match, key: string) => (key in values ? String(values[key]) : match));
 }
 
 /**
- * Splits a title around its highlighted part, so templates.json stores the title once:
+ * Splits a title around its highlighted part, so site.json stores the title once:
  * splitAccent("Simple Tips to Keep Your Diamond Jewellery Shining", "Diamond Jewellery")
  * → { before: "Simple Tips to Keep Your", accent: "Diamond Jewellery", after: "Shining" }
  */

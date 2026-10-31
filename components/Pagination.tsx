@@ -25,7 +25,7 @@ type PaginationProps = {
 const box =
   "flex size-11 items-center justify-center border-2 font-heading text-[1.1rem] transition-colors lg:size-[4rem] lg:text-[1.5rem]";
 
-/** Page numbers under a listing; shows only when the list has more than one page (perPage in templates.json) */
+/** Page numbers under a listing; shows only when the list has more than one page (perPage in site.json) */
 export default function Pagination({ page, totalPages, onChange, scrollTargetId }: PaginationProps) {
   if (totalPages <= 1) return null;
   const labels = site.pageBanner.pagination;

@@ -27,7 +27,7 @@ export default async function Footer({ data: footer = site.footer }: SectionProp
         <div className="grid gap-12 md:grid-cols-[1.3fr_1fr_1fr] md:gap-0 lg:flex lg:pl-[8.3rem]">
           {/* Brand */}
           <div className="md:pr-8 lg:w-[47.2rem] lg:shrink-0 lg:pr-0 lg:pt-[2.8rem]">
-            <Link href="/" aria-label={brand.name} className="block w-full max-w-[20rem] md:max-w-[22rem] lg:max-w-none lg:w-[42rem]">
+            <Link href={brand.href} aria-label={brand.name} className="block w-full max-w-[20rem] md:max-w-[22rem] lg:max-w-none lg:w-[42rem]">
               <Image
                 src={brand.logo.src}
                 alt={brand.logo.alt}

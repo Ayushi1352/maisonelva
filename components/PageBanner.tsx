@@ -4,48 +4,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { site, type MaisonElvaPageBannerData, type SectionProps } from "@/data";
 
-type Crumb = { label: string; href: string };
+type Crumb = { label: string; href?: string };
+type BannerPage = { title: string; paths: Crumb[] };
 
-const LOWERCASE_WORDS = new Set(["a", "an", "and", "as", "at", "by", "for", "in", "of", "on", "or", "the", "to", "with"]);
-
-/** "about-us" → "About Us", "how-to-choose-the-perfect-jewellery" → "How to Choose the Perfect Jewellery" */
-function labelFromSegment(segment: string) {
-  return decodeURIComponent(segment)
-    .split("-")
-    .filter(Boolean)
-    .map((word, index) =>
-      index > 0 && LOWERCASE_WORDS.has(word.toLowerCase()) ? word.toLowerCase() : word.charAt(0).toUpperCase() + word.slice(1),
-    )
-    .join(" ");
-}
-
-/**
- * Builds Home / Section / Item straight from the URL, one crumb per segment, so the breadcrumb always matches
- * the route. A path listed in templates.json (pageBanner.titles) uses that label; a detail page whose listed title
- * repeats its parent's ("Our Collections" under /collections) falls back to the segment name.
- */
-function crumbsFromPath(pathname: string, home: Crumb, titles: Record<string, string>): Crumb[] {
-  const segments = pathname.split("/").filter(Boolean);
-  const crumbs = [home];
-  segments.forEach((segment, index) => {
-    const href = `/${segments.slice(0, index + 1).join("/")}`;
-    const listed = titles[href];
-    const label = listed && listed !== crumbs[crumbs.length - 1].label ? listed : labelFromSegment(segment);
-    crumbs.push({ label, href });
-  });
-  return crumbs;
-}
-
-/**
- * Page title + breadcrumb, both taken from the current route. The title is the route's entry in templates.json
- * (pageBanner.titles) when there is one, otherwise the last crumb.
- */
+/** Page title + breadcrumb for the current route, both from site.json (pageBanner.pages). */
 export default function PageBanner({ data = site.pageBanner }: SectionProps<MaisonElvaPageBannerData>) {
   const pathname = usePathname();
-  const home = { label: data.homeLabel, href: data.homeHref };
-  const titles = data.titles as Record<string, string>;
-  const crumbs = crumbsFromPath(pathname, home, titles);
-  const title = titles[pathname] ?? crumbs[crumbs.length - 1].label;
+  const page = (data.pages as Record<string, BannerPage>)[pathname];
+  if (!page) return null;
+  const crumbs: Crumb[] = [{ label: data.homeLabel, href: data.homeHref }, ...page.paths];
+  const { title } = page;
 
   return (
     <section className="bg-[var(--color-bg-main)] px-4 pt-12 text-center md:pt-16 lg:pt-[8.6rem]">
@@ -59,10 +27,10 @@ export default function PageBanner({ data = site.pageBanner }: SectionProps<Mais
               <li key={`${crumb.label}-${index}`} className={`flex items-center ${last ? "min-w-0" : "shrink-0"}`}>
                 {index > 0 && (
                   <span className="mx-2.5 text-[var(--color-breadcrumb-separator)] lg:mx-[1rem]" aria-hidden="true">
-                    /
+                    {data.separator}
                   </span>
                 )}
-                {!last ? (
+                {!last && crumb.href ? (
                   <Link href={crumb.href} className="text-[var(--color-text)] transition-colors hover:text-[var(--color-secondary)] hover:underline hover:underline-offset-4">
                     {crumb.label}
                   </Link>
