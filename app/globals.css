@@ -1,57 +1,128 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/*
-  The design is drawn on a 1920px wide canvas and written in rem (design px / 16). From 1024px up the
-  root font size follows the viewport (see <html> in app/layout.tsx), so 1024px shows the same desktop
-  layout as 1440px and every screen keeps the design's exact proportions.
-*/
-@theme {
-  /* Desktop layout (xl:) starts at 1024px, so 1024 shows the same design as 1440. */
-  --breakpoint-xl: 64rem;
-
-  /* Brand colours. These are only defaults: site.json (theme.colors) overrides them in app/layout.tsx. Taken from the Maison Élva logo (maroon, charcoal, gold) */
-  --color-maroon: #4f151d; /* logo wordmark "MAISON" (sampled) */
-  --color-maroon-dark: #3a0f15;
-  --color-maroon-light: #6e3a41; /* tint of logo maroon — thin rules/dividers */
-  --color-maroon-soft: #8a5f64;
-  /* Accent reds used only where the page designs show red instead of logo maroon */
-  --color-ruby: #86061a; /* testimonials, gallery, enquiry, contact, blog details */
-  --color-ruby-dark: #6a0414; /* hover state */
-  --color-ruby-deep: #5e0411; /* product details + about "Mission" */
-  --color-ink: #222021; /* logo wordmark "ÉLVA" (sampled) */
-  --color-ink-soft: #333333;
-  --color-body: #4a4a4a;
-  --color-muted: #5c5c5c;
-  --color-subtle: #8a8a8a;
-  --color-gold: #b08858; /* logo star + swash (sampled) */
-  --color-gold-deep: #9a7346;
-  --color-gold-light: #d2b68f;
-
-  /* Warm neutrals (gold-tinted) */
-  --color-page: #fefdfb;
-  --color-sand: #f6efe7;
-  --color-blush: #f9f5f4;
-  --color-cream: #fbf6f0;
-  --color-card: #fcf8f4;
-  --color-line: #f0dfcb;
-  --color-footer: #f6f4f0;
-  /* Shown on both sides of the page when the screen is wider than 1920px (or the browser is zoomed out). */
-  --color-backdrop: #f5f3ef;
-
-  /* Inner pages (testimonials, gallery, enquiry, contact, blog and collection details): navy headings, amber accents, slate body */
-  --color-navy: #141c2b;
-  --color-amber: #c2802f;
-  --color-slate: #646a78;
+:root {
+  --color-bg-main: #fefdfb;
+  --color-bg-card: #fcf8f4;
+  --color-bg-light: #fbf6f0;
+  --color-bg-alt: #f6efe7;
+  --color-bg-backdrop: #f5f3ef;
+  --color-primary: #4f151d;
+  --color-primary-dark: #3a0f15;
+  --color-primary-light: #6e3a41;
+  --color-primary-soft: #8a5f64;
+  --color-secondary: #86061a;
+  --color-secondary-dark: #6a0414;
+  --color-secondary-deep: #5e0411;
+  --color-accent: #b08858;
+  --color-accent-dark: #9a7346;
+  --color-accent-light: #d2b68f;
+  --color-accent-alt: #c2802f;
+  --color-text: #222021;
+  --color-text-soft: #333333;
+  --color-text-light: #4a4a4a;
+  --color-text-muted: #5c5c5c;
+  --color-text-subtle: #8a8a8a;
+  --color-text-alt: #646a78;
+  --color-heading: #141c2b;
+  --color-border: #f0dfcb;
+  --color-border-form: #f3e4d3;
+  --color-border-field: #f0ddc8;
+  --color-white: #ffffff;
+  --color-surface-soft: #f9f5f4;
+  --color-surface-warm-top: #fdfcfa;
+  --color-surface-warm: #fcfaf7;
+  --color-surface-warm-alt: #fdfbf8;
+  --color-surface-warm-deep: #fbf8f4;
+  --color-surface-mission-top: #fcfaf6;
+  --color-footer-bg: #f6f4f0;
+  --color-field-bg: #fdfaf6;
+  --color-form-bg-top: #fdf8f2;
+  --color-form-bg-bottom: #fcf6ef;
+  --color-menu-divider: #efe6dc;
+  --color-hero-circle: #5b2026;
+  --color-title-stroke: #fbf9f5;
+  --color-icon-highlight: #fbe8d4;
+  --color-icon-badge-light: #fdeedd;
+  --color-icon-badge-mid: #fbe6d0;
+  --color-icon-badge-dark: #f8dcc0;
+  --color-breadcrumb-separator: #b9b9b9;
+  --color-collections-bg: #fefefe;
+  --color-tab-inactive: #cbc5c5;
+  --color-tab-rule: #e4dede;
+  --color-blog-date-bg: #f8f1ec;
+  --color-blog-divider: #d9d4d0;
+  --color-contact-rule: #ead7c2;
+  --color-quote-mark: #efdfcb;
+  --color-testimonial-card-bottom: #fbf6f1;
+  --color-gallery-accent: #700414;
+  --color-gallery-accent-end: #1f252c;
+  --color-gallery-label: #33363b;
+  --color-gallery-description: #5a5e64;
+  --color-gallery-title: #1f262d;
+  --color-gallery-rule: #dfb987;
+  --color-gallery-star: #bc7c27;
+  --color-gallery-divider-mid: #ead2b0;
+  --color-gallery-divider-end: #e0bf92;
+  --color-product-bg: #faf8f5;
+  --color-product-description-bg: #f8f3ee;
+  --color-thumbnail-hover: #e6cfb3;
+  --color-highlights-bg: #fbfaf8;
+  --color-highlights-label: #b07a48;
+  --color-highlights-rule: #d4a571;
+  --color-highlights-divider: #f3eee9;
+  --color-highlights-line: #efe3d6;
+  --color-highlights-line-soft: #f0e6dc;
+  --color-highlights-star: #c27a24;
+  --color-highlights-icon: #b06620;
+  --color-highlights-heading: #1c1f24;
+  --color-highlights-text: #67686b;
+  --color-spec-border: #ebe3da;
+  --color-spec-label-bg: #f4efe9;
+  --color-spec-value-bg: #f8f5f1;
+  --color-success: #3f7a3a;
+  --color-success-bg: #f3faf1;
+  --color-success-border: #cfe3cc;
+  --color-success-heading: #24451f;
+  --color-success-text: #3f5a3b;
+  --color-success-hover: #e2f0de;
+  --color-explore-fade-96: rgba(249, 245, 240, 0.96);
+  --color-explore-fade-95: rgba(249, 245, 240, 0.95);
+  --color-explore-fade-88: rgba(249, 245, 240, 0.88);
+  --color-explore-fade-82: rgba(249, 245, 240, 0.82);
+  --color-explore-fade-0: rgba(249, 245, 240, 0);
+  --color-lightbox-overlay: rgba(20, 8, 10, 0.88);
+  --color-menu-shadow: rgba(79, 21, 29, 0.08);
+  --color-success-shadow: rgba(63, 107, 58, 0.12);
+  --color-testimonial-shadow: rgba(190, 150, 110, 0.12);
+  --color-highlights-shadow: #f3ece4;
+  --color-gallery-arrow-shadow: rgba(0, 0, 0, 0.12);
+  --color-map-button-shadow: rgba(0, 0, 0, 0.18);
 }
 
-@theme inline {
-  /* Fonts from site.json (theme.fonts) via app/fonts.generated.ts; the second part is the fallback. */
-  --font-playfair: var(--font-playfair-face, Georgia, serif);
-  --font-caslon: var(--font-caslon-face, Georgia, serif);
-  --font-cormorant: var(--font-cormorant-face, Georgia, serif);
-  --font-newsreader: var(--font-newsreader-face, Georgia, serif);
-  --font-marcellus: var(--font-marcellus-face, Georgia, serif);
-  --font-poppins: var(--font-poppins-face, Arial, sans-serif);
-  --font-gsans: var(--font-gsans-face, Arial, sans-serif);
-  --font-sans: var(--font-poppins-face, Arial, sans-serif);
+html,
+body {
+  max-width: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-backdrop);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
 }

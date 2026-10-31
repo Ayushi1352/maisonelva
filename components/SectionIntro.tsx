@@ -28,34 +28,34 @@ export default function SectionIntro({
   titleTop,
   titleAccent,
   description,
-  labelClassName = "text-gold-deep text-[1.15rem] tracking-[0.14em] md:text-[1.5rem] xl:text-[2.1rem] xl:tracking-[0.245em]",
-  titleClassName = "xl:text-[6.1rem]",
-  descriptionClassName = "text-ink-soft xl:mt-[1.54rem] xl:max-w-[68rem] xl:text-[2.6rem] xl:leading-[3.375rem]",
+  labelClassName = "text-[var(--color-accent-dark)] text-[1.15rem] tracking-[0.14em] md:text-[1.5rem] lg:text-[2.1rem] lg:tracking-[0.245em]",
+  titleClassName = "lg:text-[6.1rem]",
+  descriptionClassName = "text-[var(--color-text-soft)] lg:mt-[1.54rem] lg:max-w-[68rem] lg:text-[2.6rem] lg:leading-[3.375rem]",
   closingRule = false,
-  ruleClassName = "xl:mt-[0.9rem]",
-  titleTopClassName = "text-navy",
-  accentClassName = "text-ruby",
-  ruleColorClassName = "bg-gold",
+  ruleClassName = "lg:mt-[0.9rem]",
+  titleTopClassName = "text-[var(--color-heading)]",
+  accentClassName = "text-[var(--color-secondary)]",
+  ruleColorClassName = "bg-[var(--color-accent)]",
   dividerStarClassName,
   dividerLineClassName,
 }: SectionIntroProps) {
   return (
     <div className="text-center">
       <StarDivider starClassName={dividerStarClassName} lineClassName={dividerLineClassName} />
-      <p className={`mt-5 font-caslon uppercase leading-none xl:mt-[2.35rem] ${labelClassName}`}>{label}</p>
+      <p className={`mt-5 font-secondary uppercase leading-none lg:mt-[2.35rem] ${labelClassName}`}>{label}</p>
       <h2
-        className={`mt-4 font-caslon text-[2.4rem] font-bold leading-[1.12] tracking-[-0.015em] md:text-[3.6rem] xl:mt-[2.2rem] xl:leading-[1.08] ${titleClassName}`}
+        className={`mt-4 font-secondary text-[2.4rem] font-bold leading-[1.12] tracking-[-0.015em] md:text-[3.6rem] lg:mt-[2.2rem] lg:leading-[1.08] ${titleClassName}`}
       >
         <span className={titleTopClassName}>{titleTop}</span> <span className={accentClassName}>{titleAccent}</span>
       </h2>
-      <span className={`mx-auto mt-4 block h-[3px] w-16 xl:w-[5.75rem] ${ruleColorClassName} ${ruleClassName}`} aria-hidden="true" />
+      <span className={`mx-auto mt-4 block h-[3px] w-16 lg:w-[5.75rem] ${ruleColorClassName} ${ruleClassName}`} aria-hidden="true" />
       <p
-        className={`mx-auto mt-5 max-w-[42rem] font-newsreader text-[1.2rem] font-[350] leading-[1.5] md:text-[1.45rem] ${descriptionClassName}`}
+        className={`mx-auto mt-5 max-w-[42rem] font-editorial text-[1.2rem] font-[350] leading-[1.5] md:text-[1.45rem] ${descriptionClassName}`}
       >
         {description}
       </p>
       {closingRule && (
-        <span className={`mx-auto mt-5 block h-[3px] w-16 xl:mt-[1.6rem] xl:w-[5.75rem] ${ruleColorClassName}`} aria-hidden="true" />
+        <span className={`mx-auto mt-5 block h-[3px] w-16 lg:mt-[1.6rem] lg:w-[5.75rem] ${ruleColorClassName}`} aria-hidden="true" />
       )}
     </div>
   );

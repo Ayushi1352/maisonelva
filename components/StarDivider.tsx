@@ -11,13 +11,13 @@ type StarDividerProps = {
 
 export default function StarDivider({
   className = "",
-  starClassName = "text-gold-deep",
-  lineClassName = "via-gold-light to-gold xl:w-[10.8rem]",
+  starClassName = "text-[var(--color-accent-dark)]",
+  lineClassName = "via-[var(--color-accent-light)] to-[var(--color-accent)] lg:w-[10.8rem]",
 }: StarDividerProps) {
   return (
-    <div className={`flex items-center justify-center gap-3 xl:gap-[1.4rem] ${className}`} aria-hidden="true">
+    <div className={`flex items-center justify-center gap-3 lg:gap-[1.4rem] ${className}`} aria-hidden="true">
       <span className={`h-[2px] w-20 bg-gradient-to-r from-transparent md:w-28 ${lineClassName}`} />
-      <Sparkle className={`size-6 xl:size-[2.6rem] ${starClassName}`} />
+      <Sparkle className={`size-6 lg:size-[2.6rem] ${starClassName}`} />
       <span className={`h-[2px] w-20 bg-gradient-to-l from-transparent md:w-28 ${lineClassName}`} />
     </div>
   );

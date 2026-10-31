@@ -36,7 +36,7 @@ export default function GalleryGrid({ data = site.galleryPage }: SectionProps<Ma
 
   return (
     <>
-      <ul id="gallery-grid" className="grid scroll-mt-28 grid-cols-2 xl:scroll-mt-[11rem] gap-3 sm:gap-4 md:grid-cols-[602fr_581fr_599fr] xl:gap-x-[1.44rem] xl:gap-y-[1.3rem]">
+      <ul id="gallery-grid" className="grid scroll-mt-28 grid-cols-2 lg:scroll-mt-[11rem] gap-3 sm:gap-4 md:grid-cols-[602fr_581fr_599fr] lg:gap-x-[1.44rem] lg:gap-y-[1.3rem]">
         {pageItems.map((image, index) => (
           <li key={image.src}>
             <button
@@ -65,13 +65,13 @@ export default function GalleryGrid({ data = site.galleryPage }: SectionProps<Ma
           role="dialog"
           aria-modal="true"
           aria-label={images[active].alt}
-          className={`fixed inset-0 z-[100] flex items-center justify-center bg-[rgba(20,8,10,0.88)] p-4 ${fadeIn}`}
+          className={`fixed inset-0 z-[100] flex items-center justify-center bg-[var(--color-lightbox-overlay)] p-4 ${fadeIn}`}
           onClick={close}
         >
           <div className="relative h-[80vh] w-full max-w-5xl" onClick={(event) => event.stopPropagation()}>
             <Image src={images[active].src} alt={images[active].alt} fill quality={90} sizes="90vw" className="object-contain" />
           </div>
-          <button type="button" onClick={close} aria-label={data.closeLabel} className="absolute right-4 top-4 text-white transition-colors hover:text-gold-light md:right-8 md:top-8">
+          <button type="button" onClick={close} aria-label={data.closeLabel} className="absolute right-4 top-4 text-[var(--color-white)] transition-colors hover:text-[var(--color-accent-light)] md:right-8 md:top-8">
             <Close className="size-8" />
           </button>
           <button
@@ -81,7 +81,7 @@ export default function GalleryGrid({ data = site.galleryPage }: SectionProps<Ma
               step(-1);
             }}
             aria-label={data.previousLabel}
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-white transition-colors hover:text-gold-light md:left-8"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-white)] transition-colors hover:text-[var(--color-accent-light)] md:left-8"
           >
             <ArrowLeft className="w-10" />
           </button>
@@ -92,7 +92,7 @@ export default function GalleryGrid({ data = site.galleryPage }: SectionProps<Ma
               step(1);
             }}
             aria-label={data.nextLabel}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-white transition-colors hover:text-gold-light md:right-8"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-white)] transition-colors hover:text-[var(--color-accent-light)] md:right-8"
           >
             <ArrowRight className="w-10" />
           </button>

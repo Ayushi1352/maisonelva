@@ -21,7 +21,7 @@ function labelFromSegment(segment: string) {
 
 /**
  * Builds Home / Section / Item straight from the URL, one crumb per segment, so the breadcrumb always matches
- * the route. A path listed in site.json (pageBanner.titles) uses that label; a detail page whose listed title
+ * the route. A path listed in templates.json (pageBanner.titles) uses that label; a detail page whose listed title
  * repeats its parent's ("Our Collections" under /collections) falls back to the segment name.
  */
 function crumbsFromPath(pathname: string, home: Crumb, titles: Record<string, string>): Crumb[] {
@@ -37,7 +37,7 @@ function crumbsFromPath(pathname: string, home: Crumb, titles: Record<string, st
 }
 
 /**
- * Page title + breadcrumb, both taken from the current route. The title is the route's entry in site.json
+ * Page title + breadcrumb, both taken from the current route. The title is the route's entry in templates.json
  * (pageBanner.titles) when there is one, otherwise the last crumb.
  */
 export default function PageBanner({ data = site.pageBanner }: SectionProps<MaisonElvaPageBannerData>) {
@@ -48,26 +48,26 @@ export default function PageBanner({ data = site.pageBanner }: SectionProps<Mais
   const title = titles[pathname] ?? crumbs[crumbs.length - 1].label;
 
   return (
-    <section className="bg-page px-4 pt-12 text-center md:pt-16 xl:pt-[8.6rem]">
-      <h1 className="mx-auto max-w-[80rem] text-balance font-marcellus text-[2.6rem] leading-[1.1] text-ink md:text-[3.5rem] xl:text-[4.38rem]">{title}</h1>
-      <nav aria-label={data.breadcrumbLabel} className="mt-5 xl:mt-[2.25rem]">
+    <section className="bg-[var(--color-bg-main)] px-4 pt-12 text-center md:pt-16 lg:pt-[8.6rem]">
+      <h1 className="mx-auto max-w-[80rem] text-balance font-decorative text-[2.6rem] leading-[1.1] text-[var(--color-text)] md:text-[3.5rem] lg:text-[4.38rem]">{title}</h1>
+      <nav aria-label={data.breadcrumbLabel} className="mt-5 lg:mt-[2.25rem]">
         {/* always one line: smaller on phones, and a very long last crumb is shortened with … */}
-        <ol className="flex items-center justify-center whitespace-nowrap font-marcellus text-[0.875rem] leading-none sm:text-[1rem] md:text-[1.15rem] xl:text-[1.39rem]">
+        <ol className="flex items-center justify-center whitespace-nowrap font-decorative text-[0.875rem] leading-none sm:text-[1rem] md:text-[1.15rem] lg:text-[1.39rem]">
           {crumbs.map((crumb, index) => {
             const last = index === crumbs.length - 1;
             return (
               <li key={`${crumb.label}-${index}`} className={`flex items-center ${last ? "min-w-0" : "shrink-0"}`}>
                 {index > 0 && (
-                  <span className="mx-2.5 text-[#b9b9b9] xl:mx-[1rem]" aria-hidden="true">
+                  <span className="mx-2.5 text-[var(--color-breadcrumb-separator)] lg:mx-[1rem]" aria-hidden="true">
                     /
                   </span>
                 )}
                 {!last ? (
-                  <Link href={crumb.href} className="text-ink transition-colors hover:text-ruby hover:underline hover:underline-offset-4">
+                  <Link href={crumb.href} className="text-[var(--color-text)] transition-colors hover:text-[var(--color-secondary)] hover:underline hover:underline-offset-4">
                     {crumb.label}
                   </Link>
                 ) : (
-                  <span className="-my-[0.15em] truncate py-[0.15em] text-muted" aria-current="page">
+                  <span className="-my-[0.15em] truncate py-[0.15em] text-[var(--color-text-muted)]" aria-current="page">
                     {crumb.label}
                   </span>
                 )}

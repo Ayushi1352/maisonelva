@@ -74,7 +74,7 @@ export function DiamondSolid(props: IconProps) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true" {...props}>
       <path fill="currentColor" d="M17 9h30l14 16-29 32L3 25 17 9Z" />
-      <path fill="none" stroke="#fbe8d4" strokeWidth={2.4} strokeLinejoin="round" d="M3 25h58M17 9l7 16 8-16 8 16 7-16M24 25l8 32 8-32" />
+      <path fill="none" className="stroke-[var(--color-icon-highlight)]" strokeWidth={2.4} strokeLinejoin="round" d="M3 25h58M17 9l7 16 8-16 8 16 7-16M24 25l8 32 8-32" />
     </svg>
   );
 }
@@ -91,7 +91,7 @@ export function ShieldCheck(props: IconProps) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true" {...props}>
       <path fill="currentColor" d="M32 4 8 12v18c0 15.3 10.2 27.4 24 30 13.8-2.6 24-14.7 24-30V12L32 4Z" />
-      <path fill="none" stroke="#fbe8d4" strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" d="m21 32 8 8 15-16" />
+      <path fill="none" className="stroke-[var(--color-icon-highlight)]" strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" d="m21 32 8 8 15-16" />
     </svg>
   );
 }
@@ -136,7 +136,7 @@ export function MapPin(props: IconProps) {
   return (
     <svg viewBox="0 0 48 48" aria-hidden="true" {...props}>
       <path fill="currentColor" d="M24 3C15.7 3 9 9.6 9 17.8 9 29 24 45 24 45s15-16 15-27.2C39 9.6 32.3 3 24 3Z" />
-      <circle cx="24" cy="18" r="5.8" fill="#fbe8d4" />
+      <circle cx="24" cy="18" r="5.8" className="fill-[var(--color-icon-highlight)]" />
     </svg>
   );
 }
@@ -163,7 +163,7 @@ export function Mail(props: IconProps) {
   return (
     <svg viewBox="0 0 48 48" aria-hidden="true" {...props}>
       <rect x="4" y="9" width="40" height="30" rx="2" fill="currentColor" />
-      <path fill="none" stroke="#fbe8d4" strokeWidth={2.6} strokeLinejoin="round" d="m6 12 18 15 18-15M6 36l13-12M42 36 29 24" />
+      <path fill="none" className="stroke-[var(--color-icon-highlight)]" strokeWidth={2.6} strokeLinejoin="round" d="m6 12 18 15 18-15M6 36l13-12M42 36 29 24" />
     </svg>
   );
 }

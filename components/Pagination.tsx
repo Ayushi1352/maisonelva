@@ -23,9 +23,9 @@ type PaginationProps = {
 };
 
 const box =
-  "flex size-11 items-center justify-center border-2 font-playfair text-[1.1rem] transition-colors xl:size-[4rem] xl:text-[1.5rem]";
+  "flex size-11 items-center justify-center border-2 font-heading text-[1.1rem] transition-colors lg:size-[4rem] lg:text-[1.5rem]";
 
-/** Page numbers under a listing; shows only when the list has more than one page (perPage in site.json) */
+/** Page numbers under a listing; shows only when the list has more than one page (perPage in templates.json) */
 export default function Pagination({ page, totalPages, onChange, scrollTargetId }: PaginationProps) {
   if (totalPages <= 1) return null;
   const labels = site.pageBanner.pagination;
@@ -37,15 +37,15 @@ export default function Pagination({ page, totalPages, onChange, scrollTargetId 
   }
 
   return (
-    <nav aria-label={labels.label} className="mt-12 flex items-center justify-center gap-2.5 xl:mt-[5rem] xl:gap-[0.9rem]">
+    <nav aria-label={labels.label} className="mt-12 flex items-center justify-center gap-2.5 lg:mt-[5rem] lg:gap-[0.9rem]">
       <button
         type="button"
         onClick={() => go(page - 1)}
         disabled={page === 1}
         aria-label={labels.previous}
-        className={`${box} border-gold-light text-maroon hover:border-maroon hover:bg-maroon hover:text-white disabled:pointer-events-none disabled:opacity-40`}
+        className={`${box} border-[var(--color-accent-light)] text-[var(--color-primary)] hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-white)] disabled:pointer-events-none disabled:opacity-40`}
       >
-        <ArrowLeft className="w-6 xl:w-[2rem]" />
+        <ArrowLeft className="w-6 lg:w-[2rem]" />
       </button>
       {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
         <button
@@ -54,7 +54,7 @@ export default function Pagination({ page, totalPages, onChange, scrollTargetId 
           onClick={() => go(n)}
           aria-label={fill(labels.page, { page: n })}
           aria-current={n === page ? "page" : undefined}
-          className={`${box} ${n === page ? "border-maroon bg-maroon text-white" : "border-gold-light text-ink hover:border-maroon hover:bg-maroon hover:text-white"}`}
+          className={`${box} ${n === page ? "border-[var(--color-primary)] bg-[var(--color-primary)] text-[var(--color-white)]" : "border-[var(--color-accent-light)] text-[var(--color-text)] hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-white)]"}`}
         >
           {n}
         </button>
@@ -64,9 +64,9 @@ export default function Pagination({ page, totalPages, onChange, scrollTargetId 
         onClick={() => go(page + 1)}
         disabled={page === totalPages}
         aria-label={labels.next}
-        className={`${box} border-gold-light text-maroon hover:border-maroon hover:bg-maroon hover:text-white disabled:pointer-events-none disabled:opacity-40`}
+        className={`${box} border-[var(--color-accent-light)] text-[var(--color-primary)] hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-white)] disabled:pointer-events-none disabled:opacity-40`}
       >
-        <ArrowRight className="w-6 xl:w-[2rem]" />
+        <ArrowRight className="w-6 lg:w-[2rem]" />
       </button>
     </nav>
   );

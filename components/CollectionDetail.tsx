@@ -9,9 +9,9 @@ type CollectionDetailProps = SectionProps<MaisonElvaCollectionDetailData> & { pr
 export default function CollectionDetail({ data = site.collectionDetailPage, product }: CollectionDetailProps) {
   // The blocks sit closer together than the page-wide section gap, so they share one wrapper; ProductDescription sets its own desktop top margin
   return (
-    <div className="flex flex-col gap-10 xl:gap-0">
-      <section className="bg-[#faf8f5] px-4 sm:px-6 md:px-10 xl:pb-[2.4rem] xl:pl-[5.8rem] xl:pr-[5.1rem] xl:pt-[2.6rem]">
-        <div className="grid items-start gap-10 xl:grid-cols-[auto_1fr] xl:gap-[3.7rem]">
+    <div className="flex flex-col gap-10 lg:gap-0">
+      <section className="bg-[var(--color-product-bg)] px-4 sm:px-6 md:px-10 lg:pb-[2.4rem] lg:pl-[5.8rem] lg:pr-[5.1rem] lg:pt-[2.6rem]">
+        <div className="grid items-start gap-10 lg:grid-cols-[auto_1fr] lg:gap-[3.7rem]">
           <ProductGallery data={data} name={product.name} images={product.images} thumbnails={product.thumbnails} />
           <ProductInfo data={data} product={product} />
         </div>

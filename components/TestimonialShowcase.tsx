@@ -56,47 +56,47 @@ export default function TestimonialShowcase({ data: content = site.testimonialsS
 
   return (
     <section
-      className={`relative bg-page xl:h-[43.95rem] ${className}`}
+      className={`relative bg-[var(--color-bg-main)] lg:h-[43.95rem] ${className}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
     >
       {/* Intro */}
-      <div className="px-5 sm:px-8 md:px-10 xl:absolute xl:left-[6.25rem] xl:top-[1.75rem] xl:w-[30rem] xl:p-0">
-        <p className="flex items-center font-poppins text-[0.72rem] font-semibold uppercase tracking-[0.25em] text-maroon md:text-[0.85rem] xl:text-[1.125rem] xl:tracking-[0.31em]">
+      <div className="px-5 sm:px-8 md:px-10 lg:absolute lg:left-[6.25rem] lg:top-[1.75rem] lg:w-[30rem] lg:p-0">
+        <p className="flex items-center font-sans text-[0.72rem] font-semibold uppercase tracking-[0.25em] text-[var(--color-primary)] md:text-[0.85rem] lg:text-[1.125rem] lg:tracking-[0.31em]">
           {content.label}
-          <span className="ml-4 h-[2px] w-12 bg-maroon-light xl:ml-[1.4rem] xl:w-[5.56rem]" aria-hidden="true" />
+          <span className="ml-4 h-[2px] w-12 bg-[var(--color-primary-light)] lg:ml-[1.4rem] lg:w-[5.56rem]" aria-hidden="true" />
         </p>
-        <h2 className="mt-5 font-playfair text-[3rem] font-semibold uppercase leading-[1.05] tracking-[-0.01em] md:text-[4rem] xl:mt-[1.4rem] xl:text-[5.75rem] xl:leading-[6.25rem]">
+        <h2 className="mt-5 font-heading text-[3rem] font-semibold uppercase leading-[1.05] tracking-[-0.01em] md:text-[4rem] lg:mt-[1.4rem] lg:text-[5.75rem] lg:leading-[6.25rem]">
           {content.titleLines.map((line) => (
-            <span key={line.text} className={`block ${line.accent ? "text-maroon" : "text-ink"}`}>
+            <span key={line.text} className={`block ${line.accent ? "text-[var(--color-primary)]" : "text-[var(--color-text)]"}`}>
               {line.text}
             </span>
           ))}
         </h2>
-        <p className="mt-5 max-w-[24rem] font-poppins text-[0.98rem] leading-[1.75] text-muted md:text-[1.05rem] xl:mt-[1.65rem] xl:max-w-[25rem] xl:text-[1.35rem] xl:leading-[2.375rem]">
+        <p className="mt-5 max-w-[24rem] font-sans text-[0.98rem] leading-[1.75] text-[var(--color-text-muted)] md:text-[1.05rem] lg:mt-[1.65rem] lg:max-w-[25rem] lg:text-[1.35rem] lg:leading-[2.375rem]">
           {content.description}
         </p>
-        <div className="mt-7 flex items-center gap-8 text-maroon xl:mt-[3.85rem] xl:gap-[2.5rem]">
-          <button type="button" onClick={() => go(-1)} aria-label={content.previousLabel} className="transition-colors hover:text-gold">
-            <ArrowLeft className="w-12 xl:w-[3.4rem]" />
+        <div className="mt-7 flex items-center gap-8 text-[var(--color-primary)] lg:mt-[3.85rem] lg:gap-[2.5rem]">
+          <button type="button" onClick={() => go(-1)} aria-label={content.previousLabel} className="transition-colors hover:text-[var(--color-accent)]">
+            <ArrowLeft className="w-12 lg:w-[3.4rem]" />
           </button>
-          <button type="button" onClick={() => go(1)} aria-label={content.nextLabel} className="transition-colors hover:text-gold">
-            <ArrowRight className="w-12 xl:w-[3.4rem]" />
+          <button type="button" onClick={() => go(1)} aria-label={content.nextLabel} className="transition-colors hover:text-[var(--color-accent)]">
+            <ArrowRight className="w-12 lg:w-[3.4rem]" />
           </button>
         </div>
       </div>
 
       {/* Image composition */}
-      <div className="relative mx-auto mt-12 aspect-[601/703] w-[82%] max-w-[30rem] xl:absolute xl:left-[34.75rem] xl:top-0 xl:mt-0 xl:w-[37.56rem] xl:max-w-none">
+      <div className="relative mx-auto mt-12 aspect-[601/703] w-[82%] max-w-[30rem] lg:absolute lg:left-[34.75rem] lg:top-0 lg:mt-0 lg:w-[37.56rem] lg:max-w-none">
         {/* thin outline frame (top-right) */}
         <span
-          className="absolute left-[55.42%] top-0 h-[52.63%] w-[44.43%] border-y-[1.5px] border-r-[1.5px] border-maroon-soft"
+          className="absolute left-[55.42%] top-0 h-[52.63%] w-[44.43%] border-y-[1.5px] border-r-[1.5px] border-[var(--color-primary-soft)]"
           aria-hidden="true"
         />
         {/* beige block (bottom-left) */}
-        <span className="absolute bottom-0 left-0 h-[35.56%] w-[21.8%] bg-sand" aria-hidden="true" />
+        <span className="absolute bottom-0 left-0 h-[35.56%] w-[21.8%] bg-[var(--color-bg-alt)]" aria-hidden="true" />
         <div className="absolute left-[11.98%] top-[2.42%] h-[87.34%] w-[82.2%]">
           <Image
             src={content.image}
@@ -108,18 +108,18 @@ export default function TestimonialShowcase({ data: content = site.testimonialsS
           />
         </div>
         {/* white notch cut out of the photo's bottom-left corner, lined up with the beige block's right edge */}
-        <span className="absolute left-[11.98%] top-[70.98%] h-[18.78%] w-[9.82%] bg-page" aria-hidden="true" />
+        <span className="absolute left-[11.98%] top-[70.98%] h-[18.78%] w-[9.82%] bg-[var(--color-bg-main)]" aria-hidden="true" />
 
       </div>
 
       {/* Quote */}
-      <figure className="relative mx-5 mt-12 sm:mx-8 md:mx-auto md:max-w-[34rem] xl:absolute xl:left-[80.75rem] xl:top-[3.45rem] xl:mx-0 xl:mt-0 xl:w-[30.5rem] xl:max-w-none">
-        <span className="flex h-16 w-[4.5rem] items-center justify-center bg-maroon xl:ml-[2.25rem] xl:h-[5.25rem] xl:w-[5.8rem]" aria-hidden="true">
-          <span className="mt-6 font-playfair text-[5rem] font-bold leading-none text-white xl:mt-[2.2rem] xl:text-[7rem]">”</span>
+      <figure className="relative mx-5 mt-12 sm:mx-8 md:mx-auto md:max-w-[34rem] lg:absolute lg:left-[80.75rem] lg:top-[3.45rem] lg:mx-0 lg:mt-0 lg:w-[30.5rem] lg:max-w-none">
+        <span className="flex h-16 w-[4.5rem] items-center justify-center bg-[var(--color-primary)] lg:ml-[2.25rem] lg:h-[5.25rem] lg:w-[5.8rem]" aria-hidden="true">
+          <span className="mt-6 font-heading text-[5rem] font-bold leading-none text-[var(--color-white)] lg:mt-[2.2rem] lg:text-[7rem]">”</span>
         </span>
         <div ref={slide}>
-          <blockquote className="relative mt-8 font-cormorant text-[1.45rem] font-medium leading-[1.4] text-ink-soft md:text-[1.6rem] xl:mt-[2.85rem] xl:text-[2.25rem] xl:leading-[3rem]">
-            <span className="absolute -left-4 -top-1 font-playfair text-[1.4rem] text-muted xl:-left-[1.7rem] xl:-top-[0.4rem] xl:text-[2rem]" aria-hidden="true">
+          <blockquote className="relative mt-8 font-display text-[1.45rem] font-medium leading-[1.4] text-[var(--color-text-soft)] md:text-[1.6rem] lg:mt-[2.85rem] lg:text-[2.25rem] lg:leading-[3rem]">
+            <span className="absolute -left-4 -top-1 font-heading text-[1.4rem] text-[var(--color-text-muted)] lg:-left-[1.7rem] lg:-top-[0.4rem] lg:text-[2rem]" aria-hidden="true">
               “
             </span>
             <p>
@@ -127,12 +127,12 @@ export default function TestimonialShowcase({ data: content = site.testimonialsS
               <span aria-hidden="true">”</span>
             </p>
           </blockquote>
-          <figcaption className="mt-7 xl:mt-[2.6rem]">
-            <span className="block h-[2px] w-14 bg-gold xl:w-[4.6rem]" aria-hidden="true" />
-            <span className="mt-5 block font-playfair text-[1.5rem] font-medium uppercase leading-none text-maroon xl:mt-[1.75rem] xl:text-[2.16rem]">
+          <figcaption className="mt-7 lg:mt-[2.6rem]">
+            <span className="block h-[2px] w-14 bg-[var(--color-accent)] lg:w-[4.6rem]" aria-hidden="true" />
+            <span className="mt-5 block font-heading text-[1.5rem] font-medium uppercase leading-none text-[var(--color-primary)] lg:mt-[1.75rem] lg:text-[2.16rem]">
               {item.name}
             </span>
-            <span className="mt-3 block font-poppins text-[0.75rem] uppercase tracking-[0.45em] text-subtle xl:mt-[1.15rem] xl:text-[0.94rem] xl:tracking-[0.53em]">
+            <span className="mt-3 block font-sans text-[0.75rem] uppercase tracking-[0.45em] text-[var(--color-text-subtle)] lg:mt-[1.15rem] lg:text-[0.94rem] lg:tracking-[0.53em]">
               {item.role}
             </span>
           </figcaption>

@@ -7,7 +7,7 @@ export default function StoreMap({ data = site.contactPage }: SectionProps<Maiso
   const query = encodeURIComponent(address);
 
   return (
-    <div className="relative h-64 overflow-hidden sm:h-80 md:h-96 xl:h-[32.35rem]">
+    <div className="relative h-64 overflow-hidden sm:h-80 md:h-96 lg:h-[32.35rem]">
       <iframe
         src={`https://maps.google.com/maps?q=${query}&z=15&output=embed`}
         title={map.title}
@@ -20,7 +20,7 @@ export default function StoreMap({ data = site.contactPage }: SectionProps<Maiso
         href={`https://www.google.com/maps/search/?api=1&query=${query}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="absolute bottom-3 left-3 bg-white px-4 py-2 font-caslon text-[0.9rem] text-ink shadow-[0_2px_6px_rgba(0,0,0,0.18)] transition-colors hover:bg-ruby hover:text-white xl:bottom-[1.75rem] xl:left-[1.75rem] xl:px-[1.6rem] xl:py-[0.9rem] xl:text-[1.3rem]"
+        className="absolute bottom-3 left-3 bg-[var(--color-white)] px-4 py-2 font-secondary text-[0.9rem] text-[var(--color-text)] shadow-[0_2px_6px_var(--color-map-button-shadow)] transition-colors hover:bg-[var(--color-secondary)] hover:text-[var(--color-white)] lg:bottom-[1.75rem] lg:left-[1.75rem] lg:px-[1.6rem] lg:py-[0.9rem] lg:text-[1.3rem]"
       >
         {map.openLabel}
       </a>

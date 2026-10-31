@@ -10,9 +10,9 @@ export default function StorySection({
   className = "",
 }: SectionProps<MaisonElvaAboutStoryData> & { showButton?: boolean }) {
   return (
-    <section className={`bg-page xl:flex xl:items-start ${className}`}>
+    <section className={`bg-[var(--color-bg-main)] lg:flex lg:items-start ${className}`}>
       {/* Overlapping image composition (proportions taken from the 1920px design) */}
-      <div className="relative mr-5 aspect-[1102/829] sm:mr-8 md:mr-10 md:max-w-[52rem] xl:mr-0 xl:w-[68.875rem] xl:max-w-none xl:shrink-0">
+      <div className="relative mr-5 aspect-[1102/829] sm:mr-8 md:mr-10 md:max-w-[52rem] lg:mr-0 lg:w-[68.875rem] lg:max-w-none lg:shrink-0">
         <div className="absolute left-0 top-0 h-[88.66%] w-[82.58%]">
           <Image
             src={story.primaryImage}
@@ -35,16 +35,16 @@ export default function StorySection({
         </div>
       </div>
 
-      <div className="px-5 pt-10 sm:px-8 md:px-10 md:pt-12 xl:ml-[5rem] xl:max-w-[40rem] xl:px-0 xl:pt-[10.95rem]">
-        <p className="flex items-center font-poppins text-[0.72rem] font-medium uppercase tracking-[0.18em] text-ink md:text-[0.85rem] xl:text-[1.125rem]">
+      <div className="px-5 pt-10 sm:px-8 md:px-10 md:pt-12 lg:ml-[5rem] lg:max-w-[40rem] lg:px-0 lg:pt-[10.95rem]">
+        <p className="flex items-center font-sans text-[0.72rem] font-medium uppercase tracking-[0.18em] text-[var(--color-text)] md:text-[0.85rem] lg:text-[1.125rem]">
           {story.label}
-          <span className="ml-4 h-[2px] w-12 bg-maroon-light xl:ml-[2rem] xl:w-[5.7rem]" aria-hidden="true" />
+          <span className="ml-4 h-[2px] w-12 bg-[var(--color-primary-light)] lg:ml-[2rem] lg:w-[5.7rem]" aria-hidden="true" />
         </p>
-        <h2 className="mt-5 font-playfair text-[2.6rem] leading-[1.18] md:text-[3.4rem] xl:mt-[2rem] xl:text-[5.3rem] xl:leading-[6.25rem]">
-          <span className="block font-semibold text-ink">{story.titleTop}</span>
-          <span className="block font-semibold tracking-[-0.012em] text-maroon">{story.titleAccent}</span>
+        <h2 className="mt-5 font-heading text-[2.6rem] leading-[1.18] md:text-[3.4rem] lg:mt-[2rem] lg:text-[5.3rem] lg:leading-[6.25rem]">
+          <span className="block font-semibold text-[var(--color-text)]">{story.titleTop}</span>
+          <span className="block font-semibold tracking-[-0.012em] text-[var(--color-primary)]">{story.titleAccent}</span>
         </h2>
-        <div className="mt-5 space-y-3 font-poppins text-[0.98rem] leading-[1.6] text-ink md:text-[1.1rem] xl:mt-[1.6rem] xl:max-w-[39.6rem] xl:space-y-[0.95rem] xl:text-[1.36rem] xl:leading-[2.125rem]">
+        <div className="mt-5 space-y-3 font-sans text-[0.98rem] leading-[1.6] text-[var(--color-text)] md:text-[1.1rem] lg:mt-[1.6rem] lg:max-w-[39.6rem] lg:space-y-[0.95rem] lg:text-[1.36rem] lg:leading-[2.125rem]">
           {story.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
@@ -52,10 +52,10 @@ export default function StorySection({
         {showButton && (
           <Link
             href={story.button.href}
-            className="mt-8 inline-flex h-12 items-center gap-6 border border-maroon-dark bg-maroon-dark px-6 font-poppins text-[0.95rem] font-medium text-white transition-colors hover:bg-white hover:text-maroon-dark md:h-14 xl:mt-[2.9rem] xl:h-[4.3rem] xl:w-[16.4rem] xl:gap-[2.75rem] xl:px-0 xl:pl-[2.5rem] xl:text-[1.25rem]"
+            className="mt-8 inline-flex h-12 items-center gap-6 border border-[var(--color-primary-dark)] bg-[var(--color-primary-dark)] px-6 font-sans text-[0.95rem] font-medium text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary-dark)] md:h-14 lg:mt-[2.9rem] lg:h-[4.3rem] lg:w-[16.4rem] lg:gap-[2.75rem] lg:px-0 lg:pl-[2.5rem] lg:text-[1.25rem]"
           >
             {story.button.label}
-            <ArrowRight className="w-6 xl:w-[1.9rem]" />
+            <ArrowRight className="w-6 lg:w-[1.9rem]" />
           </Link>
         )}
       </div>

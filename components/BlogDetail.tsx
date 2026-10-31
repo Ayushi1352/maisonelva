@@ -6,7 +6,7 @@ type BlogDetailProps = SectionProps<MaisonElvaBlogDetailData> & { post: BlogPost
 
 export default function BlogDetail({ data = site.blogDetailPage, post }: BlogDetailProps) {
   return (
-    <article className="bg-[linear-gradient(180deg,#fdfcfa_0%,#fcfaf7_100%)]">
+    <article className="bg-[linear-gradient(180deg,var(--color-surface-warm-top)_0%,var(--color-surface-warm)_100%)]">
       <ArticleHeader data={data} post={post} />
       <ArticleBody post={post} />
     </article>
