@@ -29,7 +29,7 @@ export const CollectionsPreview = ({ data: section, collections }: { data?: Coll
             <ul
               role="tablist"
               aria-label={section.categoriesLabel}
-              className="mt-6 flex flex-wrap gap-x-6 gap-y-3 pb-2 lg:mt-[9.3rem] lg:flex-col lg:flex-nowrap lg:gap-0 lg:pb-0"
+              className="mt-6 flex gap-x-4 overflow-x-auto pb-2 [scrollbar-width:none] sm:gap-x-7 lg:mt-[9.3rem] lg:flex-col lg:gap-0 lg:overflow-visible lg:pb-0 [&::-webkit-scrollbar]:hidden"
             >
               {categories.map((category) => {
                 const selected = category.id === active;
@@ -40,7 +40,7 @@ export const CollectionsPreview = ({ data: section, collections }: { data?: Coll
                       role="tab"
                       aria-selected={selected}
                       onClick={() => setActive(category.id)}
-                      className={`relative flex items-center font-display text-[1.15rem] font-medium uppercase tracking-[0.04em] transition-colors lg:h-[3.625rem] lg:pl-[0.7rem] lg:text-[1.62rem] lg:tracking-[0.005em] ${
+                      className={`relative flex items-center whitespace-nowrap font-display text-[0.82rem] font-medium uppercase tracking-[0.03em] min-[370px]:text-[0.88rem] min-[400px]:text-[0.95rem] sm:text-[1.15rem] sm:tracking-[0.04em] transition-colors lg:h-[3.625rem] lg:pl-[0.7rem] lg:text-[1.62rem] lg:tracking-[0.005em] ${
                         selected ? "text-[var(--color-primary)]" : "text-[var(--color-tab-inactive)] hover:text-[var(--color-primary-soft)]"
                       }`}
                     >

@@ -32,7 +32,7 @@ export const HeroSection = ({ data: hero }: { data?: HeroData }) => {
       </div>
 
       {/* Visual composition */}
-      <div className="relative mx-5 mt-10 pr-[14%] pt-[12%] sm:mx-8 md:mx-auto md:w-[min(40rem,80%)] lg:static lg:m-0 lg:w-auto lg:p-0">
+      <div className="relative mx-5 mt-10 pl-[9%] pr-[14%] pt-[12%] sm:mx-8 md:mx-auto md:w-[min(40rem,80%)] lg:static lg:m-0 lg:w-auto lg:p-0">
         <span
           className="absolute right-0 top-0 h-[13%] w-[42%] bg-[var(--color-primary)] lg:h-[6.375rem] lg:w-[20.2rem]"
           aria-hidden="true"
@@ -42,7 +42,7 @@ export const HeroSection = ({ data: hero }: { data?: HeroData }) => {
           aria-hidden="true"
         />
         <span
-          className="absolute left-[-9%] top-[38%] aspect-square w-[34%] rounded-full border-2 border-[var(--color-primary-light)] bg-[linear-gradient(to_bottom,var(--color-hero-circle)_50%,transparent_50%)] lg:left-[60.25rem] lg:top-[19.25rem] lg:w-[17rem]"
+          className="absolute left-0 top-[38%] aspect-square w-[34%] rounded-full border-2 border-[var(--color-primary-light)] bg-[linear-gradient(to_bottom,var(--color-hero-circle)_50%,transparent_50%)] lg:left-[60.25rem] lg:top-[19.25rem] lg:w-[17rem]"
           aria-hidden="true"
         />
         <div className="relative z-10 aspect-[738/805] w-full lg:absolute lg:left-[67.94rem] lg:top-[6.375rem] lg:w-[46.125rem]">

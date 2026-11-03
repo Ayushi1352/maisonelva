@@ -8,7 +8,7 @@ export const EnquiryIntro = ({ data: enquiry }: { data: EnquiryData }) => {
         {enquiry.eyebrow}
         <span className="ml-4 h-[2px] w-20 bg-gradient-to-r from-[var(--color-accent)] to-transparent lg:ml-[1.2rem] lg:w-[9.4rem]" aria-hidden="true" />
       </p>
-      <h2 className="mt-4 font-secondary text-[2.5rem] font-bold leading-[1.1] tracking-[-0.015em] md:text-[3.4rem] lg:mt-[1.55rem] lg:text-[5.05rem] lg:leading-[5.75rem]">
+      <h2 className="mt-4 font-editorial text-[1.95rem] font-semibold leading-[1.15] tracking-[-0.015em] min-[400px]:text-[2.2rem] sm:text-[2.5rem] sm:leading-[1.1] md:text-[3.2rem] lg:mt-[1.55rem] lg:text-[4.65rem] lg:leading-[5.3rem]">
         <span className="block text-[var(--color-heading)]">{enquiry.title}</span>
         <span className="block text-[var(--color-secondary)] lg:tracking-[-0.038em]">{enquiry.titleHighlight}</span>
       </h2>
@@ -23,7 +23,7 @@ export const EnquiryIntro = ({ data: enquiry }: { data: EnquiryData }) => {
                 <Icon name={feature.icon} className="size-9 lg:size-[3.9rem]" />
               </span>
               <div className="lg:pt-[0.6rem]">
-                <h3 className="font-secondary text-[1.35rem] font-bold leading-tight tracking-[-0.02em] text-[var(--color-heading)] md:text-[1.6rem] lg:whitespace-nowrap lg:text-[2.3rem]">
+                <h3 className="font-editorial text-[1.3rem] font-semibold leading-tight tracking-[-0.02em] text-[var(--color-heading)] md:text-[1.5rem] lg:whitespace-nowrap lg:text-[2.1rem]">
                   {feature.title}
                 </h3>
                 <p className="mt-1 font-ui text-[1rem] leading-[1.5] text-[var(--color-text-alt)] md:text-[1.1rem] lg:mt-[0.5rem] lg:text-[1.8rem] lg:leading-[2.6rem]">

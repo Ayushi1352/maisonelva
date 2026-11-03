@@ -14,7 +14,7 @@ export const ContactForm = ({ data: form }: { data?: ContactFormData }) => {
 
   return (
     <div className="border-2 border-[var(--color-border-form)] lg:mt-[0.31rem] bg-[linear-gradient(180deg,var(--color-form-bg-top)_0%,var(--color-form-bg-bottom)_100%)] px-5 pb-8 pt-8 sm:px-8 md:px-10 lg:px-0 lg:pb-[3.6rem] lg:pl-[4.7rem] lg:pr-[3.2rem] lg:pt-[4.4rem]">
-      <h2 className="font-secondary text-[2rem] leading-tight tracking-[-0.02em] text-[var(--color-heading)] md:text-[2.4rem] lg:text-[3.68rem]">{form.title}</h2>
+      <h2 className="font-secondary text-[2rem] leading-tight tracking-[-0.02em] text-[var(--color-heading)] md:text-[2.25rem] lg:text-[3.35rem]">{form.title}</h2>
       <span className="mt-4 block h-[3px] w-16 bg-[var(--color-accent)] lg:mt-[1.6rem] lg:w-[5.6rem]" aria-hidden="true" />
       {/* remounting the form (via key) after each send clears every field */}
       <form

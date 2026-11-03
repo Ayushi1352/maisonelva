@@ -9,7 +9,7 @@ export const ContactIntro = ({ data: contact }: { data: ContactData }) => {
         {contact.eyebrow}
         <span className="ml-4 h-[2px] w-24 bg-gradient-to-r from-[var(--color-accent)] to-transparent lg:ml-[1.2rem] lg:w-[10.5rem]" aria-hidden="true" />
       </p>
-      <h2 className="mt-4 font-secondary text-[2.5rem] font-bold leading-[1.1] tracking-[-0.02em] md:text-[3.4rem] lg:mt-[1.3rem] lg:text-[5.18rem] lg:leading-[5.95rem]">
+      <h2 className="mt-4 font-editorial text-[1.95rem] font-semibold leading-[1.15] tracking-[-0.02em] min-[400px]:text-[2.2rem] sm:text-[2.5rem] sm:leading-[1.1] md:text-[3.2rem] lg:mt-[1.3rem] lg:text-[4.75rem] lg:leading-[5.45rem]">
         <span className="block text-[var(--color-heading)]">{contact.title}</span>
         <span className="block text-[var(--color-secondary)] lg:tracking-[-0.04em]">{contact.titleHighlight}</span>
       </h2>
@@ -17,7 +17,7 @@ export const ContactIntro = ({ data: contact }: { data: ContactData }) => {
         {contact.description}
       </p>
       <span className="mt-8 block h-[3px] w-16 bg-[var(--color-accent)] lg:mt-[3.5rem] lg:w-[5.6rem]" aria-hidden="true" />
-      <h3 className="mt-7 font-secondary text-[1.8rem] leading-tight text-[var(--color-heading)] md:text-[2.2rem] lg:mt-[2.95rem] lg:text-[2.9rem]">
+      <h3 className="mt-7 font-secondary text-[1.8rem] leading-tight text-[var(--color-heading)] md:text-[2.1rem] lg:mt-[2.95rem] lg:text-[2.65rem]">
         {contact.hoursTitle}
       </h3>
       <ul className="mt-4 space-y-3 lg:mt-[1.35rem] lg:space-y-[1.05rem]">

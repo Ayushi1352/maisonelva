@@ -47,7 +47,7 @@ export const EnquiryForm = ({ data: form }: { data?: EnquiryFormData }) => {
         {form.eyebrow}
         <span className="ml-4 h-[2px] w-16 bg-gradient-to-r from-[var(--color-accent)] to-transparent lg:ml-[1.2rem] lg:w-[7.6rem]" aria-hidden="true" />
       </p>
-      <h2 className="mt-3 font-secondary text-[2.5rem] font-bold leading-[1.1] tracking-[-0.015em] md:text-[3.2rem] lg:ml-[0.75rem] lg:mt-[0.75rem] lg:text-[4.61rem] lg:leading-[6rem]">
+      <h2 className="mt-3 font-editorial text-[2.3rem] font-semibold leading-[1.1] tracking-[-0.015em] md:text-[3rem] lg:ml-[0.75rem] lg:mt-[0.75rem] lg:text-[4.25rem] lg:leading-[5.5rem]">
         <span className="text-[var(--color-heading)]">{form.title}</span> <span className="text-[var(--color-secondary)]">{form.titleHighlight}</span>
       </h2>
 

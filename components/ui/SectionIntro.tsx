@@ -44,7 +44,7 @@ export const SectionIntro = ({
       <StarDivider starClassName={dividerStarClassName} lineClassName={dividerLineClassName} />
       <p className={`mt-5 font-secondary uppercase leading-none lg:mt-[2.35rem] ${labelClassName}`}>{eyebrow}</p>
       <h2
-        className={`mt-4 font-secondary text-[2.4rem] font-bold leading-[1.12] tracking-[-0.015em] md:text-[3.6rem] lg:mt-[2.2rem] lg:leading-[1.08] ${titleClassName}`}
+        className={`mt-4 text-balance font-secondary text-[2rem] font-bold leading-[1.15] min-[400px]:text-[2.25rem] sm:text-[2.4rem] sm:leading-[1.12] tracking-[-0.015em] md:text-[3.6rem] lg:mt-[2.2rem] lg:leading-[1.08] ${titleClassName}`}
       >
         <span className={titleTopClassName}>{title}</span> <span className={accentClassName}>{titleHighlight}</span>
       </h2>

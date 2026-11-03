@@ -276,6 +276,27 @@
           "url": "https://www.linkedin.com/"
         }
       ],
+      "contactTitle": "Contact Us",
+      "contactDetails": [
+        {
+          "id": "phone",
+          "icon": "FaPhoneAlt",
+          "label": "+1 0000000000",
+          "url": "tel:+10000000000"
+        },
+        {
+          "id": "email",
+          "icon": "FaEnvelope",
+          "label": "info@xyz.com",
+          "url": "mailto:info@xyz.com"
+        },
+        {
+          "id": "address",
+          "icon": "FaMapMarkerAlt",
+          "label": "123 Main Street, New York, NY 10001, USA",
+          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street,+New+York,+NY+10001,+USA"
+        }
+      ],
       "copyrightText": "© {year} All Rights Reserved. Powered by Lestow.",
       "motto": [
         "Timeless",
@@ -2582,19 +2603,6 @@
                   ],
                   "urls": [
                     "tel:+10000000000"
-                  ]
-                },
-                {
-                  "id": "globe",
-                  "icon": "FaGlobe",
-                  "title": "Our Websites",
-                  "lines": [
-                    "www.example.com",
-                    "www.examplejewels.com"
-                  ],
-                  "urls": [
-                    "https://www.example.com",
-                    "https://www.examplejewels.com"
                   ]
                 },
                 {

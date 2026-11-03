@@ -75,6 +75,8 @@ export interface FooterData extends LogoData {
   quickLinks: LinkItem[];
   followTitle: string;
   socialLinks: SocialLink[];
+  contactTitle: string;
+  contactDetails: SocialLink[];
   copyrightText: string;
   motto: string[];
 }

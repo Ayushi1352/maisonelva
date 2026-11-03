@@ -10,9 +10,9 @@ export const ArticleHeader = ({ data, post }: { data: BlogDetailData; post: Blog
   return (
     <header>
       <div className="px-5 text-center sm:px-8 md:px-10">
-        <h1 className="mx-auto max-w-[80rem] font-secondary text-[2.3rem] font-bold leading-[1.15] tracking-[-0.02em] text-[var(--color-heading)] md:text-[3.4rem] lg:text-[5.1rem] lg:leading-[5.95rem]">
-          <span className="block">{title.before}</span>
-          <span className="block">
+        <h1 className="mx-auto max-w-[80rem] text-balance font-secondary text-[1.85rem] font-bold leading-[1.2] tracking-[-0.02em] min-[400px]:text-[2.1rem] sm:text-[2.4rem] md:leading-[1.15] text-[var(--color-heading)] md:text-[3.4rem] lg:text-[5.1rem] lg:leading-[5.95rem]">
+          <span className="lg:block">{title.before}</span>{" "}
+          <span className="lg:block">
             <span className="text-[var(--color-secondary)]">{title.accent}</span> {title.after}
           </span>
         </h1>
@@ -25,7 +25,7 @@ export const ArticleHeader = ({ data, post }: { data: BlogDetailData; post: Blog
           {detail.intro}
         </p>
       </div>
-      <div className="relative mx-4 mt-8 aspect-[16/10] sm:aspect-[2/1] sm:mx-6 md:mx-10 lg:mx-[4.8rem] lg:mt-[2.6rem] lg:aspect-[1766/602]">
+      <div className="relative mx-5 mt-8 aspect-[16/10] sm:mx-8 sm:aspect-[2/1] md:mx-10 lg:mx-[4.8rem] lg:mt-[2.6rem] lg:aspect-[1766/602]">
         <Image src={detail.image} alt={detail.imageAlt} fill preload quality={90} sizes="(min-width: 1280px) 92vw, 96vw" className="object-cover" />
       </div>
     </header>

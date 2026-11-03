@@ -54,6 +54,16 @@ export const Testimonials = ({ data: content, className = "" }: { data?: Testimo
 
   if (!content) return null;
   const item = content.items[index];
+  const arrows = (
+    <>
+      <button type="button" onClick={() => go(-1)} aria-label={content.previousLabel} className="transition-colors hover:text-[var(--color-accent)]">
+        <Icon name="HiOutlineArrowLongLeft" className="w-12 lg:w-[3.4rem]" />
+      </button>
+      <button type="button" onClick={() => go(1)} aria-label={content.nextLabel} className="transition-colors hover:text-[var(--color-accent)]">
+        <Icon name="HiOutlineArrowLongRight" className="w-12 lg:w-[3.4rem]" />
+      </button>
+    </>
+  );
 
   return (
     <section
@@ -79,14 +89,8 @@ export const Testimonials = ({ data: content, className = "" }: { data?: Testimo
         <p className="mt-5 max-w-[24rem] font-sans text-[0.98rem] leading-[1.75] text-[var(--color-text-muted)] md:text-[1.05rem] lg:mt-[1.65rem] lg:max-w-[25rem] lg:text-[1.35rem] lg:leading-[2.375rem]">
           {content.description}
         </p>
-        <div className="mt-7 flex items-center gap-8 text-[var(--color-primary)] lg:mt-[3.85rem] lg:gap-[2.5rem]">
-          <button type="button" onClick={() => go(-1)} aria-label={content.previousLabel} className="transition-colors hover:text-[var(--color-accent)]">
-            <Icon name="HiOutlineArrowLongLeft" className="w-12 lg:w-[3.4rem]" />
-          </button>
-          <button type="button" onClick={() => go(1)} aria-label={content.nextLabel} className="transition-colors hover:text-[var(--color-accent)]">
-            <Icon name="HiOutlineArrowLongRight" className="w-12 lg:w-[3.4rem]" />
-          </button>
-        </div>
+        {/* arrows sit here on desktop; on mobile they move below the image */}
+        <div className="mt-[3.85rem] hidden items-center gap-[2.5rem] text-[var(--color-primary)] lg:flex">{arrows}</div>
       </div>
 
       {/* Image composition */}
@@ -112,6 +116,7 @@ export const Testimonials = ({ data: content, className = "" }: { data?: Testimo
         <span className="absolute left-[11.98%] top-[70.98%] h-[18.78%] w-[9.82%] bg-[var(--color-bg-main)]" aria-hidden="true" />
 
       </div>
+      <div className="mt-8 flex items-center justify-center gap-8 text-[var(--color-primary)] lg:hidden">{arrows}</div>
 
       {/* Quote */}
       <figure className="relative mx-5 mt-12 sm:mx-8 md:mx-auto md:max-w-[34rem] lg:absolute lg:left-[80.75rem] lg:top-[3.45rem] lg:mx-0 lg:mt-0 lg:w-[30.5rem] lg:max-w-none">
