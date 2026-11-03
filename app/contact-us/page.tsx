@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { site } from "@/data";
-import PageBanner from "@/components/PageBanner";
-import ContactDetails from "@/components/ContactDetails";
+import rawData from "@/data/templates.json";
+import type { JewelleryTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { Contact } from "@/components/sections/Contact";
 
-export const metadata: Metadata = site.contactPage.seo;
+const templateData: JewelleryTemplateData = rawData;
+const sectionData = templateData.categories.Jewellery.sections;
+const commonData = templateData.common;
+
+export const metadata: Metadata = { ...commonData.contactBreadcrumb?.seo };
 
 export default function ContactUsPage() {
   return (
-    <>
-      <PageBanner data={site.pageBanner} />
-      <ContactDetails data={site.contactPage} form={site.contactFormSection} />
-    </>
+    <main className="flex flex-1 flex-col gap-[var(--section-gap)]">
+      <Breadcrumb data={commonData.contactBreadcrumb} ui={commonData.globalUI} />
+      <Contact data={sectionData.Contact?.variants?.JewelleryContact1} form={sectionData.ContactForm?.variants?.JewelleryContactForm1} />
+    </main>
   );
 }

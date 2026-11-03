@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
-import { site } from "@/data";
-import NotFoundSection from "@/components/NotFoundSection";
+import rawData from "@/data/templates.json";
+import type { JewelleryTemplateData } from "@/types/templates.types";
+import { NotFoundSection } from "@/components/sections/NotFoundSection";
 
-export const metadata: Metadata = site.notFoundPage.seo;
+const templateData: JewelleryTemplateData = rawData;
+const commonData = templateData.common;
+
+export const metadata: Metadata = { ...commonData.notFound?.seo };
 
 export default function NotFoundPage() {
-  return <NotFoundSection data={site.notFoundPage} />;
+  return (
+    <main className="flex flex-1 flex-col gap-[var(--section-gap)]">
+      <NotFoundSection data={commonData.notFound} />
+    </main>
+  );
 }

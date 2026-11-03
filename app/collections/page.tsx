@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { site } from "@/data";
-import PageBanner from "@/components/PageBanner";
-import CollectionListing from "@/components/CollectionListing";
+import rawData from "@/data/templates.json";
+import type { JewelleryTemplateData } from "@/types/templates.types";
+import { Breadcrumb } from "@/components/common/Breadcrumb";
+import { Collections } from "@/components/sections/Collections";
 
-export const metadata: Metadata = site.collectionsPage.seo;
+const templateData: JewelleryTemplateData = rawData;
+const sectionData = templateData.categories.Jewellery.sections;
+const commonData = templateData.common;
+
+export const metadata: Metadata = { ...commonData.collectionsBreadcrumb?.seo };
 
 export default function CollectionsPage() {
   return (
-    <>
-      <PageBanner data={site.pageBanner} />
-      <CollectionListing data={site.collectionsPage} />
-    </>
+    <main className="flex flex-1 flex-col gap-[var(--section-gap)]">
+      <Breadcrumb data={commonData.collectionsBreadcrumb} ui={commonData.globalUI} />
+      <Collections data={sectionData.Collections?.variants?.JewelleryCollections1} ui={commonData.globalUI} />
+    </main>
   );
 }

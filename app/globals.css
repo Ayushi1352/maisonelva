@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 :root {
+  --font-primary: sans-serif;
+  --font-heading: sans-serif;
+  --font-navigation: sans-serif;
+  --font-secondary: sans-serif;
+  --font-display: sans-serif;
+  --font-editorial: sans-serif;
+  --font-decorative: sans-serif;
+  --font-ui: sans-serif;
+
+  /* Maison Élva theme */
   --color-bg-main: #fefdfb;
   --color-bg-card: #fcf8f4;
   --color-bg-light: #fbf6f0;
@@ -13,7 +23,6 @@
   --color-primary-light: #6e3a41;
   --color-primary-soft: #8a5f64;
   --color-secondary: #86061a;
-  --color-secondary-dark: #6a0414;
   --color-secondary-deep: #5e0411;
   --color-accent: #b08858;
   --color-accent-dark: #9a7346;
@@ -43,7 +52,6 @@
   --color-menu-divider: #efe6dc;
   --color-hero-circle: #5b2026;
   --color-title-stroke: #fbf9f5;
-  --color-icon-highlight: #fbe8d4;
   --color-icon-badge-light: #fdeedd;
   --color-icon-badge-mid: #fbe6d0;
   --color-icon-badge-dark: #f8dcc0;
