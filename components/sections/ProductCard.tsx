@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CollectionCategory, Product } from "@/types/templates.types";
 import { splitAccent } from "@/components/ui/text";
-import { fadeIn } from "@/components/ui/styles";
 
 /** Collection card: product image, short maroon rule, title and "CATEGORY · FINISH" meta */
 export const ProductCard = ({ product, categories, detailPageUrl, className = "" }: { product: Product; categories: CollectionCategory[]; detailPageUrl: string; className?: string }) => {
@@ -10,7 +9,7 @@ export const ProductCard = ({ product, categories, detailPageUrl, className = ""
   const title = splitAccent(product.name, product.nameHighlight);
 
   return (
-    <Link href={detailPageUrl} className={`group block ${fadeIn} ${className}`}>
+    <Link href={detailPageUrl} className={`group block animate-fade-in ${className}`}>
       <div className="relative mx-auto aspect-[380/270] w-full max-w-[23.75rem] overflow-hidden">
         <Image
           src={product.cardImage}

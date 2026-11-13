@@ -1,11 +1,11 @@
-import type { ContactData, ContactFormData } from "@/types/templates.types";
+import type { CompanyData, ContactData, ContactFormData } from "@/types/templates.types";
 import { ContactIntro } from "@/components/sections/ContactIntro";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { GetInTouch } from "@/components/sections/GetInTouch";
 import { StoreMap } from "@/components/sections/StoreMap";
 
 /** Contact page: intro + form, the "Get in touch" details and the store map (three page sections) */
-export const Contact = ({ data: contact, form }: { data?: ContactData; form?: ContactFormData }) => {
+export const Contact = ({ data: contact, form, company }: { data?: ContactData; form?: ContactFormData; company?: CompanyData }) => {
   if (!contact) return null;
   return (
     <>
@@ -14,10 +14,10 @@ export const Contact = ({ data: contact, form }: { data?: ContactData; form?: Co
         <ContactForm data={form} />
       </section>
       <section className="px-4 sm:px-6 md:px-10 lg:pl-[5.45rem] lg:pr-[3.9rem]">
-        <GetInTouch data={contact} />
+        <GetInTouch data={contact} company={company} />
       </section>
       <section>
-        <StoreMap data={contact} />
+        <StoreMap data={contact} company={company} />
       </section>
     </>
   );

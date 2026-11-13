@@ -19,13 +19,33 @@
       "icon": "/favicon.ico",
       "lang": "en"
     },
+    "company": {
+      "name": "Maison Élva",
+      "logo": "/images/logo.webp",
+      "logoAlt": "Maison Élva — Jewellery | Fashion Apparel",
+      "logoUrl": "/",
+      "logoLabel": "Maison Élva",
+      "logoWidth": 1958,
+      "logoHeight": 436,
+      "phone": "+1 0000000000",
+      "email": "info@xyz.com",
+      "address": [
+        "123 Main Street,",
+        "New York, NY 10001,",
+        "USA"
+      ],
+      "mapEmbedUrl": "https://maps.google.com/maps?q={query}&z=15&output=embed",
+      "mapOpenUrl": "https://www.google.com/maps/search/?api=1&query={query}"
+    },
     "globalUI": {
       "breadcrumbLabel": "Breadcrumb",
       "breadcrumbSeparator": "/",
       "paginationLabel": "Pagination",
       "previousPageLabel": "Previous page",
       "nextPageLabel": "Next page",
-      "pageLabel": "Page {page}"
+      "pageLabel": "Page {page}",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
     },
     "aboutBreadcrumb": {
       "title": "About Us",
@@ -212,12 +232,6 @@
       "buttonUrl": "/"
     },
     "Footer": {
-      "logo": "/images/logo.webp",
-      "logoAlt": "Maison Élva — Jewellery | Fashion Apparel",
-      "logoUrl": "/",
-      "logoLabel": "Maison Élva",
-      "logoWidth": 1958,
-      "logoHeight": 436,
       "tagline": [
         "Timeless jewellery and fashion",
         "for a more confident you."
@@ -281,20 +295,17 @@
         {
           "id": "phone",
           "icon": "FaPhoneAlt",
-          "label": "+1 0000000000",
-          "url": "tel:+10000000000"
+          "source": "phone"
         },
         {
           "id": "email",
           "icon": "FaEnvelope",
-          "label": "info@xyz.com",
-          "url": "mailto:info@xyz.com"
+          "source": "email"
         },
         {
           "id": "address",
           "icon": "FaMapMarkerAlt",
-          "label": "123 Main Street, New York, NY 10001, USA",
-          "url": "https://www.google.com/maps/search/?api=1&query=123+Main+Street,+New+York,+NY+10001,+USA"
+          "source": "address"
         }
       ],
       "copyrightText": "© {year} All Rights Reserved. Powered by Lestow.",
@@ -311,12 +322,6 @@
         "Header": {
           "variants": {
             "JewelleryHeader1": {
-              "logo": "/images/logo.webp",
-              "logoAlt": "Maison Élva — Jewellery | Fashion Apparel",
-              "logoUrl": "/",
-              "logoLabel": "Maison Élva",
-              "logoWidth": 1958,
-              "logoHeight": 436,
               "navLinks": [
                 {
                   "id": "home",
@@ -357,9 +362,7 @@
               "buttonText": "Enquiry Now",
               "buttonUrl": "/enquiry-now",
               "mainNavLabel": "Main navigation",
-              "mobileNavLabel": "Mobile navigation",
-              "openMenuLabel": "Open menu",
-              "closeMenuLabel": "Close menu"
+              "mobileNavLabel": "Mobile navigation"
             }
           }
         },
@@ -2588,22 +2591,13 @@
                   "id": "location",
                   "icon": "FaMapMarkerAlt",
                   "title": "Our Location",
-                  "lines": [
-                    "123 Main Street,",
-                    "New York, NY 10001,",
-                    "USA"
-                  ]
+                  "source": "address"
                 },
                 {
                   "id": "phone",
                   "icon": "FaPhoneAlt",
                   "title": "Instant Connect",
-                  "lines": [
-                    "+1 0000000000"
-                  ],
-                  "urls": [
-                    "tel:+10000000000"
-                  ]
+                  "source": "phone"
                 },
                 {
                   "id": "mail",
@@ -2621,9 +2615,7 @@
               ],
               "map": {
                 "title": "Map showing the Maison Élva store location",
-                "openLabel": "Open in Google Maps",
-                "embedUrl": "https://maps.google.com/maps?q={query}&z=15&output=embed",
-                "openUrl": "https://www.google.com/maps/search/?api=1&query={query}"
+                "openLabel": "Open in Google Maps"
               }
             }
           }

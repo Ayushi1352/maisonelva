@@ -26,6 +26,23 @@ export interface SiteMetadataData {
   lang: string;
 }
 
+/** Brand + contact details shared by the header, footer and contact page. */
+export interface CompanyData {
+  name: string;
+  logo: string;
+  logoAlt: string;
+  logoUrl: string;
+  logoLabel: string;
+  logoWidth: number;
+  logoHeight: number;
+  phone: string;
+  email: string;
+  address: string[];
+  /** "{query}" is filled with the address */
+  mapEmbedUrl: string;
+  mapOpenUrl: string;
+}
+
 export interface GlobalUIData {
   breadcrumbLabel: string;
   breadcrumbSeparator: string;
@@ -33,6 +50,8 @@ export interface GlobalUIData {
   previousPageLabel: string;
   nextPageLabel: string;
   pageLabel: string;
+  openMenu: string;
+  closeMenu: string;
 }
 
 export interface LinkItem {
@@ -56,39 +75,39 @@ export interface NotFoundData {
   buttonUrl: string;
 }
 
-export interface LogoData {
-  logo: string;
-  logoAlt: string;
-  logoUrl: string;
-  logoLabel: string;
-  logoWidth: number;
-  logoHeight: number;
-}
-
 export interface SocialLink extends LinkItem {
   icon: string;
 }
 
-export interface FooterData extends LogoData {
+/** A contact line either carries its own `lines` or points at a company field ("phone", "email", "address") with `source`. */
+export interface ContactLinesSource {
+  source?: string;
+  lines?: string[];
+}
+
+export interface FooterContactItem extends ContactLinesSource {
+  id: string;
+  icon: string;
+}
+
+export interface FooterData {
   tagline: string[];
   quickLinksTitle: string;
   quickLinks: LinkItem[];
   followTitle: string;
   socialLinks: SocialLink[];
   contactTitle: string;
-  contactDetails: SocialLink[];
+  contactDetails: FooterContactItem[];
   copyrightText: string;
   motto: string[];
 }
 
-export interface HeaderData extends LogoData {
+export interface HeaderData {
   navLinks: LinkItem[];
   buttonText: string;
   buttonUrl: string;
   mainNavLabel: string;
   mobileNavLabel: string;
-  openMenuLabel: string;
-  closeMenuLabel: string;
 }
 
 export interface TitleLine {
@@ -340,19 +359,16 @@ export interface ContactTouchData {
   description: string;
 }
 
-export interface ContactInfoItem {
+export interface ContactInfoItem extends ContactLinesSource {
   id: string;
   icon: string;
   title: string;
-  lines: string[];
   urls?: string[];
 }
 
 export interface ContactMapData {
   title: string;
   openLabel: string;
-  embedUrl: string;
-  openUrl: string;
 }
 
 export interface ContactData {
@@ -425,6 +441,7 @@ export interface EnquiryFormData extends FormMessages {
 export interface CommonData {
   theme: ThemeData;
   metadata: SiteMetadataData;
+  company: CompanyData;
   globalUI: GlobalUIData;
   aboutBreadcrumb?: BreadcrumbData;
   collectionsBreadcrumb?: BreadcrumbData;

@@ -14,7 +14,7 @@ export default function ContactUsPage() {
   return (
     <main className="flex flex-1 flex-col gap-[var(--section-gap)]">
       <Breadcrumb data={commonData.contactBreadcrumb} ui={commonData.globalUI} />
-      <Contact data={sectionData.Contact?.variants?.JewelleryContact1} form={sectionData.ContactForm?.variants?.JewelleryContactForm1} />
+      <Contact data={sectionData.Contact?.variants?.JewelleryContact1} form={sectionData.ContactForm?.variants?.JewelleryContactForm1} company={commonData.company} />
     </main>
   );
 }

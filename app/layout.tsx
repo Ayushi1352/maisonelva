@@ -16,6 +16,7 @@ const newsreader = Newsreader({ subsets: ["latin"], style: ["normal"], display: 
 const marcellus = Marcellus({ subsets: ["latin"], weight: ["400"], style: ["normal"], display: "swap", fallback: ["Georgia", "serif"], variable: "--font-marcellus" });
 const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600"], style: ["normal"], display: "swap", fallback: ["Arial", "sans-serif"], variable: "--font-poppins" });
 const gsans = Google_Sans({ subsets: ["latin"], weight: ["400", "500"], style: ["normal"], display: "swap", fallback: ["Arial", "sans-serif"], variable: "--font-gsans" });
+const fontClasses = [playfair, caslon, cormorant, newsreader, marcellus, poppins, gsans].map((font) => font.variable).join(" ");
 
 const templateData: JewelleryTemplateData = rawData;
 const sectionData = templateData.categories.Jewellery.sections;
@@ -53,7 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       style={fontVariables}
       // Root font size: 16px, and from 1024px it follows the viewport width (16px at 1920px) so the 1920px design
       // scales as a whole. Capped at 16px: wider screens and a zoomed-out browser keep the 1920px design, centred.
-      className={`${playfair.variable} ${caslon.variable} ${cormorant.variable} ${newsreader.variable} ${marcellus.variable} ${poppins.variable} ${gsans.variable} h-full text-[16px] motion-reduce:scroll-auto lg:text-[length:min(16px,calc(100vw/120))]`}
+      className={`${fontClasses} h-full text-[16px] motion-reduce:scroll-auto lg:text-[length:min(16px,calc(100vw/120))]`}
     >
       <body className="min-h-full antialiased [&_img]:select-none">
         {/*
@@ -63,12 +64,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           64px mobile, 80px tablet, then 9rem of the scaled desktop design (144px at 1920px).
         */}
         <div className="mx-auto flex min-h-screen w-full max-w-[1920px] flex-col overflow-x-clip bg-[var(--color-bg-main)] [--section-gap:4rem] md:[--section-gap:5rem] lg:[--section-gap:9rem]">
-          <Header data={sectionData.Header?.variants?.JewelleryHeader1} />
+          <Header data={sectionData.Header?.variants?.JewelleryHeader1} company={commonData.company} ui={commonData.globalUI} />
           <ScrollToTop>
             {children}
             <ScrollReveal />
           </ScrollToTop>
-          <Footer data={commonData.Footer} />
+          <Footer data={commonData.Footer} company={commonData.company} />
         </div>
       </body>
     </html>

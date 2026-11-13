@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import type { EnquiryFormData } from "@/types/templates.types";
-import { useDummySubmit } from "@/components/ui/useDummySubmit";
+import { useFormSubmit } from "@/components/ui/useFormSubmit";
 import { Icon } from "@/components/ui/Icon";
 import { FormSuccess, Spinner } from "@/components/ui/FormSuccess";
-import { field } from "@/components/ui/styles";
+import { inputClass } from "@/components/ui/Field";
 
 // Text colour is added per field: the selects show the placeholder grey until an option is picked.
-const fieldBase = `${field} h-14 px-5 font-ui text-[1rem] md:h-16 lg:h-[5.375rem] lg:px-[2.3rem] lg:text-[1.5rem]`;
+const fieldBase = `${inputClass} h-14 px-5 font-ui text-[1rem] md:h-16 lg:h-[5.375rem] lg:px-[2.3rem] lg:text-[1.5rem]`;
 const fieldClass = `${fieldBase} text-[var(--color-heading)]`;
 
 function SelectField({ name, placeholder, options, required }: { name: string; placeholder: string; options: string[]; required?: boolean }) {
@@ -38,7 +38,7 @@ function SelectField({ name, placeholder, options, required }: { name: string; p
 }
 
 export const EnquiryForm = ({ data: form }: { data?: EnquiryFormData }) => {
-  const submit = useDummySubmit();
+  const submit = useFormSubmit();
   if (!form) return null;
 
   return (
@@ -72,7 +72,7 @@ export const EnquiryForm = ({ data: form }: { data?: EnquiryFormData }) => {
           rows={4}
           placeholder={form.fields.message}
           aria-label={form.fields.message}
-          className={`${field} block min-h-32 resize-y px-5 py-4 font-ui text-[1rem] text-[var(--color-heading)] lg:h-[10.8rem] lg:px-[2.3rem] lg:py-[1.7rem] lg:text-[1.5rem]`}
+          className={`${inputClass} block min-h-32 resize-y px-5 py-4 font-ui text-[1rem] text-[var(--color-heading)] lg:h-[10.8rem] lg:px-[2.3rem] lg:py-[1.7rem] lg:text-[1.5rem]`}
         />
         <button
           type="submit"

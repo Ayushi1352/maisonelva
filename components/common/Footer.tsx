@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { FooterData } from "@/types/templates.types";
+import type { CompanyData, FooterData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { contactHref, contactLines, fill } from "@/components/ui/text";
 
 /** Fills `{year}` in the copyright line; cached so the footer can still be prerendered. */
 async function currentYear() {
@@ -9,9 +10,9 @@ async function currentYear() {
   return new Date().getFullYear();
 }
 
-export const Footer = async ({ data: footer }: { data?: FooterData }) => {
+export const Footer = async ({ data: footer, company }: { data?: FooterData; company: CompanyData }) => {
   if (!footer) return null;
-  const copyright = footer.copyrightText.replace("{year}", String(await currentYear()));
+  const copyright = fill(footer.copyrightText, { year: await currentYear() });
 
   return (
     <footer className="mt-[var(--section-gap)] bg-[var(--color-footer-bg)]">
@@ -19,12 +20,12 @@ export const Footer = async ({ data: footer }: { data?: FooterData }) => {
         <div className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-10 sm:gap-x-10 md:grid-cols-[1.3fr_1fr_1fr] md:gap-0 lg:flex lg:justify-between lg:gap-[4rem] lg:pl-[8.3rem] lg:pr-[6.6rem]">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 md:pr-8 lg:min-w-0 lg:pr-0">
-            <Link href={footer.logoUrl} aria-label={footer.logoLabel} className="block w-full max-w-[13rem] md:max-w-[19rem] lg:w-[36rem] lg:max-w-full">
+            <Link href={company.logoUrl} aria-label={company.logoLabel} className="block w-full max-w-[13rem] md:max-w-[19rem] lg:w-[36rem] lg:max-w-full">
               <Image
-                src={footer.logo}
-                alt={footer.logoAlt}
-                width={footer.logoWidth}
-                height={footer.logoHeight}
+                src={company.logo}
+                alt={company.logoAlt}
+                width={company.logoWidth}
+                height={company.logoHeight}
                 quality={90}
                 sizes="(min-width: 1024px) 36rem, (min-width: 768px) 304px, 208px"
                 className="h-auto w-full"
@@ -87,12 +88,12 @@ export const Footer = async ({ data: footer }: { data?: FooterData }) => {
               {footer.contactDetails.map((item) => (
                 <li key={item.id}>
                   <a
-                    href={item.url}
-                    {...(item.url.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                    href={contactHref(item.source, company)}
+                    {...(item.source === "address" && { target: "_blank", rel: "noopener noreferrer" })}
                     className="inline-flex items-start gap-2 font-display text-[1rem] font-bold leading-[1.45] sm:font-semibold sm:gap-3 sm:text-[1.2rem] tracking-[0.04em] text-[var(--color-text)] transition-colors hover:text-[var(--color-secondary)] lg:gap-[1rem] lg:text-[1.45rem]"
                   >
                     <Icon name={item.icon} className="mt-[0.25rem] size-[0.95rem] shrink-0 sm:mt-[0.3rem] sm:size-[1.05rem] text-[var(--color-accent-dark)] lg:size-[1.25rem]" />
-                    <span className={item.url.startsWith("tel:") || item.url.startsWith("mailto:") ? "whitespace-nowrap" : "break-words"}>{item.label}</span>
+                    <span className={item.source === "address" ? "break-words" : "whitespace-nowrap"}>{contactLines(item, company).join(" ")}</span>
                   </a>
                 </li>
               ))}

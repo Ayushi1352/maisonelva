@@ -17,7 +17,7 @@ type Options = {
  * Dummy form submission: shows a sending state, resets the form, then shows a
  * thank-you message that always hides itself after `visibleFor` ms.
  */
-export function useDummySubmit({ sendDelay = 1200, visibleFor = 5000, fadeFor = 400 }: Options = {}) {
+export function useFormSubmit({ sendDelay = 1200, visibleFor = 5000, fadeFor = 400 }: Options = {}) {
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [name, setName] = useState("");
   // incremented on every successful send so callers can remount (fully reset) the form

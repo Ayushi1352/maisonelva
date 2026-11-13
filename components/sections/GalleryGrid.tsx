@@ -5,7 +5,6 @@ import { useCallback, useEffect, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
 import type { GalleryData, GlobalUIData } from "@/types/templates.types";
 import { fill } from "@/components/ui/text";
-import { fadeIn } from "@/components/ui/styles";
 import { Pagination, usePagination } from "@/components/ui/Pagination";
 
 export const GalleryGrid = ({ data, ui }: { data: GalleryData; ui?: GlobalUIData }) => {
@@ -65,7 +64,7 @@ export const GalleryGrid = ({ data, ui }: { data: GalleryData; ui?: GlobalUIData
           role="dialog"
           aria-modal="true"
           aria-label={images[active].imageAlt}
-          className={`fixed inset-0 z-[100] flex items-center justify-center bg-[var(--color-lightbox-overlay)] p-4 ${fadeIn}`}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[var(--color-lightbox-overlay)] p-4 animate-fade-in"
           onClick={close}
         >
           <div className="relative h-[80vh] w-full max-w-5xl" onClick={(event) => event.stopPropagation()}>

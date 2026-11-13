@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import type { HeaderData } from "@/types/templates.types";
+import type { CompanyData, GlobalUIData, HeaderData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 
 function isActive(pathname: string, href: string) {
   return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export const Header = ({ data }: { data?: HeaderData }) => {
+export const Header = ({ data, company, ui }: { data?: HeaderData; company: CompanyData; ui: GlobalUIData }) => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -27,12 +27,12 @@ export const Header = ({ data }: { data?: HeaderData }) => {
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-bg-main)]">
       <div className="flex h-20 items-center justify-between px-4 sm:px-6 md:h-24 md:px-10 lg:h-[9.375rem] lg:pl-[3.75rem] lg:pr-[2.3rem]">
-        <Link href={data.logoUrl} aria-label={data.logoLabel} className="block shrink-0">
+        <Link href={company.logoUrl} aria-label={company.logoLabel} className="block shrink-0">
           <Image
-            src={data.logo}
-            alt={data.logoAlt}
-            width={data.logoWidth}
-            height={data.logoHeight}
+            src={company.logo}
+            alt={company.logoAlt}
+            width={company.logoWidth}
+            height={company.logoHeight}
             preload
             quality={90}
             sizes="(min-width: 1280px) 28rem, 260px"
@@ -79,7 +79,7 @@ export const Header = ({ data }: { data?: HeaderData }) => {
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label={open ? data.closeMenuLabel : data.openMenuLabel}
+          aria-label={open ? ui.closeMenu : ui.openMenu}
           className="flex size-11 items-center justify-center text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)] lg:hidden"
         >
           {open ? <Icon name="FaTimes" className="size-7" /> : <Icon name="FaBars" className="size-7" />}

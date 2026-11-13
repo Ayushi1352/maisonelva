@@ -20,7 +20,7 @@ export const FormSuccess = ({ name, title, message, leaving, visibleFor, onClose
       role="status"
       aria-live="polite"
       className={`relative overflow-hidden rounded-[0.35rem] border border-[var(--color-success-border)] bg-[var(--color-success-bg)] pl-4 pr-11 pt-4 pb-5 shadow-[0_0.5rem_1.5rem_var(--color-success-shadow)] animate-fade-in transition-[opacity,transform] ease-[ease] lg:pl-[1.4rem] lg:pr-[3.6rem] lg:pt-[1.3rem] lg:pb-[1.5rem] ${
-        // fades in when shown; fades out (duration = fadeFor in useDummySubmit) before it is removed
+        // fades in when shown; fades out (duration = fadeFor in useFormSubmit) before it is removed
         leaving ? "-translate-y-[6px] opacity-0 duration-[400ms]" : "duration-[450ms]"
       } ${className}`}
     >

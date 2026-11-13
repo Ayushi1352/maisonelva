@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CollectionsData, GlobalUIData } from "@/types/templates.types";
 import { Pagination, usePagination } from "@/components/ui/Pagination";
-import { fadeIn } from "@/components/ui/styles";
 
 /** Category cards (image + name with a short gold rule), three per row, paged by perPage in templates.json */
 export const CollectionBrowser = ({ data, ui }: { data: CollectionsData; ui?: GlobalUIData }) => {
@@ -16,7 +15,7 @@ export const CollectionBrowser = ({ data, ui }: { data: CollectionsData; ui?: Gl
       <ul className="mx-auto grid max-w-[24rem] gap-5 sm:max-w-none sm:grid-cols-2 md:grid-cols-3 lg:w-[102rem] lg:gap-x-[2.04rem] lg:gap-y-[1.65rem]">
         {pageItems.map((card) => (
           <li key={`${page}-${card.id}`}>
-            <Link href={cardUrl} className={`group flex h-full flex-col ${fadeIn}`}>
+            <Link href={cardUrl} className="group flex h-full flex-col animate-fade-in">
               <div className="relative aspect-[320/176] overflow-hidden">
                 <Image
                   src={card.image}

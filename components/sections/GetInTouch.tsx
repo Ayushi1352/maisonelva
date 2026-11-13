@@ -1,7 +1,8 @@
-import type { ContactData } from "@/types/templates.types";
+import type { CompanyData, ContactData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { contactHref, contactLines } from "@/components/ui/text";
 
-export const GetInTouch = ({ data }: { data: ContactData }) => {
+export const GetInTouch = ({ data, company }: { data: ContactData; company?: CompanyData }) => {
   const { touch, info } = data;
   return (
     <div>
@@ -33,8 +34,9 @@ export const GetInTouch = ({ data }: { data: ContactData }) => {
                 {item.title}
               </h3>
               <ul className="mt-2 lg:mt-[0.15rem]">
-                {item.lines.map((line, lineIndex) => {
-                  const href = item.urls?.[lineIndex];
+                {contactLines(item, company).map((line, lineIndex) => {
+                  // the address is plain text; phone and email from the company become call / mail links
+                  const href = item.urls?.[lineIndex] ?? (company && item.source !== "address" ? contactHref(item.source, company) : undefined);
                   return (
                     <li key={line} className="font-secondary text-[1rem] leading-[1.6] text-[var(--color-text-muted)] lg:text-[1.75rem] lg:leading-[2.65rem]">
                       {href ? (

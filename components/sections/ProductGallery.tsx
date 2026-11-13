@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
 import type { CollectionDetailData } from "@/types/templates.types";
 import { fill } from "@/components/ui/text";
-import { fadeIn } from "@/components/ui/styles";
 
 type ProductGalleryProps = { data: CollectionDetailData; name: string; imageAlt: string; images: string[]; thumbnails: string[] };
 
@@ -55,7 +54,7 @@ export const ProductGallery = ({ data, name, imageAlt, images, thumbnails }: Pro
           preload
           quality={90}
           sizes="(min-width: 1280px) 43vw, (min-width: 768px) 70vw, 94vw"
-          className={`object-cover ${fadeIn}`}
+          className="object-cover animate-fade-in"
         />
         <button
           type="button"
@@ -72,7 +71,7 @@ export const ProductGallery = ({ data, name, imageAlt, images, thumbnails }: Pro
           role="dialog"
           aria-modal="true"
           aria-label={name}
-          className={`fixed inset-0 z-[100] flex items-center justify-center bg-[var(--color-lightbox-overlay)] p-4 ${fadeIn}`}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[var(--color-lightbox-overlay)] p-4 animate-fade-in"
           onClick={() => setZoomed(false)}
         >
           <div className="relative h-[85vh] w-full max-w-5xl">

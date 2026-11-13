@@ -1,15 +1,15 @@
 "use client";
 
 import type { ContactFormData } from "@/types/templates.types";
-import { useDummySubmit } from "@/components/ui/useDummySubmit";
+import { useFormSubmit } from "@/components/ui/useFormSubmit";
 import { Icon } from "@/components/ui/Icon";
 import { FormSuccess, Spinner } from "@/components/ui/FormSuccess";
-import { field } from "@/components/ui/styles";
+import { inputClass } from "@/components/ui/Field";
 
-const fieldClass = `${field} h-14 px-5 font-secondary text-[1rem] text-[var(--color-heading)] md:h-16 lg:h-[5.6rem] lg:px-[2.2rem] lg:text-[1.43rem]`;
+const fieldClass = `${inputClass} h-14 px-5 font-secondary text-[1rem] text-[var(--color-heading)] md:h-16 lg:h-[5.6rem] lg:px-[2.2rem] lg:text-[1.43rem]`;
 
 export const ContactForm = ({ data: form }: { data?: ContactFormData }) => {
-  const submit = useDummySubmit();
+  const submit = useFormSubmit();
   if (!form) return null;
 
   return (
@@ -34,7 +34,7 @@ export const ContactForm = ({ data: form }: { data?: ContactFormData }) => {
           rows={4}
           placeholder={form.fields.message}
           aria-label={form.fields.message}
-          className={`${field} block min-h-32 resize-y px-5 py-4 font-secondary text-[1rem] text-[var(--color-heading)] lg:h-[10.65rem] lg:px-[2.2rem] lg:py-[1.9rem] lg:text-[1.43rem]`}
+          className={`${inputClass} block min-h-32 resize-y px-5 py-4 font-secondary text-[1rem] text-[var(--color-heading)] lg:h-[10.65rem] lg:px-[2.2rem] lg:py-[1.9rem] lg:text-[1.43rem]`}
         />
         <button
           type="submit"
