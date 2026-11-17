@@ -1,8 +1,8 @@
 import Link from "next/link";
-import type { NotFoundData } from "@/types/templates.types";
+import type { NotFoundProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 
-export const NotFoundSection = ({ data }: { data?: NotFoundData }) => {
+export const NotFound = ({ data }: NotFoundProps) => {
   if (!data) return null;
   return (
     <section className="bg-[var(--color-bg-main)] px-5 pt-12 text-center sm:px-8 md:pt-16 lg:pt-[8.6rem]">
@@ -16,7 +16,7 @@ export const NotFoundSection = ({ data }: { data?: NotFoundData }) => {
         className="mt-8 inline-flex h-14 items-center gap-6 border border-[var(--color-primary)] bg-[var(--color-primary)] px-7 font-sans text-[0.95rem] font-normal tracking-[0.05em] text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary)] md:h-16 lg:mt-[2.9rem] lg:h-[4.8rem] lg:gap-[2.8rem] lg:px-[3.1rem] lg:text-[1.25rem]"
       >
         {data.buttonText}
-        <Icon name="HiOutlineArrowLongRight" className="w-6 lg:w-[1.75rem]" />
+        <Icon name={data.buttonIcon} className="w-6 lg:w-[1.75rem]" />
       </Link>
     </section>
   );

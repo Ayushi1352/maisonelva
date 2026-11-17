@@ -1,10 +1,9 @@
 import Image from "next/image";
-import type { BlogDetailData, BlogPost } from "@/types/templates.types";
+import type { BlogDetailMeta, BlogPost } from "@/types/templates.types";
 import { splitAccent } from "@/components/ui/text";
 import { Icon } from "@/components/ui/Icon";
 
-export const ArticleHeader = ({ data, post }: { data: BlogDetailData; post: BlogPost }) => {
-  const { detail } = post;
+export const ArticleHeader = ({ data, post }: { data: BlogDetailMeta; post: BlogPost }) => {
   const title = splitAccent(post.title, post.titleHighlight);
 
   return (
@@ -17,16 +16,16 @@ export const ArticleHeader = ({ data, post }: { data: BlogDetailData; post: Blog
           </span>
         </h1>
         <p className="mt-4 flex items-center justify-center gap-2.5 font-ui text-[1rem] text-[var(--color-text-alt)] lg:mt-[0.8rem] lg:gap-[0.9rem] lg:text-[2rem]">
-          <Icon name="FaRegCalendarAlt" className="size-5 text-[var(--color-accent-alt)] lg:size-[1.9rem]" />
+          <Icon name={data.dateIcon} className="size-5 text-[var(--color-accent-alt)] lg:size-[1.9rem]" />
           <span className="sr-only">{data.dateLabel}</span>
           <time>{post.date}</time>
         </p>
         <p className="mx-auto mt-5 max-w-[94rem] font-ui text-[1rem] leading-[1.7] text-[var(--color-text-alt)] md:text-[1.1rem] lg:mt-[1.85rem] lg:max-w-[97rem] lg:text-[1.97rem] lg:leading-[2.95rem] lg:tracking-[0.025em]">
-          {detail.intro}
+          {post.intro}
         </p>
       </div>
       <div className="relative mx-5 mt-8 aspect-[16/10] sm:mx-8 sm:aspect-[2/1] md:mx-10 lg:mx-[4.8rem] lg:mt-[2.6rem] lg:aspect-[1766/602]">
-        <Image src={detail.image} alt={detail.imageAlt} fill preload quality={90} sizes="(min-width: 1280px) 92vw, 96vw" className="object-cover" />
+        <Image src={post.image} alt={post.imageAlt} fill preload quality={90} sizes="(min-width: 1280px) 92vw, 96vw" className="object-cover" />
       </div>
     </header>
   );

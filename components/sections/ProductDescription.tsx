@@ -31,7 +31,7 @@ export const ProductDescription = ({ data, product }: { data: CollectionDetailDa
           className="absolute left-[61.9rem] top-[7.6rem] hidden h-[21.75rem] w-[2px] -translate-x-1/2 bg-[var(--color-accent-light)] lg:block"
           aria-hidden="true"
         />
-        <Icon name="PiStarFourFill" className="absolute left-[61.9rem] top-[17.4rem] hidden size-[2.2rem] -translate-x-1/2 text-[var(--color-accent)] lg:block" />
+        <Icon name={data.starIcon} className="absolute left-[61.9rem] top-[17.4rem] hidden size-[2.2rem] -translate-x-1/2 text-[var(--color-accent)] lg:block" />
       </div>
       <div className="relative aspect-[865/662] overflow-hidden lg:aspect-auto lg:h-[37rem] lg:rounded-tl-[24rem]">
         <Image

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import type { BreadcrumbData, GlobalUIData } from "@/types/templates.types";
+import type { BreadcrumbProps } from "@/types/templates.types";
 
-export const Breadcrumb = ({ data, ui }: { data?: BreadcrumbData; ui?: GlobalUIData }) => {
+export const Breadcrumb = ({ data, ui }: BreadcrumbProps) => {
   if (!data) return null;
   const { title, paths: crumbs } = data;
 

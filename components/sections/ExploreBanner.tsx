@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { ExploreBannerData } from "@/types/templates.types";
+import type { ExploreBannerProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 
-export const ExploreBanner = ({ data: explore }: { data?: ExploreBannerData }) => {
+export const ExploreBanner = ({ data: explore }: ExploreBannerProps) => {
   if (!explore) return null;
   return (
     <section className="relative min-h-[38rem] overflow-hidden md:min-h-[34rem] lg:h-[44rem] lg:min-h-0">
@@ -38,7 +38,7 @@ export const ExploreBanner = ({ data: explore }: { data?: ExploreBannerData }) =
           className="mt-8 inline-flex h-14 items-center gap-6 border border-[var(--color-primary)] bg-[var(--color-primary)] px-7 font-sans text-[0.95rem] font-normal tracking-[0.05em] text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary)] md:h-16 lg:mt-[2.9rem] lg:h-[4.8rem] lg:w-[22rem] lg:gap-[2.8rem] lg:px-0 lg:pl-[3.1rem] lg:text-[1.25rem]"
         >
           {explore.buttonText}
-          <Icon name="HiOutlineArrowLongRight" className="w-6 lg:w-[1.75rem]" />
+          <Icon name={explore.buttonIcon} className="w-6 lg:w-[1.75rem]" />
         </Link>
       </div>
     </section>

@@ -2,6 +2,7 @@ import { Icon } from "@/components/ui/Icon";
 
 /** Centered gold rule with a four-point star, used above section headings */
 type StarDividerProps = {
+  icon: string;
   className?: string;
   /** star colour and size */
   starClassName?: string;
@@ -10,6 +11,7 @@ type StarDividerProps = {
 };
 
 export const StarDivider = ({
+  icon,
   className = "",
   starClassName = "text-[var(--color-accent-dark)]",
   lineClassName = "via-[var(--color-accent-light)] to-[var(--color-accent)] lg:w-[10.8rem]",
@@ -17,7 +19,7 @@ export const StarDivider = ({
   return (
     <div className={`flex items-center justify-center gap-3 lg:gap-[1.4rem] ${className}`} aria-hidden="true">
       <span className={`h-[2px] w-20 bg-gradient-to-r from-transparent md:w-28 ${lineClassName}`} />
-      <Icon name="PiStarFourFill" className={`size-6 lg:size-[2.6rem] ${starClassName}`} />
+      <Icon name={icon} className={`size-6 lg:size-[2.6rem] ${starClassName}`} />
       <span className={`h-[2px] w-20 bg-gradient-to-l from-transparent md:w-28 ${lineClassName}`} />
     </div>
   );

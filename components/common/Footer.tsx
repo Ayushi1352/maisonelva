@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { CompanyData, FooterData } from "@/types/templates.types";
+import type { FooterProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
-import { contactHref, contactLines, fill } from "@/components/ui/text";
+import { fill, lines } from "@/components/ui/text";
 
 /** Fills `{year}` in the copyright line; cached so the footer can still be prerendered. */
 async function currentYear() {
@@ -10,7 +10,7 @@ async function currentYear() {
   return new Date().getFullYear();
 }
 
-export const Footer = async ({ data: footer, company }: { data?: FooterData; company: CompanyData }) => {
+export const Footer = async ({ data: footer }: FooterProps) => {
   if (!footer) return null;
   const copyright = fill(footer.copyrightText, { year: await currentYear() });
 
@@ -20,20 +20,20 @@ export const Footer = async ({ data: footer, company }: { data?: FooterData; com
         <div className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-10 sm:gap-x-10 md:grid-cols-[1.3fr_1fr_1fr] md:gap-0 lg:flex lg:justify-between lg:gap-[4rem] lg:pl-[8.3rem] lg:pr-[6.6rem]">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 md:pr-8 lg:min-w-0 lg:pr-0">
-            <Link href={company.logoUrl} aria-label={company.logoLabel} className="block w-full max-w-[13rem] md:max-w-[19rem] lg:w-[36rem] lg:max-w-full">
+            <Link href={footer.logoUrl} aria-label={footer.logoLabel} className="block w-full max-w-[13rem] md:max-w-[19rem] lg:w-[36rem] lg:max-w-full">
               <Image
-                src={company.logo}
-                alt={company.logoAlt}
-                width={company.logoWidth}
-                height={company.logoHeight}
+                src={footer.logo}
+                alt={footer.logoAlt}
+                width={footer.logoWidth}
+                height={footer.logoHeight}
                 quality={90}
                 sizes="(min-width: 1024px) 36rem, (min-width: 768px) 304px, 208px"
                 className="h-auto w-full"
               />
             </Link>
             <p className="mt-6 font-display text-[1.35rem] italic font-medium leading-[1.35] tracking-[0.01em] text-[var(--color-text-soft)] lg:mt-[3.4rem] lg:text-[1.875rem] lg:leading-[2.5rem]">
-              {footer.tagline.map((line) => (
-                <span key={line} className="block">
+              {lines(footer.description).map((line, index) => (
+                <span key={index} className="block">
                   {line}
                 </span>
               ))}
@@ -61,11 +61,11 @@ export const Footer = async ({ data: footer, company }: { data?: FooterData; com
           {/* Quick links */}
           <div className="md:border-l-2 md:border-[var(--color-accent-light)] md:pl-8 lg:h-[23.75rem] lg:shrink-0 lg:pl-[5rem]">
             <h2 className="font-display text-[0.95rem] font-semibold uppercase leading-none tracking-[0.14em] sm:text-[1.2rem] sm:tracking-[0.22em] text-[var(--color-primary)] sm:text-[var(--color-accent-dark)] lg:mt-[1.1rem] lg:text-[1.45rem] lg:tracking-[0.25em]">
-              {footer.quickLinksTitle}
+              {footer.quickLinks.title}
             </h2>
             <span className="mt-4 block h-[2px] w-10 bg-[var(--color-accent)] lg:mt-[1.35rem] lg:h-[0.19rem] lg:w-[2.6rem]" aria-hidden="true" />
             <ul className="mt-5 space-y-2 lg:mt-[1.4rem] lg:space-y-0">
-              {footer.quickLinks.map((link) => (
+              {footer.quickLinks.links.map((link) => (
                 <li key={link.id}>
                   <Link
                     href={link.url}
@@ -85,15 +85,15 @@ export const Footer = async ({ data: footer, company }: { data?: FooterData; com
             </h2>
             <span className="mt-4 block h-[2px] w-10 bg-[var(--color-accent)] lg:mt-[1.35rem] lg:h-[0.19rem] lg:w-[2.6rem]" aria-hidden="true" />
             <ul className="mt-5 space-y-4 lg:mt-[2.2rem] lg:space-y-[1.6rem]">
-              {footer.contactDetails.map((item) => (
+              {footer.contactItems.map((item) => (
                 <li key={item.id}>
                   <a
-                    href={contactHref(item.source, company)}
-                    {...(item.source === "address" && { target: "_blank", rel: "noopener noreferrer" })}
+                    href={item.url}
+                    {...(item.id === "address" && { target: "_blank", rel: "noopener noreferrer" })}
                     className="inline-flex items-start gap-2 font-display text-[1rem] font-bold leading-[1.45] sm:font-semibold sm:gap-3 sm:text-[1.2rem] tracking-[0.04em] text-[var(--color-text)] transition-colors hover:text-[var(--color-secondary)] lg:gap-[1rem] lg:text-[1.45rem]"
                   >
                     <Icon name={item.icon} className="mt-[0.25rem] size-[0.95rem] shrink-0 sm:mt-[0.3rem] sm:size-[1.05rem] text-[var(--color-accent-dark)] lg:size-[1.25rem]" />
-                    <span className={item.source === "address" ? "break-words" : "whitespace-nowrap"}>{contactLines(item, company).join(" ")}</span>
+                    <span className={item.id === "address" ? "break-words" : "whitespace-nowrap"}>{lines(item.text).join(" ")}</span>
                   </a>
                 </li>
               ))}
@@ -105,7 +105,7 @@ export const Footer = async ({ data: footer, company }: { data?: FooterData; com
         <div className="mt-12 lg:mt-[3.6rem] lg:px-[6.05rem]">
           <div className="flex items-center gap-3 lg:gap-[0.9rem]" aria-hidden="true">
             <span className="h-px flex-1 bg-[var(--color-accent-light)] lg:h-[2px]" />
-            <Icon name="PiStarFourFill" className="size-5 text-[var(--color-accent-dark)] lg:size-[1.75rem]" />
+            <Icon name={footer.starIcon} className="size-5 text-[var(--color-accent-dark)] lg:size-[1.75rem]" />
             <span className="h-px flex-1 bg-[var(--color-accent-light)] lg:h-[2px]" />
           </div>
           <div className="mt-5 flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left lg:mt-[1.7rem] lg:px-[0.6rem]">

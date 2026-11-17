@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import type { CollectionsData, GlobalUIData } from "@/types/templates.types";
+import type { CollectionsData } from "@/types/templates.types";
 import { Pagination, usePagination } from "@/components/ui/Pagination";
 
 /** Category cards (image + name with a short gold rule), three per row, paged by perPage in templates.json */
-export const CollectionBrowser = ({ data, ui }: { data: CollectionsData; ui?: GlobalUIData }) => {
+export const CollectionBrowser = ({ data }: { data: CollectionsData }) => {
   const { cards, cardUrl, perPage } = data;
   const { page, setPage, totalPages, pageItems } = usePagination(cards, perPage);
 
@@ -36,7 +36,7 @@ export const CollectionBrowser = ({ data, ui }: { data: CollectionsData; ui?: Gl
           </li>
         ))}
       </ul>
-      <Pagination page={page} totalPages={totalPages} onChange={setPage} scrollTargetId="collection-grid" ui={ui} />
+      <Pagination page={page} totalPages={totalPages} onChange={setPage} scrollTargetId="collection-grid" data={data.pagination} />
     </div>
   );
 };

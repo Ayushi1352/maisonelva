@@ -1,5 +1,6 @@
 import type { EnquiryData } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { lines } from "@/components/ui/text";
 
 export const EnquiryIntro = ({ data: enquiry }: { data: EnquiryData }) => {
   return (
@@ -27,8 +28,8 @@ export const EnquiryIntro = ({ data: enquiry }: { data: EnquiryData }) => {
                   {feature.title}
                 </h3>
                 <p className="mt-1 font-ui text-[1rem] leading-[1.5] text-[var(--color-text-alt)] md:text-[1.1rem] lg:mt-[0.5rem] lg:text-[1.8rem] lg:leading-[2.6rem]">
-                  {feature.description.map((line) => (
-                    <span key={line} className="lg:block">
+                  {lines(feature.description).map((line, index) => (
+                    <span key={index} className="lg:block">
                       {line}{" "}
                     </span>
                   ))}

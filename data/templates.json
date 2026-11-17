@@ -19,33 +19,9 @@
       "icon": "/favicon.ico",
       "lang": "en"
     },
-    "company": {
-      "name": "Maison Élva",
-      "logo": "/images/logo.webp",
-      "logoAlt": "Maison Élva — Jewellery | Fashion Apparel",
-      "logoUrl": "/",
-      "logoLabel": "Maison Élva",
-      "logoWidth": 1958,
-      "logoHeight": 436,
-      "phone": "+1 0000000000",
-      "email": "info@xyz.com",
-      "address": [
-        "123 Main Street,",
-        "New York, NY 10001,",
-        "USA"
-      ],
-      "mapEmbedUrl": "https://maps.google.com/maps?q={query}&z=15&output=embed",
-      "mapOpenUrl": "https://www.google.com/maps/search/?api=1&query={query}"
-    },
     "globalUI": {
       "breadcrumbLabel": "Breadcrumb",
-      "breadcrumbSeparator": "/",
-      "paginationLabel": "Pagination",
-      "previousPageLabel": "Previous page",
-      "nextPageLabel": "Next page",
-      "pageLabel": "Page {page}",
-      "openMenu": "Open menu",
-      "closeMenu": "Close menu"
+      "breadcrumbSeparator": "/"
     },
     "aboutBreadcrumb": {
       "title": "About Us",
@@ -229,46 +205,45 @@
       "title": "Oops! Page Not Found",
       "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
       "buttonText": "Back to Home",
-      "buttonUrl": "/"
+      "buttonUrl": "/",
+      "buttonIcon": "HiOutlineArrowLongRight"
     },
     "Footer": {
-      "tagline": [
-        "Timeless jewellery and fashion",
-        "for a more confident you."
-      ],
-      "quickLinksTitle": "Quick Links",
-      "quickLinks": [
-        {
-          "id": "home",
-          "label": "Home",
-          "url": "/"
-        },
-        {
-          "id": "about-us",
-          "label": "About Us",
-          "url": "/about-us"
-        },
-        {
-          "id": "collections",
-          "label": "Collections",
-          "url": "/collections"
-        },
-        {
-          "id": "gallery",
-          "label": "Gallery",
-          "url": "/gallery"
-        },
-        {
-          "id": "blog",
-          "label": "Blog",
-          "url": "/blog"
-        },
-        {
-          "id": "contact-us",
-          "label": "Contact Us",
-          "url": "/contact-us"
-        }
-      ],
+      "quickLinks": {
+        "title": "Quick Links",
+        "links": [
+          {
+            "id": "home",
+            "label": "Home",
+            "url": "/"
+          },
+          {
+            "id": "about-us",
+            "label": "About Us",
+            "url": "/about-us"
+          },
+          {
+            "id": "collections",
+            "label": "Collections",
+            "url": "/collections"
+          },
+          {
+            "id": "gallery",
+            "label": "Gallery",
+            "url": "/gallery"
+          },
+          {
+            "id": "blog",
+            "label": "Blog",
+            "url": "/blog"
+          },
+          {
+            "id": "contact-us",
+            "label": "Contact Us",
+            "url": "/contact-us"
+          }
+        ]
+      },
       "followTitle": "Follow Us",
       "socialLinks": [
         {
@@ -291,29 +266,40 @@
         }
       ],
       "contactTitle": "Contact Us",
-      "contactDetails": [
-        {
-          "id": "phone",
-          "icon": "FaPhoneAlt",
-          "source": "phone"
-        },
-        {
-          "id": "email",
-          "icon": "FaEnvelope",
-          "source": "email"
-        },
-        {
-          "id": "address",
-          "icon": "FaMapMarkerAlt",
-          "source": "address"
-        }
-      ],
       "copyrightText": "© {year} All Rights Reserved. Powered by Lestow.",
       "motto": [
         "Timeless",
         "Elegant",
         "You"
-      ]
+      ],
+      "logo": "/images/logo.webp",
+      "logoAlt": "Maison Élva — Jewellery | Fashion Apparel",
+      "logoUrl": "/",
+      "logoLabel": "Maison Élva",
+      "logoWidth": 1958,
+      "logoHeight": 436,
+      "description": "Timeless jewellery and fashion\nfor a more confident you.",
+      "contactItems": [
+        {
+          "id": "phone",
+          "icon": "FaPhoneAlt",
+          "text": "+1 0000000000",
+          "url": "tel:+10000000000"
+        },
+        {
+          "id": "email",
+          "icon": "FaEnvelope",
+          "text": "info@xyz.com",
+          "url": "mailto:info@xyz.com"
+        },
+        {
+          "id": "address",
+          "icon": "FaMapMarkerAlt",
+          "text": "123 Main Street,\nNew York, NY 10001,\nUSA",
+          "url": "https://www.google.com/maps/search/?api=1&query=123%20Main%20Street%2C%20New%20York%2C%20NY%2010001%2C%20USA"
+        }
+      ],
+      "starIcon": "PiStarFourFill"
     }
   },
   "categories": {
@@ -362,7 +348,18 @@
               "buttonText": "Enquiry Now",
               "buttonUrl": "/enquiry-now",
               "mainNavLabel": "Main navigation",
-              "mobileNavLabel": "Mobile navigation"
+              "mobileNavLabel": "Mobile navigation",
+              "logo": "/images/logo.webp",
+              "logoAlt": "Maison Élva — Jewellery | Fashion Apparel",
+              "logoUrl": "/",
+              "logoLabel": "Maison Élva",
+              "logoWidth": 1958,
+              "logoHeight": 436,
+              "buttonIcon": "HiOutlineArrowLongRight",
+              "openMenu": "Open menu",
+              "closeMenu": "Close menu",
+              "openMenuIcon": "FaBars",
+              "closeMenuIcon": "FaTimes"
             }
           }
         },
@@ -370,28 +367,14 @@
           "variants": {
             "JewelleryHero1": {
               "eyebrow": "Timeless Elegance",
-              "titleLines": [
-                {
-                  "id": "fine",
-                  "text": "Fine",
-                  "accent": false
-                },
-                {
-                  "id": "jewellery",
-                  "text": "Jewellery",
-                  "accent": true
-                },
-                {
-                  "id": "collection",
-                  "text": "Collection",
-                  "accent": false
-                }
-              ],
               "description": "Crafted to celebrate your unique story, our jewellery blends modern sophistication with timeless artistry.",
               "buttonText": "Explore Collection",
               "buttonUrl": "/collections",
               "image": "/images/home/hero-model.webp",
-              "imageAlt": "Model wearing a ruby and diamond necklace with matching drop earrings"
+              "imageAlt": "Model wearing a ruby and diamond necklace with matching drop earrings",
+              "title": "Fine\nJewellery\nCollection",
+              "titleHighlight": "Jewellery",
+              "buttonIcon": "HiOutlineArrowLongRight"
             }
           }
         },
@@ -401,16 +384,14 @@
               "eyebrow": "About Maison Élva",
               "title": "A Story of",
               "titleHighlight": "Timeless Beauty",
-              "paragraphs": [
-                "At Maison ÉLVA, we believe jewellery is more than an adornment — it’s a reflection of your story, your moments and your individuality.",
-                "Our collections are thoughtfully crafted with exquisite detail, blending modern elegance with timeless artistry to create pieces that stay with you forever."
-              ],
               "buttonText": "Read More",
               "buttonUrl": "/about-us",
               "mainImage": "/images/home/story-necklace.webp",
               "mainImageAlt": "Ruby pear pendant necklace resting on champagne satin",
               "secondaryImage": "/images/home/story-model.webp",
-              "secondaryImageAlt": "Model in burgundy silk wearing ruby earrings and a diamond bracelet"
+              "secondaryImageAlt": "Model in burgundy silk wearing ruby earrings and a diamond bracelet",
+              "description": "At Maison ÉLVA, we believe jewellery is more than an adornment — it’s a reflection of your story, your moments and your individuality.\nOur collections are thoughtfully crafted with exquisite detail, blending modern elegance with timeless artistry to create pieces that stay with you forever.",
+              "buttonIcon": "HiOutlineArrowLongRight"
             }
           }
         },
@@ -435,67 +416,129 @@
               "buttonText": "View Collections",
               "buttonUrl": "/collections",
               "image": "/images/home/explore-banner.webp",
-              "imageAlt": "Gold leaf bangle and matching earrings displayed on travertine with satin"
+              "imageAlt": "Gold leaf bangle and matching earrings displayed on travertine with satin",
+              "buttonIcon": "HiOutlineArrowLongRight"
             }
           }
         },
         "Testimonials": {
           "variants": {
             "JewelleryTestimonials1": {
-              "eyebrow": "Testimonials",
-              "titleLines": [
-                {
-                  "id": "trusted",
-                  "text": "Trusted",
-                  "accent": false
-                },
-                {
-                  "id": "by-our",
-                  "text": "By Our",
-                  "accent": false
-                },
-                {
-                  "id": "clients",
-                  "text": "Clients",
-                  "accent": true
-                }
+              "home": {
+                "eyebrow": "Testimonials",
+                "description": "Real stories from our valued clients who cherish our jewellery and the moments it represents.",
+                "image": "/images/home/testimonial-model.webp",
+                "imageAlt": "Smiling model wearing ruby drop earrings, a ruby ring and a diamond bracelet",
+                "previousLabel": "Previous testimonial",
+                "nextLabel": "Next testimonial",
+                "autoplayMs": 6000,
+                "title": "Trusted\nBy Our\nClients",
+                "titleHighlight": "Clients",
+                "previousIcon": "HiOutlineArrowLongLeft",
+                "nextIcon": "HiOutlineArrowLongRight"
+              },
+              "intro": {
+                "eyebrow": "Testimonials",
+                "title": "What Our",
+                "titleHighlight": "Customers Say",
+                "description": "Real stories from our valued customers who trust our jewellery for life’s most cherished moments.",
+                "perPage": 6,
+                "ratingLabel": "{rating} out of 5 stars"
+              },
+              "homeItemIds": [
+                "home-priya-sharma",
+                "home-aaradhya-mehta",
+                "home-kavya-nair"
               ],
-              "description": "Real stories from our valued clients who cherish our jewellery and the moments it represents.",
-              "image": "/images/home/testimonial-model.webp",
-              "imageAlt": "Smiling model wearing ruby drop earrings, a ruby ring and a diamond bracelet",
+              "listingItemIds": [
+                "aaradhya-mehta",
+                "priya-sharma",
+                "sneha-kapoor",
+                "kavya-nair",
+                "rhea-malhotra",
+                "ananya-desai",
+                "kavya-iyer"
+              ],
+              "quoteIcon": "FaQuoteLeft",
+              "starIcon": "FaStar",
+              "pagination": {
+                "label": "Pagination",
+                "previousLabel": "Previous page",
+                "previousIcon": "HiOutlineArrowLongLeft",
+                "nextLabel": "Next page",
+                "nextIcon": "HiOutlineArrowLongRight",
+                "pageLabel": "Page {page}"
+              },
               "items": [
                 {
-                  "id": "priya-sharma",
+                  "id": "home-priya-sharma",
                   "quote": "The craftsmanship and attention to detail are truly exceptional. Each piece from Maison Élva feels special and timeless. I always receive compliments whenever I wear their jewellery.",
                   "name": "Priya Sharma",
                   "role": "Happy Customer"
                 },
                 {
-                  "id": "aaradhya-mehta",
+                  "id": "home-aaradhya-mehta",
                   "quote": "From the first sketch to the final polish, the team made my custom ring feel like a true heirloom. The finish is flawless and the stones simply glow in every light.",
                   "name": "Aaradhya Mehta",
                   "role": "Happy Customer"
                 },
                 {
-                  "id": "kavya-nair",
+                  "id": "home-kavya-nair",
                   "quote": "Elegant packaging, quick delivery and earrings that look even more beautiful in person. Maison Élva has become my first choice for every special occasion.",
                   "name": "Kavya Nair",
                   "role": "Happy Customer"
+                },
+                {
+                  "id": "aaradhya-mehta",
+                  "quote": "The quality and finish of the jewellery is simply outstanding. I bought a diamond ring for our anniversary and it exceeded all my expectations. Truly a timeless piece!",
+                  "name": "Aaradhya Mehta",
+                  "city": "Mumbai",
+                  "rating": 5
+                },
+                {
+                  "id": "priya-sharma",
+                  "quote": "Beautiful collection with elegant designs. The team guided me to the perfect necklace for my special occasion, and the entire experience was smooth and delightful.",
+                  "name": "Priya Sharma",
+                  "city": "Delhi",
+                  "rating": 5
+                },
+                {
+                  "id": "sneha-kapoor",
+                  "quote": "I bought a pair of diamond earrings and I’m in love with them. The craftsmanship is exceptional and the detailing is just perfect. Definitely my go-to jewellery store!",
+                  "name": "Sneha Kapoor",
+                  "city": "Bengaluru",
+                  "rating": 5
+                },
+                {
+                  "id": "kavya-nair",
+                  "quote": "From design to delivery, everything was flawless. The jewellery looks even more beautiful in person, with premium quality, elegant packaging and excellent service.",
+                  "name": "Kavya Nair",
+                  "city": "Chennai",
+                  "rating": 5
+                },
+                {
+                  "id": "rhea-malhotra",
+                  "quote": "I ordered a pendant for my mother’s birthday and she absolutely loved it. The design is classic and the quality is unmatched. Thank you for making it such a special gift.",
+                  "name": "Rhea Malhotra",
+                  "city": "Kolkata",
+                  "rating": 5
+                },
+                {
+                  "id": "ananya-desai",
+                  "quote": "Exceptional collection and outstanding service. The jewellery is elegant, modern and perfect for every occasion. I highly recommend them to anyone who truly values quality.",
+                  "name": "Ananya Desai",
+                  "city": "Pune",
+                  "rating": 5
+                },
+                {
+                  "id": "kavya-iyer",
+                  "quote": "The bracelet I bought for my anniversary is simply stunning. The craftsmanship is flawless and the team helped me choose the perfect piece with so much patience.",
+                  "name": "Kavya Iyer",
+                  "city": "Chennai",
+                  "rating": 5
                 }
               ],
-              "previousLabel": "Previous testimonial",
-              "nextLabel": "Next testimonial",
-              "autoplayMs": 6000
-            }
-          }
-        },
-        "BlogPreview": {
-          "variants": {
-            "JewelleryBlogPreview1": {
-              "eyebrow": "Our Blog",
-              "title": "Latest",
-              "titleHighlight": "Stories",
-              "count": 2
+              "dividerStarIcon": "PiStarFourFill"
             }
           }
         },
@@ -513,7 +556,8 @@
                 "description": "To be a trusted and inspiring brand known for refined design, exceptional quality and a modern approach to jewellery and fashion, making every moment more meaningful."
               },
               "image": "/images/about/mission-rings.webp",
-              "imageAlt": "Two stacked gold rings, one set with diamonds, on a marble plinth"
+              "imageAlt": "Two stacked gold rings, one set with diamonds, on a marble plinth",
+              "starIcon": "PiStarFourFill"
             }
           }
         },
@@ -2047,7 +2091,16 @@
                     }
                   ]
                 }
-              ]
+              ],
+              "starIcon": "PiStarFourFill",
+              "pagination": {
+                "label": "Pagination",
+                "previousLabel": "Previous page",
+                "previousIcon": "HiOutlineArrowLongLeft",
+                "nextLabel": "Next page",
+                "nextIcon": "HiOutlineArrowLongRight",
+                "pageLabel": "Page {page}"
+              }
             }
           }
         },
@@ -2059,7 +2112,10 @@
               "specificationsLabel": "Product Specifications",
               "thumbnailLabel": "Show image {index} of {name}",
               "zoomLabel": "View larger image",
-              "closeLabel": "Close"
+              "closeLabel": "Close",
+              "zoomIcon": "FaExpandAlt",
+              "closeIcon": "FaTimes",
+              "starIcon": "PiStarFourFill"
             }
           }
         },
@@ -2154,79 +2210,25 @@
               "viewLabel": "View {alt}",
               "closeLabel": "Close",
               "previousLabel": "Previous image",
-              "nextLabel": "Next image"
-            }
-          }
-        },
-        "TestimonialListing": {
-          "variants": {
-            "JewelleryTestimonialListing1": {
-              "eyebrow": "Testimonials",
-              "title": "What Our",
-              "titleHighlight": "Customers Say",
-              "description": "Real stories from our valued customers who trust our jewellery for life’s most cherished moments.",
-              "perPage": 6,
-              "items": [
-                {
-                  "id": "aaradhya-mehta",
-                  "quote": "The quality and finish of the jewellery is simply outstanding. I bought a diamond ring for our anniversary and it exceeded all my expectations. Truly a timeless piece!",
-                  "name": "Aaradhya Mehta",
-                  "city": "Mumbai",
-                  "rating": 5
-                },
-                {
-                  "id": "priya-sharma",
-                  "quote": "Beautiful collection with elegant designs. The team guided me to the perfect necklace for my special occasion, and the entire experience was smooth and delightful.",
-                  "name": "Priya Sharma",
-                  "city": "Delhi",
-                  "rating": 5
-                },
-                {
-                  "id": "sneha-kapoor",
-                  "quote": "I bought a pair of diamond earrings and I’m in love with them. The craftsmanship is exceptional and the detailing is just perfect. Definitely my go-to jewellery store!",
-                  "name": "Sneha Kapoor",
-                  "city": "Bengaluru",
-                  "rating": 5
-                },
-                {
-                  "id": "kavya-nair",
-                  "quote": "From design to delivery, everything was flawless. The jewellery looks even more beautiful in person, with premium quality, elegant packaging and excellent service.",
-                  "name": "Kavya Nair",
-                  "city": "Chennai",
-                  "rating": 5
-                },
-                {
-                  "id": "rhea-malhotra",
-                  "quote": "I ordered a pendant for my mother’s birthday and she absolutely loved it. The design is classic and the quality is unmatched. Thank you for making it such a special gift.",
-                  "name": "Rhea Malhotra",
-                  "city": "Kolkata",
-                  "rating": 5
-                },
-                {
-                  "id": "ananya-desai",
-                  "quote": "Exceptional collection and outstanding service. The jewellery is elegant, modern and perfect for every occasion. I highly recommend them to anyone who truly values quality.",
-                  "name": "Ananya Desai",
-                  "city": "Pune",
-                  "rating": 5
-                },
-                {
-                  "id": "kavya-iyer",
-                  "quote": "The bracelet I bought for my anniversary is simply stunning. The craftsmanship is flawless and the team helped me choose the perfect piece with so much patience.",
-                  "name": "Kavya Iyer",
-                  "city": "Chennai",
-                  "rating": 5
-                }
-              ],
-              "ratingLabel": "{rating} out of 5 stars"
+              "nextLabel": "Next image",
+              "closeIcon": "FaTimes",
+              "previousIcon": "HiOutlineArrowLongLeft",
+              "nextIcon": "HiOutlineArrowLongRight",
+              "starIcon": "PiStarFourFill",
+              "pagination": {
+                "label": "Pagination",
+                "previousLabel": "Previous page",
+                "previousIcon": "HiOutlineArrowLongLeft",
+                "nextLabel": "Next page",
+                "nextIcon": "HiOutlineArrowLongRight",
+                "pageLabel": "Page {page}"
+              }
             }
           }
         },
         "Blogs": {
           "variants": {
             "JewelleryBlogs1": {
-              "eyebrow": "Our Blog",
-              "title": "Latest",
-              "titleHighlight": "Stories",
               "buttonText": "Read More",
               "detailPageUrl": "/blog/blog-details",
               "perPage": 6,
@@ -2240,12 +2242,8 @@
                   "day": "12",
                   "month": "Oct",
                   "date": "12 Oct 2026",
-                  "image": "/images/blog/jewellery-guide.webp",
-                  "imageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                  "image": "/images/blog/diamond-care.webp",
                   "detail": {
-                    "intro": "Diamond jewellery is more than just an accessory, it’s a symbol of love, elegance and cherished memories. With the right care and mindful habits, you can keep your favourite pieces looking as brilliant as the day you bought them.",
-                    "image": "/images/blog/diamond-care.webp",
-                    "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
                     "quote": "A little care goes a long way in preserving the beauty and brilliance of your diamond jewellery. Follow these simple tips to keep your cherished pieces looking radiant for years to come.",
                     "sections": [
                       {
@@ -2273,7 +2271,12 @@
                         "description": "For valuable or frequently worn pieces, it’s a good idea to get them checked by a professional jeweller once in a while. They can inspect the settings, clean them thoroughly and ensure that your jewellery remains in perfect condition."
                       }
                     ]
-                  }
+                  },
+                  "homeImage": "/images/blog/jewellery-guide.webp",
+                  "content": "Diamond jewellery is more than just an accessory, it’s a symbol of love, elegance and cherished memories. With the right care and mindful habits, you can keep your favourite pieces looking as brilliant as the day you bought them.\nA little care goes a long way in preserving the beauty and brilliance of your diamond jewellery. Follow these simple tips to keep your cherished pieces looking radiant for years to come.\nKeep Your Jewellery Clean\nRegular cleaning helps maintain the natural shine of your diamond jewellery. Use a soft, lint-free cloth to gently wipe your pieces after wearing them. For a deeper clean, use a mild jewellery cleaner or lukewarm water with a few drops of gentle soap. Avoid harsh chemicals that can damage delicate stones and metals.\nStore Them Properly\nAlways store your jewellery in a soft-lined jewellery box or individual pouches to prevent scratches and tangling. Keep different pieces separate, especially those with diamonds or delicate designs. Proper storage not only keeps them safe but also helps maintain their brilliance for longer.\nAvoid Exposure to Harsh Elements\nRemove your jewellery before swimming, exercising or using household cleaning products. Exposure to chlorine, sweat, perfumes and harsh chemicals can dull the shine and damage the metal or gemstones. Putting them on after your skincare and makeup routine is a good habit.\nGet Professional Check-ups\nFor valuable or frequently worn pieces, it’s a good idea to get them checked by a professional jeweller once in a while. They can inspect the settings, clean them thoroughly and ensure that your jewellery remains in perfect condition.",
+                  "homeImageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                  "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "intro": "Diamond jewellery is more than just an accessory, it’s a symbol of love, elegance and cherished memories. With the right care and mindful habits, you can keep your favourite pieces looking as brilliant as the day you bought them."
                 },
                 {
                   "id": "top-jewellery-trends-you-ll-love-this-season",
@@ -2284,12 +2287,8 @@
                   "day": "25",
                   "month": "Oct",
                   "date": "25 Oct 2026",
-                  "image": "/images/blog/jewellery-trends.webp",
-                  "imageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                  "image": "/images/gallery/eternity-bands.webp",
                   "detail": {
-                    "intro": "This season is all about pieces that feel personal, versatile and quietly luxurious. From stacked bands to sculptural gold, here are the trends our clients are falling in love with.",
-                    "image": "/images/gallery/eternity-bands.webp",
-                    "imageAlt": "Stacked gold eternity bands with diamonds",
                     "quote": "The best trends are the ones that feel like you. Choose pieces that layer easily, flatter your everyday style and still feel special years from now.",
                     "sections": [
                       {
@@ -2317,7 +2316,12 @@
                         "description": "Delicate halo pendants on fine chains remain a favourite. They are easy to wear daily and make thoughtful gifts for birthdays and anniversaries."
                       }
                     ]
-                  }
+                  },
+                  "homeImage": "/images/blog/jewellery-trends.webp",
+                  "content": "This season is all about pieces that feel personal, versatile and quietly luxurious. From stacked bands to sculptural gold, here are the trends our clients are falling in love with.\nThe best trends are the ones that feel like you. Choose pieces that layer easily, flatter your everyday style and still feel special years from now.\nStacked Eternity Bands\nSlim diamond bands worn together create a personalised look that grows with you. Mix yellow and rose gold, or combine plain and pavé bands for depth and texture.\nSculptural Gold Cuffs\nFluid, open cuffs with a single statement stone are replacing busy stacks. They feel modern on their own and add instant polish to both day and evening outfits.\nColour With Rubies\nDeep red rubies paired with diamonds bring warmth and romance to classic designs. Look for marquise and pear shapes for a contemporary feel.\nEveryday Diamond Pendants\nDelicate halo pendants on fine chains remain a favourite. They are easy to wear daily and make thoughtful gifts for birthdays and anniversaries.",
+                  "homeImageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                  "imageAlt": "Stacked gold eternity bands with diamonds",
+                  "intro": "This season is all about pieces that feel personal, versatile and quietly luxurious. From stacked bands to sculptural gold, here are the trends our clients are falling in love with."
                 },
                 {
                   "id": "how-to-choose-the-perfect-jewellery-for-every-occasion",
@@ -2328,12 +2332,8 @@
                   "day": "12",
                   "month": "Oct",
                   "date": "12 Oct 2026",
-                  "image": "/images/blog/jewellery-guide.webp",
-                  "imageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                  "image": "/images/blog/diamond-care.webp",
                   "detail": {
-                    "intro": "The right piece can complete an outfit and make a moment unforgettable. Here is how to choose jewellery that feels perfectly suited to every occasion.",
-                    "image": "/images/blog/diamond-care.webp",
-                    "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
                     "quote": "Let the occasion guide the sparkle, and let your personal style guide the design.",
                     "sections": [
                       {
@@ -2361,7 +2361,12 @@
                         "description": "Diamonds and fine gold are timeless choices for life’s biggest moments. Coordinate metals with your outfit and choose pieces you will treasure for years."
                       }
                     ]
-                  }
+                  },
+                  "homeImage": "/images/blog/jewellery-guide.webp",
+                  "content": "The right piece can complete an outfit and make a moment unforgettable. Here is how to choose jewellery that feels perfectly suited to every occasion.\nLet the occasion guide the sparkle, and let your personal style guide the design.\nEveryday Elegance\nFor daily wear, choose lightweight studs, slim bands and delicate pendants that are comfortable and easy to pair with any outfit.\nWork & Meetings\nOpt for refined, understated pieces — a classic pendant or small hoops add polish without distraction.\nEvenings & Celebrations\nDrop earrings, statement necklaces and cocktail rings bring drama and light to evening looks. Balance one statement piece with simpler accents.\nWeddings & Milestones\nDiamonds and fine gold are timeless choices for life’s biggest moments. Coordinate metals with your outfit and choose pieces you will treasure for years.",
+                  "homeImageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                  "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "intro": "The right piece can complete an outfit and make a moment unforgettable. Here is how to choose jewellery that feels perfectly suited to every occasion."
                 },
                 {
                   "id": "the-season-s-jewellery-edit",
@@ -2372,12 +2377,8 @@
                   "day": "25",
                   "month": "Oct",
                   "date": "25 Oct 2026",
-                  "image": "/images/blog/jewellery-trends.webp",
-                  "imageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                  "image": "/images/home/explore-banner.webp",
                   "detail": {
-                    "intro": "A curated look at the shapes, metals and stones defining jewellery this season — and how to wear them your way.",
-                    "image": "/images/home/explore-banner.webp",
-                    "imageAlt": "Gold leaf bangle and matching earrings displayed on travertine with satin",
                     "quote": "Invest in pieces that move effortlessly between occasions — that is the true modern luxury.",
                     "sections": [
                       {
@@ -2405,7 +2406,12 @@
                         "description": "Personal, wearable pieces — pendants, studs and slim bands — remain the most cherished gifts."
                       }
                     ]
-                  }
+                  },
+                  "homeImage": "/images/blog/jewellery-trends.webp",
+                  "content": "A curated look at the shapes, metals and stones defining jewellery this season — and how to wear them your way.\nInvest in pieces that move effortlessly between occasions — that is the true modern luxury.\nNature-Inspired Motifs\nLeaves, petals and clovers in gold and diamonds bring softness and movement to bracelets and earrings.\nWarm Rose Gold\nRose gold continues to shine for its flattering, romantic glow on every skin tone.\nMixed Shapes\nPear, marquise and emerald cuts add a contemporary edge to classic designs.\nMeaningful Gifts\nPersonal, wearable pieces — pendants, studs and slim bands — remain the most cherished gifts.",
+                  "homeImageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                  "imageAlt": "Gold leaf bangle and matching earrings displayed on travertine with satin",
+                  "intro": "A curated look at the shapes, metals and stones defining jewellery this season — and how to wear them your way."
                 },
                 {
                   "id": "choosing-jewellery-for-special-moments",
@@ -2416,12 +2422,8 @@
                   "day": "12",
                   "month": "Oct",
                   "date": "12 Oct 2026",
-                  "image": "/images/blog/jewellery-guide.webp",
-                  "imageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                  "image": "/images/blog/diamond-care.webp",
                   "detail": {
-                    "intro": "Celebrations deserve pieces that feel as meaningful as the moment itself. Here is how to choose them with confidence.",
-                    "image": "/images/blog/diamond-care.webp",
-                    "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
                     "quote": "The most beautiful jewellery tells a story — make sure it is yours.",
                     "sections": [
                       {
@@ -2449,7 +2451,12 @@
                         "description": "Our team is always happy to guide you to pieces that match your occasion, style and budget."
                       }
                     ]
-                  }
+                  },
+                  "homeImage": "/images/blog/jewellery-guide.webp",
+                  "content": "Celebrations deserve pieces that feel as meaningful as the moment itself. Here is how to choose them with confidence.\nThe most beautiful jewellery tells a story — make sure it is yours.\nStart With Your Style\nClassic, modern or romantic — knowing your style narrows the choices and ensures the piece feels like you.\nConsider the Neckline\nPendants suit V-necks, collars suit strapless styles and drop earrings flatter high necklines.\nChoose the Right Metal\nYellow gold feels warm and classic, rose gold romantic, and white gold crisp and modern.\nAsk an Expert\nOur team is always happy to guide you to pieces that match your occasion, style and budget.",
+                  "homeImageAlt": "Model wearing pear diamond drop earrings and a matching ring",
+                  "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "intro": "Celebrations deserve pieces that feel as meaningful as the moment itself. Here is how to choose them with confidence."
                 },
                 {
                   "id": "from-modern-minimalism-to-timeless-classics",
@@ -2460,12 +2467,8 @@
                   "day": "25",
                   "month": "Oct",
                   "date": "25 Oct 2026",
-                  "image": "/images/blog/jewellery-trends.webp",
-                  "imageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                  "image": "/images/gallery/tennis-bracelet.webp",
                   "detail": {
-                    "intro": "Minimal lines and heirloom classics are meeting in beautiful new ways. Discover how to balance both in your collection.",
-                    "image": "/images/gallery/tennis-bracelet.webp",
-                    "imageAlt": "Gold and diamond tennis bracelet",
                     "quote": "Build your collection around a few timeless foundations, then layer in modern pieces that reflect who you are today.",
                     "sections": [
                       {
@@ -2493,7 +2496,12 @@
                         "description": "Clean and store your pieces properly so they stay brilliant for generations."
                       }
                     ]
-                  }
+                  },
+                  "homeImage": "/images/blog/jewellery-trends.webp",
+                  "content": "Minimal lines and heirloom classics are meeting in beautiful new ways. Discover how to balance both in your collection.\nBuild your collection around a few timeless foundations, then layer in modern pieces that reflect who you are today.\nMinimal Foundations\nFine chains, slim bands and small studs create an effortless base for everyday wear.\nTimeless Classics\nTennis bracelets, solitaire rings and halo pendants never go out of style.\nLayer With Intention\nCombine textures and lengths thoughtfully so every piece has room to shine.\nCare for Longevity\nClean and store your pieces properly so they stay brilliant for generations.",
+                  "homeImageAlt": "Two diamond-set gold bands resting on a stone plinth with dried flowers",
+                  "imageAlt": "Gold and diamond tennis bracelet",
+                  "intro": "Minimal lines and heirloom classics are meeting in beautiful new ways. Discover how to balance both in your collection."
                 },
                 {
                   "id": "caring-for-your-gold-jewellery-at-home",
@@ -2504,12 +2512,8 @@
                   "day": "28",
                   "month": "Oct",
                   "date": "28 Oct 2026",
-                  "image": "/images/blog/diamond-care.webp",
-                  "imageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "image": "/images/gallery/eternity-bands.webp",
                   "detail": {
-                    "intro": "Gold is timeless, but a little care keeps it looking its best. Here is how to look after your pieces at home.",
-                    "image": "/images/gallery/eternity-bands.webp",
-                    "imageAlt": "Stacked gold eternity bands with diamonds",
                     "quote": "Treat your jewellery gently every day, and it will stay beautiful for a lifetime.",
                     "sections": [
                       {
@@ -2537,16 +2541,51 @@
                         "description": "Bring your pieces in once a year for a professional clean and a check of clasps and settings."
                       }
                     ]
-                  }
+                  },
+                  "homeImage": "/images/blog/diamond-care.webp",
+                  "content": "Gold is timeless, but a little care keeps it looking its best. Here is how to look after your pieces at home.\nTreat your jewellery gently every day, and it will stay beautiful for a lifetime.\nClean Gently\nSoak your pieces in warm water with a drop of mild soap, then brush softly and pat dry.\nStore Separately\nKeep each piece in its own soft pouch or lined compartment to avoid scratches and tangles.\nAvoid Chemicals\nRemove jewellery before swimming, cleaning or applying perfume and lotions.\nVisit an Expert\nBring your pieces in once a year for a professional clean and a check of clasps and settings.",
+                  "homeImageAlt": "Diamond halo stud earrings on a marble block beside white flowers",
+                  "imageAlt": "Stacked gold eternity bands with diamonds",
+                  "intro": "Gold is timeless, but a little care keeps it looking its best. Here is how to look after your pieces at home."
                 }
-              ]
-            }
-          }
-        },
-        "BlogDetail": {
-          "variants": {
-            "JewelleryBlogDetail1": {
-              "dateLabel": "Published on"
+              ],
+              "home": {
+                "eyebrow": "Our Blog",
+                "title": "Latest",
+                "titleHighlight": "Stories"
+              },
+              "intro": {
+                "eyebrow": "Our Blog",
+                "title": "Latest",
+                "titleHighlight": "Stories"
+              },
+              "detail": {
+                "dateLabel": "Published on",
+                "dateIcon": "FaRegCalendarAlt"
+              },
+              "homePostIds": [
+                "simple-tips-to-keep-your-diamond-jewellery-shining",
+                "top-jewellery-trends-you-ll-love-this-season"
+              ],
+              "listingPostIds": [
+                "simple-tips-to-keep-your-diamond-jewellery-shining",
+                "top-jewellery-trends-you-ll-love-this-season",
+                "how-to-choose-the-perfect-jewellery-for-every-occasion",
+                "the-season-s-jewellery-edit",
+                "choosing-jewellery-for-special-moments",
+                "from-modern-minimalism-to-timeless-classics",
+                "caring-for-your-gold-jewellery-at-home"
+              ],
+              "detailPostId": "simple-tips-to-keep-your-diamond-jewellery-shining",
+              "buttonIcon": "HiOutlineArrowLongRight",
+              "pagination": {
+                "label": "Pagination",
+                "previousLabel": "Previous page",
+                "previousIcon": "HiOutlineArrowLongLeft",
+                "nextLabel": "Next page",
+                "nextIcon": "HiOutlineArrowLongRight",
+                "pageLabel": "Page {page}"
+              }
             }
           }
         },
@@ -2591,22 +2630,20 @@
                   "id": "location",
                   "icon": "FaMapMarkerAlt",
                   "title": "Our Location",
-                  "source": "address"
+                  "text": "123 Main Street,\nNew York, NY 10001,\nUSA"
                 },
                 {
                   "id": "phone",
                   "icon": "FaPhoneAlt",
                   "title": "Instant Connect",
-                  "source": "phone"
+                  "text": "+1 0000000000",
+                  "url": "tel:+10000000000"
                 },
                 {
                   "id": "mail",
                   "icon": "FaEnvelope",
                   "title": "Mail Us",
-                  "lines": [
-                    "info@xyz.com",
-                    "support@xyz.com"
-                  ],
+                  "text": "info@xyz.com\nsupport@xyz.com",
                   "urls": [
                     "mailto:info@xyz.com",
                     "mailto:support@xyz.com"
@@ -2616,7 +2653,10 @@
               "map": {
                 "title": "Map showing the Maison Élva store location",
                 "openLabel": "Open in Google Maps"
-              }
+              },
+              "hoursIcon": "FaRegClock",
+              "mapEmbedUrl": "https://maps.google.com/maps?q=123%20Main%20Street%2C%20New%20York%2C%20NY%2010001%2C%20USA&z=15&output=embed",
+              "directionUrl": "https://www.google.com/maps/search/?api=1&query=123%20Main%20Street%2C%20New%20York%2C%20NY%2010001%2C%20USA"
             }
           }
         },
@@ -2635,7 +2675,11 @@
               "sendingText": "Sending…",
               "successTitle": "Thank you, {name}!",
               "successMessage": "Your message has been sent. Our team will get back to you within 24 hours.",
-              "closeLabel": "Close message"
+              "closeLabel": "Close message",
+              "buttonIcon": "HiOutlineArrowLongRight",
+              "successIcon": "FaCheck",
+              "closeMessageIcon": "FaTimes",
+              "spinnerIcon": "FaSpinner"
             }
           }
         },
@@ -2651,28 +2695,19 @@
                   "id": "expert-guidance",
                   "icon": "FaGem",
                   "title": "Expert Guidance",
-                  "description": [
-                    "Get professional advice tailored",
-                    "to your style and budget."
-                  ]
+                  "description": "Get professional advice tailored\nto your style and budget."
                 },
                 {
                   "id": "quick-response",
                   "icon": "FaHeadset",
                   "title": "Quick Response",
-                  "description": [
-                    "Our team will get back to you",
-                    "as soon as possible."
-                  ]
+                  "description": "Our team will get back to you\nas soon as possible."
                 },
                 {
                   "id": "personalized-recommendations",
                   "icon": "FaShieldAlt",
                   "title": "Personalized Recommendations",
-                  "description": [
-                    "Find the perfect jewellery options",
-                    "for your special moments."
-                  ]
+                  "description": "Find the perfect jewellery options\nfor your special moments."
                 }
               ]
             }
@@ -2711,7 +2746,12 @@
               "sendingText": "Sending…",
               "successTitle": "Thank you, {name}!",
               "successMessage": "We have received your enquiry. Our jewellery expert will call you shortly with the best options for you.",
-              "closeLabel": "Close message"
+              "closeLabel": "Close message",
+              "buttonIcon": "HiOutlineArrowLongRight",
+              "selectIcon": "FaChevronDown",
+              "successIcon": "FaCheck",
+              "closeMessageIcon": "FaTimes",
+              "spinnerIcon": "FaSpinner"
             }
           }
         }
@@ -2719,7 +2759,7 @@
       "templateComponents": {
         "shared": {
           "Header": "JewelleryHeader1",
-          "Footer": "common.Footer"
+          "Footer": "JewelleryFooter1"
         },
         "pages": {
           "home": {
@@ -2729,32 +2769,32 @@
                 "component": "JewelleryHeader1"
               },
               {
-                "key": "Hero",
+                "key": "HeroSection",
                 "component": "JewelleryHero1"
               },
               {
                 "key": "AboutUs",
-                "component": "JewelleryAboutUs1"
+                "component": "AboutUs"
               },
               {
                 "key": "CollectionsPreview",
-                "component": "JewelleryCollectionsPreview1"
+                "component": "CollectionsPreview"
               },
               {
                 "key": "ExploreBanner",
-                "component": "JewelleryExploreBanner1"
+                "component": "ExploreBanner"
               },
               {
                 "key": "Testimonials",
-                "component": "JewelleryTestimonials1"
+                "component": "Testimonials"
               },
               {
-                "key": "BlogPreview",
-                "component": "JewelleryBlogPreview1"
+                "key": "Blogs",
+                "component": "Blogs"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2766,23 +2806,23 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.aboutBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "AboutUs",
-                "component": "JewelleryAboutUs1"
+                "component": "AboutUs"
               },
               {
                 "key": "MissionVision",
-                "component": "JewelleryMissionVision1"
+                "component": "MissionVision"
               },
               {
                 "key": "Testimonials",
-                "component": "JewelleryTestimonials1"
+                "component": "Testimonials"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2794,15 +2834,15 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.collectionsBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "Collections",
-                "component": "JewelleryCollections1"
+                "component": "Collections"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2814,15 +2854,15 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.collectionDetailBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "CollectionDetail",
-                "component": "JewelleryCollectionDetail1"
+                "component": "CollectionDetail"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2834,15 +2874,15 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.galleryBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "Gallery",
-                "component": "JewelleryGallery1"
+                "component": "Gallery"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2854,15 +2894,15 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.testimonialsBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
-                "key": "TestimonialListing",
-                "component": "JewelleryTestimonialListing1"
+                "key": "Testimonials",
+                "component": "Testimonials"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2874,15 +2914,15 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.blogsBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "Blogs",
-                "component": "JewelleryBlogs1"
+                "component": "Blogs"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2894,15 +2934,15 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.blogDetailBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "BlogDetail",
-                "component": "JewelleryBlogDetail1"
+                "component": "BlogDetail"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2914,19 +2954,19 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.contactBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "Contact",
-                "component": "JewelleryContact1"
+                "component": "Contact"
               },
               {
                 "key": "ContactForm",
-                "component": "JewelleryContactForm1"
+                "component": "ContactForm"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2938,19 +2978,19 @@
               },
               {
                 "key": "Breadcrumb",
-                "component": "common.enquiryBreadcrumb"
+                "component": "Breadcrumb"
               },
               {
                 "key": "Enquiry",
-                "component": "JewelleryEnquiry1"
+                "component": "Enquiry"
               },
               {
                 "key": "EnquiryForm",
-                "component": "JewelleryEnquiryForm1"
+                "component": "EnquiryForm"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           },
@@ -2961,12 +3001,12 @@
                 "component": "JewelleryHeader1"
               },
               {
-                "key": "NotFoundSection",
-                "component": "common.notFound"
+                "key": "NotFound",
+                "component": "NotFound"
               },
               {
                 "key": "Footer",
-                "component": "common.Footer"
+                "component": "JewelleryFooter1"
               }
             ]
           }

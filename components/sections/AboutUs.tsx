@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { AboutUsData } from "@/types/templates.types";
+import type { AboutUsProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { lines } from "@/components/ui/text";
 
 /** "A Story of Timeless Beauty" — used on the home page and the about page */
-export const AboutUs = ({ data: story, showButton = true, className = "" }: { data?: AboutUsData; showButton?: boolean; className?: string }) => {
+export const AboutUs = ({ data: story, showButton = true, className = "" }: AboutUsProps) => {
   if (!story) return null;
   return (
     <section className={`bg-[var(--color-bg-main)] lg:flex lg:items-start ${className}`}>
@@ -42,8 +43,8 @@ export const AboutUs = ({ data: story, showButton = true, className = "" }: { da
           <span className="block font-semibold tracking-[-0.012em] text-[var(--color-primary)]">{story.titleHighlight}</span>
         </h2>
         <div className="mt-5 space-y-3 font-sans text-[0.98rem] leading-[1.6] text-[var(--color-text)] md:text-[1.1rem] lg:mt-[1.6rem] lg:max-w-[39.6rem] lg:space-y-[0.95rem] lg:text-[1.36rem] lg:leading-[2.125rem]">
-          {story.paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {lines(story.description).map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
           ))}
         </div>
         {showButton && (
@@ -52,7 +53,7 @@ export const AboutUs = ({ data: story, showButton = true, className = "" }: { da
             className="mt-8 inline-flex h-12 items-center gap-6 border border-[var(--color-primary-dark)] bg-[var(--color-primary-dark)] px-6 font-sans text-[0.95rem] font-medium text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary-dark)] md:h-14 lg:mt-[2.9rem] lg:h-[4.3rem] lg:w-[16.4rem] lg:gap-[2.75rem] lg:px-0 lg:pl-[2.5rem] lg:text-[1.25rem]"
           >
             {story.buttonText}
-            <Icon name="HiOutlineArrowLongRight" className="w-6 lg:w-[1.9rem]" />
+            <Icon name={story.buttonIcon} className="w-6 lg:w-[1.9rem]" />
           </Link>
         )}
       </div>

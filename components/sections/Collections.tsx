@@ -1,14 +1,14 @@
-import type { CollectionsData, GlobalUIData } from "@/types/templates.types";
+import type { CollectionsProps } from "@/types/templates.types";
 import { StarDivider } from "@/components/ui/StarDivider";
 import { CollectionBrowser } from "@/components/sections/CollectionBrowser";
 
 /** Collections page: star divider, small "OUR" label, small-caps "COLLECTION" heading, gold rule, intro and the category cards */
-export const Collections = ({ data: collections, ui }: { data?: CollectionsData; ui?: GlobalUIData }) => {
+export const Collections = ({ data: collections }: CollectionsProps) => {
   if (!collections) return null;
   return (
     <section className="bg-[var(--color-bg-main)] px-5 sm:px-8 md:px-10 lg:px-0">
       <div className="text-center">
-        <StarDivider />
+        <StarDivider icon={collections.starIcon} />
         <p className="mt-3 font-secondary text-[0.8rem] uppercase leading-none tracking-[0.3em] text-[var(--color-text)] lg:mt-[0.9rem] lg:text-[1.15rem]">
           {collections.eyebrow}
         </p>
@@ -21,7 +21,7 @@ export const Collections = ({ data: collections, ui }: { data?: CollectionsData;
         </p>
       </div>
       <div className="mt-10 lg:mt-[2.7rem]">
-        <CollectionBrowser data={collections} ui={ui} />
+        <CollectionBrowser data={collections} />
       </div>
     </section>
   );

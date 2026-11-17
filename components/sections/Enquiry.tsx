@@ -1,8 +1,8 @@
-import type { EnquiryData, EnquiryFormData } from "@/types/templates.types";
+import type { EnquiryProps } from "@/types/templates.types";
 import { EnquiryIntro } from "@/components/sections/EnquiryIntro";
 import { EnquiryForm } from "@/components/sections/EnquiryForm";
 
-export const Enquiry = ({ data: enquiry, form }: { data?: EnquiryData; form?: EnquiryFormData }) => {
+export const Enquiry = ({ data: enquiry, form }: EnquiryProps) => {
   if (!enquiry) return null;
   return (
     <section className="bg-[linear-gradient(180deg,var(--color-surface-warm-top)_0%,var(--color-surface-warm-alt)_100%)] px-4 sm:px-6 md:px-10 lg:pl-[6.1rem] lg:pr-[4rem]">

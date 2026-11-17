@@ -1,11 +1,25 @@
 "use client";
 
-import type { BlogPost, GlobalUIData } from "@/types/templates.types";
-import { BlogCard } from "@/components/sections/BlogCard";
+import type { BlogPost, PaginationData } from "@/types/templates.types";
+import { BlogCard } from "@/components/ui/BlogCard";
 import { Pagination, usePagination } from "@/components/ui/Pagination";
 
 /** Two-column blog layout with the thin centre divider between each pair; paginated when `perPage` is set */
-export const BlogGrid = ({ posts, buttonText, detailPageUrl, perPage = posts.length, ui }: { posts: BlogPost[]; buttonText: string; detailPageUrl: string; perPage?: number; ui?: GlobalUIData }) => {
+export const BlogGrid = ({
+  posts,
+  buttonText,
+  buttonIcon,
+  detailPageUrl,
+  perPage = posts.length,
+  pagination,
+}: {
+  posts: BlogPost[];
+  buttonText: string;
+  buttonIcon: string;
+  detailPageUrl: string;
+  perPage?: number;
+  pagination: PaginationData;
+}) => {
   const { page, setPage, totalPages, pageItems } = usePagination(posts, perPage);
   const rows: BlogPost[][] = [];
   for (let i = 0; i < pageItems.length; i += 2) rows.push(pageItems.slice(i, i + 2));
@@ -22,12 +36,12 @@ export const BlogGrid = ({ posts, buttonText, detailPageUrl, perPage = posts.len
               />
             )}
             {row.map((post) => (
-              <BlogCard key={post.id} post={post} buttonText={buttonText} detailPageUrl={detailPageUrl} />
+              <BlogCard key={post.id} post={post} buttonText={buttonText} buttonIcon={buttonIcon} detailPageUrl={detailPageUrl} />
             ))}
           </div>
         ))}
       </div>
-      <Pagination page={page} totalPages={totalPages} onChange={setPage} scrollTargetId="blog-grid" ui={ui} />
+      <Pagination page={page} totalPages={totalPages} onChange={setPage} scrollTargetId="blog-grid" data={pagination} />
     </div>
   );
 };

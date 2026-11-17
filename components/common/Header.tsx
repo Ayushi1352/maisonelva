@@ -4,14 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import type { CompanyData, GlobalUIData, HeaderData } from "@/types/templates.types";
+import type { HeaderProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 
 function isActive(pathname: string, href: string) {
   return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 }
 
-export const Header = ({ data, company, ui }: { data?: HeaderData; company: CompanyData; ui: GlobalUIData }) => {
+export const Header = ({ data }: HeaderProps) => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -27,12 +27,12 @@ export const Header = ({ data, company, ui }: { data?: HeaderData; company: Comp
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-bg-main)]">
       <div className="flex h-20 items-center justify-between px-4 sm:px-6 md:h-24 md:px-10 lg:h-[9.375rem] lg:pl-[3.75rem] lg:pr-[2.3rem]">
-        <Link href={company.logoUrl} aria-label={company.logoLabel} className="block shrink-0">
+        <Link href={data.logoUrl} aria-label={data.logoLabel} className="block shrink-0">
           <Image
-            src={company.logo}
-            alt={company.logoAlt}
-            width={company.logoWidth}
-            height={company.logoHeight}
+            src={data.logo}
+            alt={data.logoAlt}
+            width={data.logoWidth}
+            height={data.logoHeight}
             preload
             quality={90}
             sizes="(min-width: 1280px) 28rem, 260px"
@@ -70,7 +70,7 @@ export const Header = ({ data, company, ui }: { data?: HeaderData; company: Comp
             className="ml-[2.1rem] flex h-[4.375rem] w-[16.25rem] items-center justify-center gap-[2.1rem] border border-[var(--color-primary)] bg-[var(--color-primary)] font-navigation text-[1.625rem] tracking-[-0.01em] text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary)]"
           >
             {data.buttonText}
-            <Icon name="HiOutlineArrowLongRight" className="w-[1.4rem]" />
+            <Icon name={data.buttonIcon} className="w-[1.4rem]" />
           </Link>
         </nav>
 
@@ -79,10 +79,10 @@ export const Header = ({ data, company, ui }: { data?: HeaderData; company: Comp
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label={open ? ui.closeMenu : ui.openMenu}
+          aria-label={open ? data.closeMenu : data.openMenu}
           className="flex size-11 items-center justify-center text-[var(--color-primary)] transition-colors hover:text-[var(--color-accent)] lg:hidden"
         >
-          {open ? <Icon name="FaTimes" className="size-7" /> : <Icon name="FaBars" className="size-7" />}
+          {open ? <Icon name={data.closeMenuIcon} className="size-7" /> : <Icon name={data.openMenuIcon} className="size-7" />}
         </button>
       </div>
 
@@ -120,7 +120,7 @@ export const Header = ({ data, company, ui }: { data?: HeaderData; company: Comp
             className="mt-6 flex h-12 w-full items-center justify-center gap-4 border border-[var(--color-primary)] bg-[var(--color-primary)] font-navigation text-lg text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary)] sm:w-64"
           >
             {data.buttonText}
-            <Icon name="HiOutlineArrowLongRight" className="w-5" />
+            <Icon name={data.buttonIcon} className="w-5" />
           </Link>
         </nav>
       </div>

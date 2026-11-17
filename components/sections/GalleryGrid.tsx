@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
-import type { GalleryData, GlobalUIData } from "@/types/templates.types";
+import type { GalleryData } from "@/types/templates.types";
 import { fill } from "@/components/ui/text";
 import { Pagination, usePagination } from "@/components/ui/Pagination";
 
-export const GalleryGrid = ({ data, ui }: { data: GalleryData; ui?: GlobalUIData }) => {
+export const GalleryGrid = ({ data }: { data: GalleryData }) => {
   const { images } = data;
   const [active, setActive] = useState<number | null>(null);
   const { page, setPage, totalPages, start, pageItems } = usePagination(images, data.perPage);
@@ -57,7 +57,7 @@ export const GalleryGrid = ({ data, ui }: { data: GalleryData; ui?: GlobalUIData
           </li>
         ))}
       </ul>
-      <Pagination page={page} totalPages={totalPages} onChange={setPage} scrollTargetId="gallery-grid" ui={ui} />
+      <Pagination page={page} totalPages={totalPages} onChange={setPage} scrollTargetId="gallery-grid" data={data.pagination} />
 
       {active !== null && (
         <div
@@ -71,7 +71,7 @@ export const GalleryGrid = ({ data, ui }: { data: GalleryData; ui?: GlobalUIData
             <Image src={images[active].image} alt={images[active].imageAlt} fill quality={90} sizes="90vw" className="object-contain" />
           </div>
           <button type="button" onClick={close} aria-label={data.closeLabel} className="absolute right-4 top-4 text-[var(--color-white)] transition-colors hover:text-[var(--color-accent-light)] md:right-8 md:top-8">
-            <Icon name="FaTimes" className="size-8" />
+            <Icon name={data.closeIcon} className="size-8" />
           </button>
           <button
             type="button"
@@ -82,7 +82,7 @@ export const GalleryGrid = ({ data, ui }: { data: GalleryData; ui?: GlobalUIData
             aria-label={data.previousLabel}
             className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-white)] transition-colors hover:text-[var(--color-accent-light)] md:left-8"
           >
-            <Icon name="HiOutlineArrowLongLeft" className="w-10" />
+            <Icon name={data.previousIcon} className="w-10" />
           </button>
           <button
             type="button"
@@ -93,7 +93,7 @@ export const GalleryGrid = ({ data, ui }: { data: GalleryData; ui?: GlobalUIData
             aria-label={data.nextLabel}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-white)] transition-colors hover:text-[var(--color-accent-light)] md:right-8"
           >
-            <Icon name="HiOutlineArrowLongRight" className="w-10" />
+            <Icon name={data.nextIcon} className="w-10" />
           </button>
         </div>
       )}

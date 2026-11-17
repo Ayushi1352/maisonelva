@@ -1,8 +1,7 @@
-import type { CSSProperties } from "react";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Google_Sans, Libre_Caslon_Text, Marcellus, Newsreader, Playfair_Display, Poppins } from "next/font/google";
 import rawData from "@/data/templates.json";
-import type { JewelleryTemplateData } from "@/types/templates.types";
+import type { JewelleryTemplateData, ThemeFontVariables } from "@/types/templates.types";
 import { Header } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
@@ -22,7 +21,7 @@ const templateData: JewelleryTemplateData = rawData;
 const sectionData = templateData.categories.Jewellery.sections;
 const commonData = templateData.common;
 
-const fontVariables = {
+const fontVariables: ThemeFontVariables = {
   "--font-primary": commonData.theme.fonts.primary,
   "--font-heading": commonData.theme.fonts.heading,
   "--font-navigation": commonData.theme.fonts.navigation,
@@ -31,7 +30,7 @@ const fontVariables = {
   "--font-editorial": commonData.theme.fonts.editorial,
   "--font-decorative": commonData.theme.fonts.decorative,
   "--font-ui": commonData.theme.fonts.ui,
-} as CSSProperties;
+};
 
 export const metadata: Metadata = {
   title: {
@@ -64,12 +63,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           64px mobile, 80px tablet, then 9rem of the scaled desktop design (144px at 1920px).
         */}
         <div className="mx-auto flex min-h-screen w-full max-w-[1920px] flex-col overflow-x-clip bg-[var(--color-bg-main)] [--section-gap:4rem] md:[--section-gap:5rem] lg:[--section-gap:9rem]">
-          <Header data={sectionData.Header?.variants?.JewelleryHeader1} company={commonData.company} ui={commonData.globalUI} />
+          <Header data={sectionData.Header?.variants?.JewelleryHeader1} />
           <ScrollToTop>
             {children}
             <ScrollReveal />
           </ScrollToTop>
-          <Footer data={commonData.Footer} company={commonData.company} />
+          <Footer data={commonData.Footer} />
         </div>
       </body>
     </html>

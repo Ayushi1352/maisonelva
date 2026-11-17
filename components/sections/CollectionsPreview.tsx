@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import type { CollectionsData, CollectionsPreviewData } from "@/types/templates.types";
+import type { CollectionsPreviewProps } from "@/types/templates.types";
 import { ProductCard } from "@/components/sections/ProductCard";
 
 // Categories and products come from the collections page, so both pages always show the same items
-export const CollectionsPreview = ({ data: section, collections }: { data?: CollectionsPreviewData; collections?: CollectionsData }) => {
+export const CollectionsPreview = ({ data: section, collections }: CollectionsPreviewProps) => {
   const [active, setActive] = useState(section?.defaultCategory);
   if (!section || !collections) return null;
   const { categories, detailPageUrl } = collections;

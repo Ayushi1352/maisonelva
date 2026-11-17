@@ -1,8 +1,8 @@
-import type { GalleryData, GlobalUIData } from "@/types/templates.types";
+import type { GalleryProps } from "@/types/templates.types";
 import { SectionIntro } from "@/components/ui/SectionIntro";
 import { GalleryGrid } from "@/components/sections/GalleryGrid";
 
-export const Gallery = ({ data: gallery, ui }: { data?: GalleryData; ui?: GlobalUIData }) => {
+export const Gallery = ({ data: gallery }: GalleryProps) => {
   if (!gallery) return null;
   return (
     <section className="bg-[linear-gradient(180deg,var(--color-surface-warm-alt)_0%,var(--color-bg-main)_100%)] px-4 sm:px-6 md:px-10 lg:px-[2.9rem]">
@@ -22,9 +22,10 @@ export const Gallery = ({ data: gallery, ui }: { data?: GalleryData; ui?: Global
         ruleColorClassName="bg-[var(--color-gallery-rule)]"
         dividerStarClassName="text-[var(--color-gallery-star)]"
         dividerLineClassName="via-[var(--color-gallery-divider-mid)] to-[var(--color-gallery-divider-end)] lg:w-[9rem]"
+        starIcon={gallery.starIcon}
       />
       <div className="mt-8 lg:mt-[2.2rem]">
-        <GalleryGrid data={gallery} ui={ui} />
+        <GalleryGrid data={gallery} />
       </div>
     </section>
   );

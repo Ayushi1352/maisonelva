@@ -1,6 +1,6 @@
 "use client";
 
-import type { ContactFormData } from "@/types/templates.types";
+import type { ContactFormProps } from "@/types/templates.types";
 import { useFormSubmit } from "@/components/ui/useFormSubmit";
 import { Icon } from "@/components/ui/Icon";
 import { FormSuccess, Spinner } from "@/components/ui/FormSuccess";
@@ -8,7 +8,7 @@ import { inputClass } from "@/components/ui/Field";
 
 const fieldClass = `${inputClass} h-14 px-5 font-secondary text-[1rem] text-[var(--color-heading)] md:h-16 lg:h-[5.6rem] lg:px-[2.2rem] lg:text-[1.43rem]`;
 
-export const ContactForm = ({ data: form }: { data?: ContactFormData }) => {
+export const ContactForm = ({ data: form }: ContactFormProps) => {
   const submit = useFormSubmit();
   if (!form) return null;
 
@@ -43,13 +43,13 @@ export const ContactForm = ({ data: form }: { data?: ContactFormData }) => {
         >
           {submit.sending ? (
             <>
-              <Spinner className="size-6 lg:size-[1.9rem]" />
+              <Spinner name={form.spinnerIcon} className="size-6 lg:size-[1.9rem]" />
               {form.sendingText}
             </>
           ) : (
             <>
               {form.buttonText}
-              <Icon name="HiOutlineArrowLongRight" className="w-8 lg:w-[2.3rem]" />
+              <Icon name={form.buttonIcon} className="w-8 lg:w-[2.3rem]" />
             </>
           )}
         </button>
@@ -63,6 +63,8 @@ export const ContactForm = ({ data: form }: { data?: ContactFormData }) => {
           visibleFor={submit.visibleFor}
           onClose={submit.dismiss}
           closeLabel={form.closeLabel}
+          successIcon={form.successIcon}
+          closeMessageIcon={form.closeMessageIcon}
           className="mt-5 lg:mt-[1.6rem]"
         />
       )}

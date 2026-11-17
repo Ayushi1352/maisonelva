@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { BlogPost } from "@/types/templates.types";
+import type { BlogCardProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 
 // Every post opens the one common blog detail page.
-export const BlogCard = ({ post, buttonText, detailPageUrl: href }: { post: BlogPost; buttonText: string; detailPageUrl: string }) => {
+export const BlogCard = ({ post, buttonText, buttonIcon, detailPageUrl: href }: BlogCardProps) => {
   return (
     // From tablet up the card's 5 parts sit on the row grid's shared tracks, so category, title, excerpt and
     // Read More line up across the two cards even when one title wraps to more lines.
     <article className="group md:row-span-5 md:grid md:grid-rows-subgrid md:gap-y-0">
       <Link href={href} className="relative block aspect-[642/383] overflow-hidden" aria-label={post.title}>
         <Image
-          src={post.image}
-          alt={post.imageAlt}
+          src={post.homeImage}
+          alt={post.homeImageAlt}
           fill
           quality={90}
           sizes="(min-width: 1280px) 34vw, (min-width: 768px) 46vw, 92vw"
@@ -40,7 +40,7 @@ export const BlogCard = ({ post, buttonText, detailPageUrl: href }: { post: Blog
         className="group/more mt-6 inline-flex md:self-start md:justify-self-start items-center gap-5 border-b-2 border-[var(--color-accent-light)] pb-2.5 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-[var(--color-text)] transition-colors hover:border-[var(--color-secondary)] hover:text-[var(--color-secondary)] lg:ml-[0.25rem] lg:mt-[1.75rem] lg:gap-[1.2rem] lg:pb-[0.95rem] lg:text-[0.94rem]"
       >
         {buttonText}
-        <Icon name="HiOutlineArrowLongRight" className="w-7 transition-transform group-hover/more:translate-x-1 lg:w-[1.6rem]" />
+        <Icon name={buttonIcon} className="w-7 transition-transform group-hover/more:translate-x-1 lg:w-[1.6rem]" />
       </Link>
     </article>
   );

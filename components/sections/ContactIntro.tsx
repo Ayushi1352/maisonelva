@@ -23,7 +23,7 @@ export const ContactIntro = ({ data: contact }: { data: ContactData }) => {
       <ul className="mt-4 space-y-3 lg:mt-[1.35rem] lg:space-y-[1.05rem]">
         {contact.hours.map((line) => (
           <li key={line} className="flex items-center gap-4 lg:gap-[1.8rem]">
-            <Icon name="FaRegClock" className="size-7 shrink-0 text-[var(--color-accent-alt)] lg:size-[2.75rem]" />
+            <Icon name={contact.hoursIcon} className="size-7 shrink-0 text-[var(--color-accent-alt)] lg:size-[2.75rem]" />
             <span className="font-secondary text-[1rem] text-[var(--color-text-soft)] md:text-[1.1rem] lg:text-[1.8rem]">{line}</span>
           </li>
         ))}

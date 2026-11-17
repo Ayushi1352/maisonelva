@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 export interface ThemeFonts {
   primary: string;
   heading: string;
@@ -13,6 +15,17 @@ export interface ThemeData {
   fonts: ThemeFonts;
 }
 
+export type ThemeFontVariables = CSSProperties & {
+  "--font-primary": string;
+  "--font-heading": string;
+  "--font-navigation": string;
+  "--font-secondary": string;
+  "--font-display": string;
+  "--font-editorial": string;
+  "--font-decorative": string;
+  "--font-ui": string;
+};
+
 export interface SeoData {
   title: string;
   description: string;
@@ -26,32 +39,27 @@ export interface SiteMetadataData {
   lang: string;
 }
 
-/** Brand + contact details shared by the header, footer and contact page. */
-export interface CompanyData {
-  name: string;
+export interface GlobalUIData {
+  breadcrumbLabel: string;
+  breadcrumbSeparator: string;
+}
+
+export interface PaginationData {
+  label: string;
+  previousLabel: string;
+  previousIcon: string;
+  nextLabel: string;
+  nextIcon: string;
+  pageLabel: string;
+}
+
+export interface BrandData {
   logo: string;
   logoAlt: string;
   logoUrl: string;
   logoLabel: string;
   logoWidth: number;
   logoHeight: number;
-  phone: string;
-  email: string;
-  address: string[];
-  /** "{query}" is filled with the address */
-  mapEmbedUrl: string;
-  mapOpenUrl: string;
-}
-
-export interface GlobalUIData {
-  breadcrumbLabel: string;
-  breadcrumbSeparator: string;
-  paginationLabel: string;
-  previousPageLabel: string;
-  nextPageLabel: string;
-  pageLabel: string;
-  openMenu: string;
-  closeMenu: string;
 }
 
 export interface LinkItem {
@@ -66,6 +74,11 @@ export interface BreadcrumbData {
   paths: LinkItem[];
 }
 
+export interface BreadcrumbProps {
+  data?: BreadcrumbData;
+  ui?: GlobalUIData;
+}
+
 export interface NotFoundData {
   seo: SeoData;
   code: string;
@@ -73,70 +86,95 @@ export interface NotFoundData {
   description: string;
   buttonText: string;
   buttonUrl: string;
+  buttonIcon: string;
+}
+
+export interface NotFoundProps {
+  data?: NotFoundData;
 }
 
 export interface SocialLink extends LinkItem {
   icon: string;
 }
 
-/** A contact line either carries its own `lines` or points at a company field ("phone", "email", "address") with `source`. */
-export interface ContactLinesSource {
-  source?: string;
-  lines?: string[];
-}
-
-export interface FooterContactItem extends ContactLinesSource {
+export interface FooterContactItem {
   id: string;
   icon: string;
+  text: string;
+  url: string;
 }
 
-export interface FooterData {
-  tagline: string[];
-  quickLinksTitle: string;
-  quickLinks: LinkItem[];
+export interface FooterData extends BrandData {
+  description: string;
+  quickLinks: {
+    title: string;
+    links: LinkItem[];
+  };
   followTitle: string;
   socialLinks: SocialLink[];
   contactTitle: string;
-  contactDetails: FooterContactItem[];
+  contactItems: FooterContactItem[];
   copyrightText: string;
   motto: string[];
+  starIcon: string;
 }
 
-export interface HeaderData {
+export interface FooterProps {
+  data?: FooterData;
+}
+
+export interface HeaderData extends BrandData {
   navLinks: LinkItem[];
   buttonText: string;
   buttonUrl: string;
+  buttonIcon: string;
   mainNavLabel: string;
   mobileNavLabel: string;
+  openMenu: string;
+  closeMenu: string;
+  openMenuIcon: string;
+  closeMenuIcon: string;
 }
 
-export interface TitleLine {
-  id: string;
-  text: string;
-  accent: boolean;
+export interface HeaderProps {
+  data?: HeaderData;
 }
 
 export interface HeroData {
   eyebrow: string;
-  titleLines: TitleLine[];
+  title: string;
+  titleHighlight: string;
   description: string;
   buttonText: string;
   buttonUrl: string;
+  buttonIcon: string;
   image: string;
   imageAlt: string;
+}
+
+export interface HeroSectionProps {
+  data?: HeroData;
 }
 
 export interface AboutUsData {
   eyebrow: string;
   title: string;
   titleHighlight: string;
-  paragraphs: string[];
+  description: string;
   buttonText: string;
   buttonUrl: string;
+  buttonIcon: string;
   mainImage: string;
   mainImageAlt: string;
   secondaryImage: string;
   secondaryImageAlt: string;
+}
+
+export interface AboutUsProps {
+  data?: AboutUsData;
+  /** false on the About Us page: the section without its button */
+  showButton?: boolean;
+  className?: string;
 }
 
 export interface CollectionsPreviewData {
@@ -147,6 +185,12 @@ export interface CollectionsPreviewData {
   categoriesLabel: string;
 }
 
+export interface CollectionsPreviewProps {
+  data?: CollectionsPreviewData;
+  /** products and categories the preview tabs are filled from */
+  collections?: CollectionsData;
+}
+
 export interface ExploreBannerData {
   eyebrow: string;
   title: string;
@@ -154,34 +198,44 @@ export interface ExploreBannerData {
   description: string;
   buttonText: string;
   buttonUrl: string;
+  buttonIcon: string;
   image: string;
   imageAlt: string;
 }
 
-export interface TestimonialSlide {
-  id: string;
-  quote: string;
-  name: string;
-  role: string;
+export interface ExploreBannerProps {
+  data?: ExploreBannerData;
 }
 
 export interface TestimonialsData {
-  eyebrow: string;
-  titleLines: TitleLine[];
-  description: string;
-  image: string;
-  imageAlt: string;
-  items: TestimonialSlide[];
-  previousLabel: string;
-  nextLabel: string;
-  autoplayMs: number;
-}
-
-export interface BlogPreviewData {
-  eyebrow: string;
-  title: string;
-  titleHighlight: string;
-  count: number;
+  home: {
+    eyebrow: string;
+    title: string;
+    titleHighlight: string;
+    description: string;
+    image: string;
+    imageAlt: string;
+    previousLabel: string;
+    nextLabel: string;
+    previousIcon: string;
+    nextIcon: string;
+    autoplayMs: number;
+  };
+  intro: {
+    eyebrow: string;
+    title: string;
+    titleHighlight: string;
+    description: string;
+    perPage: number;
+    ratingLabel: string;
+  };
+  homeItemIds: string[];
+  listingItemIds: string[];
+  items: TestimonialItem[];
+  quoteIcon: string;
+  starIcon: string;
+  dividerStarIcon: string;
+  pagination: PaginationData;
 }
 
 export interface StatementData {
@@ -195,6 +249,11 @@ export interface MissionVisionData {
   vision: StatementData;
   image: string;
   imageAlt: string;
+  starIcon: string;
+}
+
+export interface MissionVisionProps {
+  data?: MissionVisionData;
 }
 
 export interface CollectionCategory {
@@ -253,7 +312,13 @@ export interface CollectionsData {
   cardUrl: string;
   detailPageUrl: string;
   perPage: number;
+  starIcon: string;
+  pagination: PaginationData;
   products: Product[];
+}
+
+export interface CollectionsProps {
+  data?: CollectionsData;
 }
 
 export interface CollectionDetailData {
@@ -263,6 +328,15 @@ export interface CollectionDetailData {
   thumbnailLabel: string;
   zoomLabel: string;
   closeLabel: string;
+  zoomIcon: string;
+  closeIcon: string;
+  starIcon: string;
+}
+
+export interface CollectionDetailProps {
+  data?: CollectionDetailData;
+  product?: Product;
+  categories?: CollectionCategory[];
 }
 
 export interface GalleryImage {
@@ -283,24 +357,31 @@ export interface GalleryData {
   closeLabel: string;
   previousLabel: string;
   nextLabel: string;
+  closeIcon: string;
+  previousIcon: string;
+  nextIcon: string;
+  starIcon: string;
+  pagination: PaginationData;
+}
+
+export interface GalleryProps {
+  data?: GalleryData;
 }
 
 export interface TestimonialItem {
   id: string;
   quote: string;
   name: string;
-  city: string;
-  rating: number;
+  role?: string;
+  city?: string;
+  rating?: number;
 }
 
-export interface TestimonialListingData {
-  eyebrow: string;
-  title: string;
-  titleHighlight: string;
-  description: string;
-  perPage: number;
-  items: TestimonialItem[];
-  ratingLabel: string;
+export interface TestimonialsProps {
+  data?: TestimonialsData;
+  /** true on the Testimonials page: every review in a paged grid instead of the home slider */
+  showAll?: boolean;
+  className?: string;
 }
 
 export interface BlogDetailSection {
@@ -310,10 +391,12 @@ export interface BlogDetailSection {
   description: string;
 }
 
+export interface BlogDetailMeta {
+  dateLabel: string;
+  dateIcon: string;
+}
+
 export interface BlogPostDetail {
-  intro: string;
-  image: string;
-  imageAlt: string;
   quote: string;
   sections: BlogDetailSection[];
 }
@@ -327,23 +410,54 @@ export interface BlogPost {
   day: string;
   month: string;
   date: string;
+  intro: string;
+  homeImage: string;
+  homeImageAlt: string;
   image: string;
   imageAlt: string;
+  content: string;
   detail: BlogPostDetail;
 }
 
-export interface BlogsData {
-  eyebrow: string;
-  title: string;
-  titleHighlight: string;
+export interface BlogCardProps {
+  post: BlogPost;
   buttonText: string;
+  buttonIcon: string;
+  detailPageUrl: string;
+}
+
+export interface BlogsData {
+  home: {
+    eyebrow: string;
+    title: string;
+    titleHighlight: string;
+  };
+  intro: {
+    eyebrow: string;
+    title: string;
+    titleHighlight: string;
+  };
+  detail: BlogDetailMeta;
+  homePostIds: string[];
+  listingPostIds: string[];
+  detailPostId: string;
+  buttonText: string;
+  buttonIcon: string;
   detailPageUrl: string;
   perPage: number;
+  pagination: PaginationData;
   posts: BlogPost[];
 }
 
-export interface BlogDetailData {
-  dateLabel: string;
+export interface BlogsProps {
+  data?: BlogsData;
+  /** true on the Blog page: the paged list of listingPostIds instead of the home posts */
+  showAll?: boolean;
+}
+
+export interface BlogDetailProps {
+  data?: BlogsData;
+  postId?: string;
 }
 
 export interface ContactImage {
@@ -359,10 +473,12 @@ export interface ContactTouchData {
   description: string;
 }
 
-export interface ContactInfoItem extends ContactLinesSource {
+export interface ContactInfoItem {
   id: string;
   icon: string;
   title: string;
+  text: string;
+  url?: string;
   urls?: string[];
 }
 
@@ -378,10 +494,13 @@ export interface ContactData {
   description: string;
   hoursTitle: string;
   hours: string[];
+  hoursIcon: string;
   images: ContactImage[];
   touch: ContactTouchData;
   info: ContactInfoItem[];
   map: ContactMapData;
+  mapEmbedUrl: string;
+  directionUrl: string;
 }
 
 export interface ContactFormFields {
@@ -398,18 +517,31 @@ export interface FormMessages {
   successTitle: string;
   successMessage: string;
   closeLabel: string;
+  successIcon: string;
+  closeMessageIcon: string;
+  spinnerIcon: string;
 }
 
 export interface ContactFormData extends FormMessages {
   title: string;
   fields: ContactFormFields;
+  buttonIcon: string;
+}
+
+export interface ContactProps {
+  data?: ContactData;
+  form?: ContactFormData;
+}
+
+export interface ContactFormProps {
+  data?: ContactFormData;
 }
 
 export interface EnquiryFeature {
   id: string;
   icon: string;
   title: string;
-  description: string[];
+  description: string;
 }
 
 export interface EnquiryData {
@@ -436,12 +568,22 @@ export interface EnquiryFormData extends FormMessages {
   fields: EnquiryFormFields;
   enquiryOptions: string[];
   budgetOptions: string[];
+  buttonIcon: string;
+  selectIcon: string;
+}
+
+export interface EnquiryProps {
+  data?: EnquiryData;
+  form?: EnquiryFormData;
+}
+
+export interface EnquiryFormProps {
+  data?: EnquiryFormData;
 }
 
 export interface CommonData {
   theme: ThemeData;
   metadata: SiteMetadataData;
-  company: CompanyData;
   globalUI: GlobalUIData;
   aboutBreadcrumb?: BreadcrumbData;
   collectionsBreadcrumb?: BreadcrumbData;
@@ -467,14 +609,11 @@ export interface JewellerySections {
   CollectionsPreview?: Section<"JewelleryCollectionsPreview1", CollectionsPreviewData>;
   ExploreBanner?: Section<"JewelleryExploreBanner1", ExploreBannerData>;
   Testimonials?: Section<"JewelleryTestimonials1", TestimonialsData>;
-  BlogPreview?: Section<"JewelleryBlogPreview1", BlogPreviewData>;
   MissionVision?: Section<"JewelleryMissionVision1", MissionVisionData>;
   Collections?: Section<"JewelleryCollections1", CollectionsData>;
   CollectionDetail?: Section<"JewelleryCollectionDetail1", CollectionDetailData>;
   Gallery?: Section<"JewelleryGallery1", GalleryData>;
-  TestimonialListing?: Section<"JewelleryTestimonialListing1", TestimonialListingData>;
   Blogs?: Section<"JewelleryBlogs1", BlogsData>;
-  BlogDetail?: Section<"JewelleryBlogDetail1", BlogDetailData>;
   Contact?: Section<"JewelleryContact1", ContactData>;
   ContactForm?: Section<"JewelleryContactForm1", ContactFormData>;
   Enquiry?: Section<"JewelleryEnquiry1", EnquiryData>;

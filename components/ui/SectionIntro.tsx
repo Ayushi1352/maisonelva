@@ -20,6 +20,7 @@ type SectionIntroProps = {
   ruleColorClassName?: string;
   dividerStarClassName?: string;
   dividerLineClassName?: string;
+  starIcon: string;
 };
 
 /** Centered star divider + spaced label + two-tone heading + gold rule + description */
@@ -38,10 +39,11 @@ export const SectionIntro = ({
   ruleColorClassName = "bg-[var(--color-accent)]",
   dividerStarClassName,
   dividerLineClassName,
+  starIcon,
 }: SectionIntroProps) => {
   return (
     <div className="text-center">
-      <StarDivider starClassName={dividerStarClassName} lineClassName={dividerLineClassName} />
+      <StarDivider icon={starIcon} starClassName={dividerStarClassName} lineClassName={dividerLineClassName} />
       <p className={`mt-5 font-secondary uppercase leading-none lg:mt-[2.35rem] ${labelClassName}`}>{eyebrow}</p>
       <h2
         className={`mt-4 text-balance font-secondary text-[2rem] font-bold leading-[1.15] min-[400px]:text-[2.25rem] sm:text-[2.4rem] sm:leading-[1.12] tracking-[-0.015em] md:text-[3.6rem] lg:mt-[2.2rem] lg:leading-[1.08] ${titleClassName}`}

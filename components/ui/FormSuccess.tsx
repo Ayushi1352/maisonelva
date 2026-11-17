@@ -8,11 +8,24 @@ type FormSuccessProps = {
   visibleFor: number;
   onClose: () => void;
   closeLabel: string;
+  successIcon: string;
+  closeMessageIcon: string;
   className?: string;
 };
 
 /** Thank-you card shown after a (dummy) form submission; fades out on its own */
-export const FormSuccess = ({ name, title, message, leaving, visibleFor, onClose, closeLabel, className = "" }: FormSuccessProps) => {
+export const FormSuccess = ({
+  name,
+  title,
+  message,
+  leaving,
+  visibleFor,
+  onClose,
+  closeLabel,
+  successIcon,
+  closeMessageIcon,
+  className = "",
+}: FormSuccessProps) => {
   const heading = name ? title.replace("{name}", name) : title.replace(", {name}", "").replace("{name}", "");
 
   return (
@@ -26,7 +39,7 @@ export const FormSuccess = ({ name, title, message, leaving, visibleFor, onClose
     >
       <div className="flex items-start gap-3 lg:gap-[1rem]">
         <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full bg-[var(--color-success)] text-[var(--color-white)] lg:size-[2.4rem]" aria-hidden="true">
-          <Icon name="FaCheck" className="size-4 lg:size-[1.25rem]" />
+          <Icon name={successIcon} className="size-4 lg:size-[1.25rem]" />
         </span>
         <div>
           <p className="font-secondary text-[1.1rem] font-bold leading-snug text-[var(--color-success-heading)] lg:text-[1.6rem]">{heading}</p>
@@ -39,7 +52,7 @@ export const FormSuccess = ({ name, title, message, leaving, visibleFor, onClose
         aria-label={closeLabel}
         className="absolute right-2.5 top-2.5 flex size-8 items-center justify-center rounded-full text-[var(--color-success-text)] transition-colors hover:bg-[var(--color-success-hover)] lg:right-[0.9rem] lg:top-[0.9rem] lg:size-[2.4rem]"
       >
-        <Icon name="FaTimes" className="size-4 lg:size-[1.3rem]" />
+        <Icon name={closeMessageIcon} className="size-4 lg:size-[1.3rem]" />
       </button>
       {/* time left before the message closes itself */}
       <span
@@ -52,4 +65,4 @@ export const FormSuccess = ({ name, title, message, leaving, visibleFor, onClose
 };
 
 /** small spinner for the submit button while the dummy request runs */
-export const Spinner = ({ className = "" }: { className?: string }) => <Icon name="FaSpinner" className={`animate-spin ${className}`} />;
+export const Spinner = ({ name, className = "" }: { name: string; className?: string }) => <Icon name={name} className={`animate-spin ${className}`} />;

@@ -45,12 +45,12 @@ export const ProductHighlights = ({ data: labels, product }: { data: CollectionD
           <span className="absolute left-[26.37rem] top-[14.73rem] hidden h-[11.32rem] w-[2px] -translate-x-1/2 bg-[var(--color-highlights-line)] lg:block" aria-hidden="true" />
           <span className="absolute left-0 top-[13.31rem] hidden h-[1.5px] w-[24.91rem] -translate-y-1/2 bg-[var(--color-highlights-line-soft)] lg:block" aria-hidden="true" />
           <span className="absolute left-[27.9rem] right-0 top-[13.31rem] hidden h-[1.5px] -translate-y-1/2 bg-[var(--color-highlights-line-soft)] lg:block" aria-hidden="true" />
-          <Icon name="PiStarFourFill" className="absolute left-[26.37rem] top-[13.41rem] hidden size-[1.95rem] -translate-x-1/2 -translate-y-1/2 text-[var(--color-highlights-star)] lg:block" />
+          <Icon name={labels.starIcon} className="absolute left-[26.37rem] top-[13.41rem] hidden size-[1.95rem] -translate-x-1/2 -translate-y-1/2 text-[var(--color-highlights-star)] lg:block" />
 
           {rows.map((row, rowIndex) => (
             <div key={rowIndex} className="grid gap-6 sm:grid-cols-2 sm:gap-0 max-lg:mt-6 max-lg:first:mt-0 lg:h-[13.31rem] lg:grid-cols-[26.37rem_1fr] lg:last:h-[12.74rem]">
               {row.map((feature, index) => {
-                                const cell = cells[rowIndex][index];
+                const cell = cells[rowIndex][index];
                 return (
                   <div key={feature.id} className="relative flex items-start gap-5 lg:block">
                     <span className={`flex w-12 shrink-0 justify-center lg:absolute lg:top-[5.66rem] lg:w-auto lg:-translate-x-1/2 lg:-translate-y-1/2 ${cell.icon}`}>

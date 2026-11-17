@@ -1,8 +1,8 @@
-import type { CollectionCategory, Product } from "@/types/templates.types";
+import type { CollectionCategory, CollectionDetailData, Product } from "@/types/templates.types";
 import { splitAccent } from "@/components/ui/text";
 import { Icon } from "@/components/ui/Icon";
 
-export const ProductInfo = ({ product, categories }: { product: Product; categories: CollectionCategory[] }) => {
+export const ProductInfo = ({ data, product, categories }: { data: CollectionDetailData; product: Product; categories: CollectionCategory[] }) => {
   const category = categories.find((item) => item.id === product.category);
   const title = splitAccent(product.name, product.nameHighlight);
   // first word after the accent stays on the accent's line: "Radiant Halo Diamond" / "Pendant Necklace"
@@ -27,7 +27,7 @@ export const ProductInfo = ({ product, categories }: { product: Product; categor
       </p>
       <div className="mt-7 flex items-center gap-4 lg:mt-[2.05rem] lg:gap-[2rem]" aria-hidden="true">
         <span className="h-[2px] flex-1 bg-[var(--color-accent-light)]" />
-        <Icon name="PiStarFourFill" className="size-6 text-[var(--color-accent)] lg:size-[2.25rem]" />
+        <Icon name={data.starIcon} className="size-6 text-[var(--color-accent)] lg:size-[2.25rem]" />
         <span className="h-[2px] flex-1 bg-[var(--color-accent-light)]" />
       </div>
       <dl className="relative mt-6 lg:mt-[2.45rem]">

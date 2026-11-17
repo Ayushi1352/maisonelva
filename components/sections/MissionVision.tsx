@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { MissionVisionData } from "@/types/templates.types";
+import type { MissionVisionProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
 
 function Statement({ eyebrow, title, description, titleClass }: { eyebrow: string; title: string; description: string; titleClass: string }) {
@@ -19,7 +19,7 @@ function Statement({ eyebrow, title, description, titleClass }: { eyebrow: strin
   );
 }
 
-export const MissionVision = ({ data: about }: { data?: MissionVisionData }) => {
+export const MissionVision = ({ data: about }: MissionVisionProps) => {
   if (!about) return null;
   return (
     <section className="bg-[linear-gradient(180deg,var(--color-surface-mission-top)_0%,var(--color-surface-warm-deep)_100%)] px-5 sm:px-8 md:px-10 lg:relative lg:h-[44.25rem] lg:p-0">
@@ -32,7 +32,7 @@ export const MissionVision = ({ data: about }: { data?: MissionVisionData }) => 
         <div className="relative mx-auto w-[15rem] py-16 md:w-[13rem] lg:absolute lg:left-[49rem] lg:top-[6.95rem] lg:w-[23.06rem] lg:p-0">
           <span className="absolute left-1/2 top-0 flex h-[3.6rem] -translate-x-[60%] flex-col items-center lg:-top-[6.95rem] lg:h-[6.7rem]" aria-hidden="true">
             <span className="w-px flex-1 bg-[var(--color-accent)]" />
-            <Icon name="PiStarFourFill" className="-my-1 size-6 text-[var(--color-accent)] lg:size-[2.1rem]" />
+            <Icon name={about.starIcon} className="-my-1 size-6 text-[var(--color-accent)] lg:size-[2.1rem]" />
             <span className="h-2 w-px bg-[var(--color-accent)] lg:h-[0.6rem]" />
           </span>
           <div className="relative aspect-[369/475]">
@@ -46,7 +46,7 @@ export const MissionVision = ({ data: about }: { data?: MissionVisionData }) => 
           </div>
           <span className="absolute bottom-0 left-1/2 flex h-[3.6rem] -translate-x-[60%] flex-col items-center lg:-bottom-[7.6rem] lg:h-[7.6rem]" aria-hidden="true">
             <span className="h-[1.6rem] w-px bg-[var(--color-accent)] lg:h-[1.6rem]" />
-            <Icon name="PiStarFourFill" className="-my-1 size-6 text-[var(--color-accent)] lg:size-[2.1rem]" />
+            <Icon name={about.starIcon} className="-my-1 size-6 text-[var(--color-accent)] lg:size-[2.1rem]" />
             <span className="w-px flex-1 bg-[var(--color-accent)]" />
           </span>
         </div>

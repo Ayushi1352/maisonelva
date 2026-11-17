@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { HeroData } from "@/types/templates.types";
+import type { HeroSectionProps } from "@/types/templates.types";
 import { Icon } from "@/components/ui/Icon";
+import { lines } from "@/components/ui/text";
 
-export const HeroSection = ({ data: hero }: { data?: HeroData }) => {
+export const HeroSection = ({ data: hero }: HeroSectionProps) => {
   if (!hero) return null;
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg-main)] lg:h-[56.875rem]">
@@ -13,9 +14,9 @@ export const HeroSection = ({ data: hero }: { data?: HeroData }) => {
           <span className="ml-4 h-[2px] w-14 bg-[var(--color-primary)] lg:ml-[1.8rem] lg:w-[6.6rem]" aria-hidden="true" />
         </p>
         <h1 className="mt-6 font-heading text-[2.6rem] font-semibold uppercase leading-[1.3] tracking-[-0.005em] min-[360px]:text-[2.9rem] sm:text-[3.8rem] md:text-[4.6rem] lg:mt-[2.05rem] lg:text-[6rem]">
-          {hero.titleLines.map((line) => (
-            <span key={line.id} className={`block ${line.accent ? "text-[var(--color-primary)]" : "text-[var(--color-text)]"}`}>
-              {line.text}
+          {lines(hero.title).map((line, index) => (
+            <span key={index} className={`block ${hero.titleHighlight && line.includes(hero.titleHighlight) ? "text-[var(--color-primary)]" : "text-[var(--color-text)]"}`}>
+              {line}
             </span>
           ))}
         </h1>
@@ -27,7 +28,7 @@ export const HeroSection = ({ data: hero }: { data?: HeroData }) => {
           className="mt-8 inline-flex h-14 items-center gap-6 border border-[var(--color-primary)] bg-[var(--color-primary)] pl-7 pr-7 font-sans text-[0.95rem] text-[var(--color-white)] transition-colors hover:bg-[var(--color-white)] hover:text-[var(--color-primary)] md:h-16 md:text-[1.1rem] lg:mt-[2.6rem] lg:h-[4.8rem] lg:w-[21.85rem] lg:gap-[2.6rem] lg:pl-[2.7rem] lg:pr-0 lg:text-[1.375rem]"
         >
           {hero.buttonText}
-          <Icon name="HiOutlineArrowLongRight" className="w-6 lg:w-[1.75rem]" />
+          <Icon name={hero.buttonIcon} className="w-6 lg:w-[1.75rem]" />
         </Link>
       </div>
 

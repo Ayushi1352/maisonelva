@@ -6,13 +6,15 @@ import { AboutUs } from "@/components/sections/AboutUs";
 import { MissionVision } from "@/components/sections/MissionVision";
 import { Testimonials } from "@/components/sections/Testimonials";
 
-const templateData: JewelleryTemplateData = rawData;
-const sectionData = templateData.categories.Jewellery.sections;
-const commonData = templateData.common;
-
-export const metadata: Metadata = { ...commonData.aboutBreadcrumb?.seo };
+export const metadata: Metadata = { ...(rawData as JewelleryTemplateData).common.aboutBreadcrumb?.seo };
 
 export default function AboutUsPage() {
+  const templateData: JewelleryTemplateData = rawData;
+  const sectionData = templateData?.categories?.Jewellery?.sections;
+  const commonData = templateData?.common;
+
+  if (!sectionData || !commonData) return null;
+
   return (
     <main className="flex flex-1 flex-col gap-[var(--section-gap)]">
       <Breadcrumb data={commonData.aboutBreadcrumb} ui={commonData.globalUI} />

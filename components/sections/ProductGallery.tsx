@@ -62,7 +62,7 @@ export const ProductGallery = ({ data, name, imageAlt, images, thumbnails }: Pro
           aria-label={data.zoomLabel}
           className="absolute right-3 top-3 flex size-11 items-center justify-center rounded-full bg-[var(--color-white)] text-[var(--color-text-soft)] shadow-[0_2px_10px_var(--color-gallery-arrow-shadow)] transition-[color,background-color,transform] hover:scale-105 hover:bg-[var(--color-primary)] hover:text-[var(--color-white)] lg:right-[1.5rem] lg:top-[1.6rem] lg:size-[4.4rem]"
         >
-          <Icon name="FaExpandAlt" className="size-5 lg:size-[1.8rem]" />
+          <Icon name={data.zoomIcon} className="size-5 lg:size-[1.8rem]" />
         </button>
       </div>
 
@@ -78,7 +78,7 @@ export const ProductGallery = ({ data, name, imageAlt, images, thumbnails }: Pro
             <Image src={images[active] ?? images[0]} alt={imageAlt} fill quality={90} sizes="90vw" className="object-contain" />
           </div>
           <button type="button" onClick={() => setZoomed(false)} aria-label={data.closeLabel} className="absolute right-4 top-4 text-[var(--color-white)] transition-colors hover:text-[var(--color-accent-light)] md:right-8 md:top-8">
-            <Icon name="FaTimes" className="size-8" />
+            <Icon name={data.closeIcon} className="size-8" />
           </button>
         </div>
       )}

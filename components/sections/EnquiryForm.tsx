@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { EnquiryFormData } from "@/types/templates.types";
+import type { EnquiryFormProps } from "@/types/templates.types";
 import { useFormSubmit } from "@/components/ui/useFormSubmit";
 import { Icon } from "@/components/ui/Icon";
 import { FormSuccess, Spinner } from "@/components/ui/FormSuccess";
@@ -11,7 +11,7 @@ import { inputClass } from "@/components/ui/Field";
 const fieldBase = `${inputClass} h-14 px-5 font-ui text-[1rem] md:h-16 lg:h-[5.375rem] lg:px-[2.3rem] lg:text-[1.5rem]`;
 const fieldClass = `${fieldBase} text-[var(--color-heading)]`;
 
-function SelectField({ name, placeholder, options, required }: { name: string; placeholder: string; options: string[]; required?: boolean }) {
+function SelectField({ name, placeholder, options, icon, required }: { name: string; placeholder: string; options: string[]; icon: string; required?: boolean }) {
   const [value, setValue] = useState("");
 
   return (
@@ -32,12 +32,12 @@ function SelectField({ name, placeholder, options, required }: { name: string; p
           </option>
         ))}
       </select>
-      <Icon name="FaChevronDown" className="pointer-events-none absolute right-5 top-1/2 size-5 -translate-y-1/2 text-[var(--color-accent-alt)] lg:right-[2.2rem] lg:size-[1.6rem]" />
+      <Icon name={icon} className="pointer-events-none absolute right-5 top-1/2 size-5 -translate-y-1/2 text-[var(--color-accent-alt)] lg:right-[2.2rem] lg:size-[1.6rem]" />
     </div>
   );
 }
 
-export const EnquiryForm = ({ data: form }: { data?: EnquiryFormData }) => {
+export const EnquiryForm = ({ data: form }: EnquiryFormProps) => {
   const submit = useFormSubmit();
   if (!form) return null;
 
@@ -64,8 +64,8 @@ export const EnquiryForm = ({ data: form }: { data?: EnquiryFormData }) => {
           <input type="tel" name="phone" required placeholder={form.fields.phone} aria-label={form.fields.phone} className={fieldClass} />
         </div>
         <input type="email" name="email" required placeholder={form.fields.email} aria-label={form.fields.email} className={fieldClass} />
-        <SelectField name="enquiryFor" placeholder={form.fields.enquiryFor} options={form.enquiryOptions} required />
-        <SelectField name="budget" placeholder={form.fields.budget} options={form.budgetOptions} />
+        <SelectField name="enquiryFor" placeholder={form.fields.enquiryFor} options={form.enquiryOptions} icon={form.selectIcon} required />
+        <SelectField name="budget" placeholder={form.fields.budget} options={form.budgetOptions} icon={form.selectIcon} />
         <textarea
           name="message"
           required
@@ -81,13 +81,13 @@ export const EnquiryForm = ({ data: form }: { data?: EnquiryFormData }) => {
         >
           {submit.sending ? (
             <>
-              <Spinner className="size-6 lg:size-[1.9rem]" />
+              <Spinner name={form.spinnerIcon} className="size-6 lg:size-[1.9rem]" />
               {form.sendingText}
             </>
           ) : (
             <>
               {form.buttonText}
-              <Icon name="HiOutlineArrowLongRight" className="w-8 lg:w-[2.4rem]" />
+              <Icon name={form.buttonIcon} className="w-8 lg:w-[2.4rem]" />
             </>
           )}
         </button>
@@ -101,6 +101,8 @@ export const EnquiryForm = ({ data: form }: { data?: EnquiryFormData }) => {
           visibleFor={submit.visibleFor}
           onClose={submit.dismiss}
           closeLabel={form.closeLabel}
+          successIcon={form.successIcon}
+          closeMessageIcon={form.closeMessageIcon}
           className="mt-5 lg:mt-[1.6rem]"
         />
       )}
